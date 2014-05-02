@@ -3,7 +3,7 @@
 
 == Purpose
 
-- To keep all my configuration files under version control
+- To keep all my VIM configuration files under version control
 
 
 == Process to install on a new machine

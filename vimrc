@@ -1,7 +1,5 @@
 set nocompatible " must be first line
 
-"
-<<<<<<< HEAD
 " Setup Vundle
 filetype off
 set runtimepath+=~/.vim/bundle/vundle
@@ -27,10 +25,8 @@ Bundle 'vim-scripts/tabular'
 Bundle 'vim-scripts/tlib'
 
  
-=======
 " Setup Bundle Support 
 execute pathogen#infect()
->>>>>>> 5266a42d09fe6b903e6330c839063142825b1b75
 syntax on " syntax highlighting
 filetype plugin indent on " Automatically detect file types.
 set encoding=utf-8
