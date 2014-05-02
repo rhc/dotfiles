@@ -1,0 +1,118 @@
+cabb tt tabnew
+iabb Prj project
+iabb ak Angelique Kyony
+iabb bb byebug
+iabb biz business
+iabb bn between
+iabb bnf benefit
+iabb bnfs benefits
+iabb c5 COBIT 5
+iabb cfg (config)#
+iabb cfgif (config-if)#
+iabb cfgifr (config-if-range)#
+iabb cfgmap (config-map-class)#
+iabb cfgv (config-vrf)#
+iabb lenght length
+iabb cfgr (config-router)#
+iabb cmd command
+iabb cmds commands
+iabb db database
+iabb dbs databases
+iabb defn definition
+iabb dont don't
+iabb eg e.g.
+iabb eqn equation
+iabb eqns equations
+iabb fr Frame Relay
+iabb grp group
+iabb grps groups
+iabb gt =>
+iabb gw gateway
+iabb hw hardware
+iabb ipr internal purchase requisition
+iabb jk John Kyony
+iabb jnr junior
+iabb lt <=
+iabb ltt <<
+iabb lvl level
+iabb lvls levels
+iabb mgr manager
+iabb mgr' manager's
+iabb mgrs managers
+iabb mgt management
+iabb msg message
+iabb msgs messages
+iabb nw network
+iabb nws networks
+iabb ops operations
+iabb orga organization
+iabb p2 PRINCE2
+iabb p2ap Authorize the project
+iabb p2bc Business Case
+iabb p2bo Project Board
+iabb p2br Project Brief
+iabb p2brp Benefits Review Plan
+iabb p2cc corporate or programme management
+iabb p2cir Configuration Item Records
+iabb p2cms Configuration Management Strategy
+iabb p2cp Closing a Project process
+iabb p2cs Controlling a Stage process
+iabb p2dp Directing a Project process
+iabb p2hr Highlight Report
+iabb p2ip Initiating a Project process
+iabb p2mp Managing Product Delivery process
+iabb p2mpd Managing Product Delivery
+iabb p2msb Managing a Stage Boundary
+iabb p2mt project management team
+iabb p2pbs product breakdown structure
+iabb p2pd Product Description
+iabb p2pp Project Plan
+iabb p2ppd Project Product Description
+iabb p2qms Quality Management Strategy
+iabb p2rms Risk Management Strategy
+iabb p2sb Managing a Stage Boundary process
+iabb p2ss Senior Supplier
+iabb p2sup Starting Up a Project
+iabb p2tm Team Manager
+iabb pb problem
+iabb pbs problem
+iabb pid Product Initiation Documentation
+iabb pm Project Manager
+iabb pmm project management method
+iabb ppl people
+iabb prg programme
+iabb prgs programmes
+iabb prj project
+iabb prj' project's
+iabb prjs projects
+iabb pwd password
+iabb pwds passwords
+iabb qly quality
+iabb qn question
+iabb qns questions
+iabb qty quantity
+iabb rce resource
+iabb rces resources
+iabb req requirement
+iabb req requirements
+iabb reqd required
+iabb rtg routing
+iabb rx reception
+iabb sce service
+iabb sces services
+iabb snr senior
+iabb std standard
+iabb svr server
+iabb sw software
+iabb swg switching
+iabb tbl table
+iabb tbls tables
+iabb teh the
+iabb tx transmission
+iabb vmw VMware
+iabb vn VLAN
+iabb vns VLANs
+iabb wo without
+iabb xn Christian
+
+" end of the file

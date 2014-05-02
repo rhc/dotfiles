@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/ckyony/repo/sample_app'
+let g:netrw_dirhist_2='/home/ckyony/repo/sample_app/spec/requests'
+let g:netrw_dirhist_3='/home/ckyony/.heroku'
+let g:netrw_dirhist_4='/home/ckyony'
+let g:netrw_dirhist_5='/usr/local/heroku/lib'
+let g:netrw_dirhist_6='/usr/local/heroku/lib/heroku'
+let g:netrw_dirhist_7='/home/ckyony/repo/sample_app/spec/support'
