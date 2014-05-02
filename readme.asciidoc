@@ -1,0 +1,24 @@
+= Dotfiles
+
+
+== Purpose
+
+- To keep all my Vim configuration files under version control
+
+
+
+== Process to install on a new machine
+
+. Git clone the repository into \~/dotfiles 
+. Symlink \~/.vim to \~/dotfiles/vim
+. Symlink \~/.vimrc to \~/dotfiles/vimrc
+. Launch Vim and run the Ex command :BundleInstall
+
+
+== To do
+
+- Extend the dotfiles for other applications.
+- Create a script for the creation of the symlinks.
+
+
+
