@@ -3,14 +3,14 @@
 
 == Purpose
 
-- To keep all my Vim configuration files under version control
+- To keep all my configuration files under version control
 
 
 == Process to install on a new machine
 
-. Git clone the repository into ~/dotfiles 
-. Symlink ~/.vim to \~/dotfiles/vim
-. Symlink ~/.vimrc to \~/dotfiles/vimrc
+. Git clone the repository into $HOME/dotfiles 
+. Symlink $HOME/.vim to $HOME/dotfiles/vim
+. Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
 . Launch Vim and run the Ex command :BundleInstall
 
 
