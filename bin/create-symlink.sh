@@ -6,7 +6,7 @@
 #TODO: rewrite this script in Ruby
 
 DOTFILES="$HOME/dotfiles"
-SYMFILES=( .vim .vimrc )
+SYMFILES=( .vim .vimrc .xmonad .xmobarrc)
 
 
 for SYMFILE in ${SYMFILES[@]}
