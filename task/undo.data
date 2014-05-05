@@ -2321,3 +2321,6 @@ new [description:"weeklu review" due:"1399586400" entry:"1399073910" modified:"1
 time 1399301370
 new [description:"xxxxx" due:"2147378400" entry:"1399301370" project:"ccie" status:"pending" uuid:"b93eda70-e6de-4485-bf5f-f0663856ba37"]
 ---
+time 1399301981
+new [description:"add task to my dotfiles" due:"1399240800" end:"1399301981" entry:"1399301981" project:"arch.drp" status:"completed" uuid:"2266b15e-ebf7-47c7-b960-677414a698b9"]
+---

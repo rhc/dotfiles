@@ -581,3 +581,4 @@
 {"description":"add Guardfile Gemfile to ruby vim file type","due":"20140508T220000Z","entry":"20140430T164441Z","modified":"20140505T144219Z","project":"ccie","status":"pending","uuid":"85183492-2544-451e-bf06-75aea80fe61f"}
 {"description":"weeklu review","due":"20140508T220000Z","entry":"20140502T233830Z","modified":"20140505T144219Z","priority":"H","project":"ccie","status":"pending","uuid":"96bba666-bb00-4557-ae56-68d08815fd83"}
 {"description":"xxxxx","due":"20380117T220000Z","entry":"20140505T144930Z","project":"ccie","status":"pending","uuid":"b93eda70-e6de-4485-bf5f-f0663856ba37"}
+{"description":"add task to my dotfiles","due":"20140504T220000Z","end":"20140505T145941Z","entry":"20140505T145941Z","project":"arch.drp","status":"completed","uuid":"2266b15e-ebf7-47c7-b960-677414a698b9"}

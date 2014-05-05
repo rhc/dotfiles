@@ -142,3 +142,4 @@
 [description:"chapter 9-12" due:"1399240800" end:"1399285185" entry:"1399285185" project:"ror.rails-in-action" status:"completed" uuid:"87041efe-c017-4893-8729-6a60f349fbbc"]
 [description:"eye test for lens" due:"1399240800" end:"1399285223" entry:"1399285223" project:"run.health" status:"completed" uuid:"9deb7743-0279-4027-b028-cd3c4c80faf4"]
 [description:"chapter 13" due:"1399240800" end:"1399293510" entry:"1399293510" project:"ror.rails-in-action" status:"completed" uuid:"74414e72-a0f6-43d8-9499-91b5616e4667"]
+[description:"add task to my dotfiles" due:"1399240800" end:"1399301981" entry:"1399301981" project:"arch.drp" status:"completed" uuid:"2266b15e-ebf7-47c7-b960-677414a698b9"]

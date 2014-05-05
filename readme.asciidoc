@@ -3,21 +3,28 @@
 
 == Purpose
 
-- To keep all my VIM configuration files under version control
-
+- To keep all my configuration files under version control
 
 == Process to install on a new machine
 
 . Git clone the repository into $HOME/dotfiles 
 . Symlink $HOME/.vim to $HOME/dotfiles/vim
 . Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
+. Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
 . Launch Vim and run the Ex command :BundleInstall
 
+== Applications
+
+- Vim
+- XMonad
+- Task
 
 == To do
 
 - Extend the dotfiles for other applications.
-- Create a script for the creation of the symlinks.
+- Create a Rake script for the creation of the symlinks.
+
+// Exclude ./task from the git repository
 
 
 
