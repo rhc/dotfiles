@@ -582,3 +582,4 @@
 {"description":"weeklu review","due":"20140508T220000Z","entry":"20140502T233830Z","modified":"20140505T144219Z","priority":"H","project":"ccie","status":"pending","uuid":"96bba666-bb00-4557-ae56-68d08815fd83"}
 {"description":"xxxxx","due":"20380117T220000Z","entry":"20140505T144930Z","project":"ccie","status":"pending","uuid":"b93eda70-e6de-4485-bf5f-f0663856ba37"}
 {"description":"add task to my dotfiles","due":"20140504T220000Z","end":"20140505T145941Z","entry":"20140505T145941Z","project":"arch.drp","status":"completed","uuid":"2266b15e-ebf7-47c7-b960-677414a698b9"}
+{"description":"fix xmonad configuration","due":"20140505T220000Z","entry":"20140506T100445Z","project":"ccie","status":"pending","uuid":"755d4323-f47a-4a36-aed1-9aa805b6ab67"}

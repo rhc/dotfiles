@@ -2324,3 +2324,6 @@ new [description:"xxxxx" due:"2147378400" entry:"1399301370" project:"ccie" stat
 time 1399301981
 new [description:"add task to my dotfiles" due:"1399240800" end:"1399301981" entry:"1399301981" project:"arch.drp" status:"completed" uuid:"2266b15e-ebf7-47c7-b960-677414a698b9"]
 ---
+time 1399370685
+new [description:"fix xmonad configuration" due:"1399327200" entry:"1399370685" project:"ccie" status:"pending" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
+---
