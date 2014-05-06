@@ -29,6 +29,7 @@ image:images/xmonad-logo.jpg[height=128]
 image:images/google-chrome-logo.png[height=64]
 image:images/ruby-logo.png[height=128]
 image:images/rails-logo.jpe[height=128]
+image:images/rvm-logo.jpe[height=64]
 
 image:images/anki-logo.png[height=64]
 image:images/gns3-logo.jpe[height=64]
