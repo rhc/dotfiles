@@ -74,7 +74,8 @@ Other
 - Instant messaging: pidgin ?, 
 - IRC client: irssi
 
-- Text editor: Vim image::images/vim_on_fire.gif[]
+- Text editor: Vim 
+image::images/vim_on_fire.gif[]
 - Display manager: XMonad
 - Task manager: Task
 - Screen saver: xscreensaver 
