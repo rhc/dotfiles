@@ -24,6 +24,8 @@ image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=128]
 image:images/xmonad-logo.jpg[height=128]
 image:images/google-chrome-logo.png[height=64]
+image:images/ruby-logo.png[height=64]
+image:images/rails-logo.png[height=64]
 
 === Criteria
 
