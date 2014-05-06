@@ -21,6 +21,7 @@
 image::images/archlinux-logo.png[height=256]
 image::images/vim_on_fire.gif[height=128]
 image:images/firefox-logo.png[height=64]
+image:images/chrome-logo.png[height=32]
 
 === Criteria
 
