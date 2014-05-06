@@ -58,7 +58,7 @@ This is the list of programs I use to get things done quickly.
 Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
 I tend to follow these 4 criteria:  
 
-[asciidoc]
+[sidebar]
 --
 Do one thing, and only one thing ::
 
