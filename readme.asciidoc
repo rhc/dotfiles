@@ -37,9 +37,10 @@ image:images/anki-logo.png[height=64]
 image:images/gns3-logo.jpe[height=64]
 image:images/wireshark-logo.jpe[height=64]
 
-image:images/vlc-logo.png[height=32]
-image:images/inkscape-logo.jpe[height=32]
-image:images/gimp-logo.jpg[height=32]
+image:images/vlc-logo.png[height=48]
+image:images/inkscape-logo.jpe[height=48]
+image:images/gimp-logo.jpg[height=48]
+image:images/calibre-logo.jpe[height=48]
 
 
 === Selection  criteria
