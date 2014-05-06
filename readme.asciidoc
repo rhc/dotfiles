@@ -69,9 +69,8 @@ Internet,
 Multimedia,
 Utilities,
 Documents,
-Security,
-Science and
-Other
+Security and
+Science. 
 
 
 === Internet
@@ -156,6 +155,7 @@ Other
 - Chm: chmsee
 - OCR software: ?
 - Note taking organizers: org-mode ? 
+- Flash card: Anki
 
 === Security
 
@@ -182,9 +182,6 @@ Other
 - Numerical computation: octave?
 - Statistic: R
 - Data evaluation: gnuplot
-
-
-
 
 
 == To do
