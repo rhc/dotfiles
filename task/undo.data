@@ -2356,3 +2356,6 @@ new [annotation_1394013121:"http:\/\/www.haskell.org\/haskellwiki\/Xmonad\/Confi
 time 1399391477
 new [description:"describe my setup in dotfiles\/readme.asciidoc" due:"1399327200" entry:"1399391477" project:"arch.drp" status:"pending" uuid:"ac31eca0-1c9e-48e5-9c66-8353b24e5d35"]
 ---
+time 1399393106
+new [description:"sound icon to status bar" due:"2147378400" entry:"1399393106" project:"lpi" status:"pending" uuid:"1ce02e9e-234a-4a6c-b88b-59f7f22c9675"]
+---

@@ -15,12 +15,142 @@
 
 == Applications
 
-- Operating system: Arch Linux
+
+This is my choice of software to get things done.
+Like my friend http://kmandla.wordpress.com/software/[Mandla], 
+I tend to follow these 4 criteria:  
+
+Do one thing, and only one thing ::
+
+Everybody likes a flexible program. 
+But I don’t like software that tries to do too much at once. 
+For example, I resent music management software suites or photo management applications. 
+I manage the photos. I manage the music. The application shows it, or plays it. Period. 
+If you try to be all things at once to me, you will only disappoint.
+
+Do that one thing well :: 
+
+A program needs focus — that goes without saying. 
+If it achieves that goal and doesn’t muddle the final product, it is a winner.
+In other words, if you can’t do it right, don’t bother trying at all.
+
+Don’t drag my system down :: 
+
+If you burden my installation with pointless libraries and dependencies that don’t add anything to your software, you fail. 
+Some of the greatest software ever written has about two dependencies. 
+Some of the worst drags in all of Gnome just to put an icon on the screen. 
+That is inexcusable.
+
+Finally, points are awarded for style :: 
+
+I can forgive and even adopt an ugly or cumbersome program 
+if it achieves in the first three categories. 
+But if you manage to capture all three and have a clever interface or a smooth look,
+then I embrace thee through the power of the internets.
+
+
+
+
+
+=== Internet
+
+- Network manager: netcl
+- Web browser: firefox, chrome
+- Add-ons web browser: pentadactyl
+- Youtube downloader: youtube-dl
+- Bit torrent client: transmission
+- Email client: gmail
+- Instant messaging: pidgin ?, 
+- IRC client: irssi
 
 - Text editor: Vim
 - Display manager: XMonad
 - Task manager: Task
 - Screen saver: xscreensaver 
+- Softphone: skype, hangout 
+- News aggregator: newsbeuter ?
+- Blog: jekyll ?
+- Twitter client: ?
+- Pastebin client: gist
+- Bitcoin: 
+
+=== Multimedia
+
+- Image viewer: feh
+- Raster editor: gimp, imagemagick
+- Vector graphics: dia, inkscape, 
+- 3D modeling/rendering: blender
+- Screen capture: scrot
+- Audio player: mpd, cmus
+- Video player: vlc
+- Volume manager: ?
+- CD ripping: ?
+- Sound editing: 
+- Mobile phone manager: gnokii
+- Video editor:
+- Screencast: ?
+- Collection manager: xbmc
+
+
+
+=== Utilities
+
+- Partition tools:
+- Shell: bash, zsh (oneday?)
+- Terminal emulator: urxvt, Termite (oneday?), tilda
+- Comparison: vimdiff
+- Disk usage: filelight ?, ncdu ? 
+- Clock synchronization: ntpd
+- System monitoring: conky?, htop, 
+- System information viewer: alsi?, 
+- Clipboard manager: xclip
+- Wallpaper setter: feh
+- Package management: pacman, packer 
+
+
+
+=== Documents
+
+- Office suite: libreoffice, google docs
+- Document markup language: asciidoc, pandoc
+- Spreadsheets: libreoffice calc
+- Scientific documents: latex
+- Text editor: vim 
+- E-book reader: calibre
+- Pdf/Djvu/postscript/comicbook viewer: zathura
+- Comic book viewer: zathura, mcomix?, qcomicBook ?
+- Terminal pagers: less, vimpager
+- Chm: chmsee
+- OCR software: ?
+- Note taking organizers: org-mode ? 
+
+=== Security
+
+- Security scanner: nmap
+- Network intrusion prevention and detection system: snort
+- Network protocol analyzer: wireshark
+- Vulnerability scanner: nessus
+- Intrusion detection system: tripwire
+- Backup program: #TODO
+- Screen locker: xscreensaver
+- Hash checker: md5sum
+- Encryption: gnupg, pgp ? 
+
+
+
+=== System 
+
+- Operating system: Arch Linux
+
+=== Science
+
+- Calculator: bc
+- Numerical computation: octave?
+- Statistic: R
+- Data evaluation: gnuplot
+
+
+
 
 
 == To do
