@@ -58,7 +58,7 @@ This is the list of programs I use to get things done quickly.
 Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
 I tend to follow these 4 criteria:  
 
-. Do one thing, and only one thing ::
+. Do one thing, and only one thing::
 +
 _Everybody likes a flexible program. 
 But I don’t like software that tries to do too much at once. 
@@ -66,20 +66,20 @@ For example, I resent music management software suites or photo management appli
 I manage the photos. I manage the music. The application shows it, or plays it. Period. 
 If you try to be all things at once to me, you will only disappoint._
 +
-. Do that one thing well :: 
+. Do that one thing well::
 +
 _A program needs focus — that goes without saying. 
 If it achieves that goal and doesn’t muddle the final product, it is a winner.
 In other words, if you can’t do it right, don’t bother trying at all._
 +
-. Don’t drag my system down :: 
+. Don’t drag my system down::
 +
 _If you burden my installation with pointless libraries and dependencies that don’t add anything to your software, you fail. 
 Some of the greatest software ever written has about two dependencies. 
 Some of the worst drags in all of Gnome just to put an icon on the screen. 
 That is inexcusable._
 +
-. Finally, points are awarded for style :: 
+. Finally, points are awarded for style::
 +
 _I can forgive and even adopt an ugly or cumbersome program 
 if it achieves in the first three categories. 
