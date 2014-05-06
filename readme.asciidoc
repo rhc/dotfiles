@@ -18,6 +18,9 @@
 
 == My list of applications
 
+image::images/archlinux-logo.png[height=32]
+image::images/vim_on_fire.gif[height=32]
+
 
 === Criteria
 
@@ -63,8 +66,6 @@ Security,
 Science and
 Other
 
-image::images/archlinux-logo.png[]
-image::images/vim_on_fire.gif[]
 
 === Internet
 
