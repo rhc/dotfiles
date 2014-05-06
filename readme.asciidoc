@@ -39,7 +39,7 @@ image:images/wireshark-logo.jpe[height=64]
 
 image:images/vlc-logo.png[height=32]
 image:images/inkscape-logo.jpe[height=32]
-image:images/gimp-logo.jpe[height=32]
+image:images/gimp-logo.jpg[height=32]
 
 
 === Selection  criteria
