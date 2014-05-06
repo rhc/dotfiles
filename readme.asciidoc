@@ -49,6 +49,7 @@ image:images/gimp-logo.jpg[height=48,title="GIMP"]
 image:images/graphviz-logo.png[height=48,title="Graphviz"]
 image:images/calibre-logo.jpe[height=48,title="Calibre"]
 image:images/virtualbox-logo.png[title="Oracle Virtual Box", height=48]
+image:images/transmission-logo.png[title="Transmission Bittorrent", height=48]
 
 
 === Selection  criteria
