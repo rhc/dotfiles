@@ -32,6 +32,7 @@ image:images/rails-logo.jpe[height=128]
 
 image:images/anki-logo.png[height=64]
 image:images/gns3-logo.jpe[height=64]
+image:images/wireshark-logo.jpe[height=64]
 
 === Criteria
 
