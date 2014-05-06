@@ -1,0 +1,88 @@
+# ~/.bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias cls='clear'
+alias ls='ls --color=auto'
+alias s='sudo shutdown -h now'
+alias r='sudo reboot'
+alias d='date'
+alias x='exit'
+alias lo='libreoffice'
+alias sx='startx'
+alias nb='wmname LG3D; netbeans'
+alias ah='vim ~/aha/aha.asciidoc'
+alias kpa='vim ~/aha/kpa.asciidoc'
+alias eu='cd ~/repo/euler'
+alias di='cd ~/repo/discrete-optimization'
+alias migrate='rake db:migrate && rake db:test:prepare'
+alias rmdir='rm -rf'
+PS1='\W\$'
+alias cdbook='cd ~/certifications/ccie/study-notes/book/'
+
+export HISTSIZE=10000
+export HISTFILESIZE=1000000
+export HISTCONTROL='erasedups'
+export HISTIGNORE='cls:ls:bg:fg:s:x:r'
+export PROMPT_COMMAND="history -a"
+export CDPATH=".:~:~/certifications"
+shopt -s histappend
+
+export GREP_OPTIONS="--color"
+export EDITOR="vim"
+export TERM=xterm-256color
+export LANG=en_US.UTF-8
+set -o vi
+
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+export NODE_PATH=/usr/lib/node_modules
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk/jre
+
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+source /usr/share/git/completion/git-completion.bash
+
+# from http://github.com/jweslley/rails_completion
+# https://github.com/lewstherin/rails_completion
+source ~/repo/rails_completion/rails.bash
+
+export SGML_CATALOG_FILES=/etc/xml/catalog
+
+## # Proxy environment variable
+#source ~/.work-proxy
+
+# improve rendering by disabling pango
+#export MOZ_DISABLE_PANGO=1
+
+path_prepend () {
+    if [ -d "$1" ]; then
+        PATH=${PATH//":$1:"/:} #delete all instances in the middle
+        PATH=${PATH/%":$1"/} #delete any instance at the end
+        PATH=${PATH/#"$1:"/} #delete any instance at the beginning
+        PATH="$1${PATH:+":$PATH"}" #prepend $1 or if $PATH is empty set to $1
+    fi
+}
+
+#TODO: add the directory only once
+
+path_prepend  "/usr/local/heroku/bin"   # Add heroku to PATH
+path_prepend  "~/bin"   # Add personal home/bin
+path_prepend  "~/.cabal/bin"   # Add personal home/bin
+path_prepend  "~/.xmonad/bin"   # Add personal home/bin
+
+# To use Firefox from urlscan in mutt
+export BROWSER=/usr/bin/firefox
+
+# For netbeans
+export _JAVA_AWT_WM_NONPARENTING=1
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export AWT_TOOLKIT= MToolKit
+
+# locale
+source ~/.profile
+
+export PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
