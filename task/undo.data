@@ -2327,3 +2327,14 @@ new [description:"add task to my dotfiles" due:"1399240800" end:"1399301981" ent
 time 1399370685
 new [description:"fix xmonad configuration" due:"1399327200" entry:"1399370685" project:"ccie" status:"pending" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
 ---
+time 1399375495
+new [description:"arduino" due:"2147378400" entry:"1399375495" project:"cash" status:"pending" uuid:"766bd61d-ed0a-47f5-aeb6-01aeb6fd729d"]
+---
+time 1399382806
+old [description:"fix xmonad configuration" due:"1399327200" entry:"1399370685" project:"ccie" status:"pending" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
+new [description:"fix xmonad configuration" due:"1399327200" entry:"1399370685" modified:"1399382806" project:"ccie" status:"pending" tags:"aha" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
+---
+time 1399382822
+old [description:"fix xmonad configuration" due:"1399327200" entry:"1399370685" modified:"1399382806" project:"ccie" status:"pending" tags:"aha" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
+new [description:"fix xmonad configuration" due:"1399327200" end:"1399382822" entry:"1399370685" modified:"1399382822" project:"ccie" status:"completed" tags:"aha" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
+---

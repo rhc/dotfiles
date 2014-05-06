@@ -15,9 +15,13 @@
 
 == Applications
 
-- Vim
-- XMonad
-- Task
+- Operating system: Arch Linux
+
+- Text editor: Vim
+- Display manager: XMonad
+- Task manager: Task
+- Screen saver: xscreensaver 
+
 
 == To do
 
