@@ -13,11 +13,16 @@
 . Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
 . Launch Vim and run the Ex command :BundleInstall
 
-== Applications
 
 
-This is my choice of software to get things done.
-Like my friend http://kmandla.wordpress.com/software/[Mandla], 
+
+== My list of applications
+
+
+=== Criteria
+
+This is the list of programs I use to get things done quickly.
+Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
 I tend to follow these 4 criteria:  
 
 Do one thing, and only one thing ::
@@ -49,7 +54,14 @@ But if you manage to capture all three and have a clever interface or a smooth l
 then I embrace thee through the power of the internets._
 
 
-
+You can find below my 'list' loosely grouped in the following categories: 
+Internet,
+Multimedia,
+Utilities,
+Documents,
+Security,
+Science and
+Other
 
 === Internet
 
@@ -62,7 +74,7 @@ then I embrace thee through the power of the internets._
 - Instant messaging: pidgin ?, 
 - IRC client: irssi
 
-- Text editor: Vim
+- Text editor: Vim image::images/vim_on_fire.gif[]
 - Display manager: XMonad
 - Task manager: Task
 - Screen saver: xscreensaver 
@@ -90,7 +102,13 @@ then I embrace thee through the power of the internets._
 - Screencast: ?
 - Collection manager: xbmc
 
+=== Development
 
+- programming language: ruby
+- Web framework: rails
+- Ruby version management: rvm
+- Version control system: git
+- CSS front-end framework: bootstrap
 
 === Utilities
 
@@ -105,8 +123,12 @@ then I embrace thee through the power of the internets._
 - Clipboard manager: xclip
 - Wallpaper setter: feh
 - Package management: pacman, packer 
-
-
+- Terminal multiplexer: tmux
+- Window manager: xmonad
+- application launcher: dmenu
+- finance: gnucash ?, ledger ?
+- Time management: taskwarrior, wyrd (oneday)
+- Login manager: xdm, gdm, slim
 
 === Documents
 
