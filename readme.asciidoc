@@ -56,13 +56,13 @@ image:images/transmission-logo.jpe[title="Transmission Bittorrent", height=48]
 
 This is the list of programs I use to get things done quickly.
 Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
-I tend to follow these 4 criteria:  
+I tend to select programs that:   
 
 
 . Do one thing, and only one thing
-. Do that one thing well
+. Do that one thing well and fast
 . Don’t drag my system down
-. Finally, points are awarded for style
+. Do it in style
 
 You can find below my programs loosely grouped in the following categories: 
 Internet,
