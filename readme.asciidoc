@@ -58,8 +58,6 @@ This is the list of programs I use to get things done quickly.
 Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
 I tend to follow these 4 criteria:  
 
-[sidebar]
---
 . Do one thing, and only one thing ::
 +
 _Everybody likes a flexible program. 
@@ -87,7 +85,6 @@ _I can forgive and even adopt an ugly or cumbersome program
 if it achieves in the first three categories. 
 But if you manage to capture all three and have a clever interface or a smooth look,
 then I embrace thee through the power of the internets._
---
 
 You can find below my programs loosely grouped in the following categories: 
 Internet,
