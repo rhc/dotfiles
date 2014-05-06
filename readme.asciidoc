@@ -30,6 +30,8 @@ image:images/google-chrome-logo.png[height=64]
 image:images/ruby-logo.png[height=128]
 image:images/rails-logo.jpe[height=128]
 
+image:images/anki-logo.jpe[height=64]
+
 === Criteria
 
 This is the list of programs I use to get things done quickly.
