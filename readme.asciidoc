@@ -22,8 +22,7 @@
 image:images/archlinux-logo.png[height=192]
 // image:images/vim_on_fire.gif[height=192]
 image:images/vim-logo.png[height=192]
-image:images/asciidoc-logo.png[height=64]
-image:images/graphviz-logo.png[height=64]
+image:images/asciidoc-logo.png[height=96]
 image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=128]
 image:images/google-chrome-logo.png[height=128]
@@ -43,6 +42,7 @@ image:images/nessus-logo.jpe[height=64]
 image:images/vlc-logo.png[height=48]
 image:images/inkscape-logo.jpe[height=48]
 image:images/gimp-logo.jpg[height=48]
+image:images/graphviz-logo.png[height=48]
 image:images/calibre-logo.jpe[height=48]
 
 
