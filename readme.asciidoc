@@ -22,7 +22,7 @@ image::images/archlinux-logo.png[height=256]
 image:images/vim_on_fire.gif[height=192]
 image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=128]
-image:images/xmonad-logo.png[height=128]
+image:images/xmonad-logo.jpg[height=128]
 image:images/google-chrome-logo.png[height=64]
 
 === Criteria
