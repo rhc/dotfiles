@@ -19,7 +19,7 @@
 == My list of applications
 
 image::images/archlinux-logo.png[height=256]
-image::images/vim_on_fire.gif[height=128]
+image:images/vim_on_fire.gif[height=128]
 image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=64]
 image:images/google-chrome-logo.png[height=32]
