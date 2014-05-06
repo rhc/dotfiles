@@ -33,7 +33,7 @@ image:images/rvm-logo.png[height=64]
 image:images/bootstrap-logo.png[height=64]
 // image:images/haml-logo.png[height=64]
 image:images/postgresql-logo.jpe[height=128]
-image:images/libreoffice-logo.png[height=128]
+image:images/libreoffice-logo.png[height=64]
 
 image:images/gns3-logo.jpe[height=64]
 image:images/wireshark-logo.jpe[height=64]
