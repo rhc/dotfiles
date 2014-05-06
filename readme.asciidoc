@@ -47,7 +47,7 @@ image:images/inkscape-logo.jpe[height=48]
 image:images/gimp-logo.jpg[height=48]
 image:images/graphviz-logo.png[height=48]
 image:images/calibre-logo.jpe[height=48]
-image:images/virtualbox-logo.png[height=48]
+image:images/virtualbox-logo.png["Oracle Virtual Box", height=48]
 
 
 === Selection  criteria
