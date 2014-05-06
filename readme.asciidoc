@@ -21,7 +21,7 @@
 // image:images/linux-logo.jpe[height=192]
 image:images/archlinux-logo.png[height=192]
 // image:images/vim_on_fire.gif[height=192]
-image:images/vim-logo.gif[height=192]
+image:images/vim-logo.png[height=192]
 image:images/asciidoc-logo.png[height=128]
 image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=128]
