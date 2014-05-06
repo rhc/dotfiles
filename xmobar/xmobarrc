@@ -20,7 +20,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                         ,"-m","green"         
                         ,"-h","red"]         
                         30
-                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run Date "%a%_d %b %H:%M" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"

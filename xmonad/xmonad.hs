@@ -8,7 +8,7 @@ import System.IO
 myTerminal = "/usr/bin/urxvt"
 myModMask = mod1Mask
 myWorkspaces = ["1:dev","2","3","4:vm","5:media","6","7","8","9:server"]
-myNormalBorderColor = "#7c7c7c"
+myNormalBorderColor = "black"
 myFocusedBorderColor = "red"
 myBorderWidth = 2
 

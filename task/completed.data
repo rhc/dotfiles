@@ -1,3 +1,5 @@
+[description:"display battery icon with xmobar" due:"1399327200" end:"1399391374" entry:"1399383020" modified:"1399391374" project:"arch.xmonad" start:"1399383026" status:"completed" uuid:"80d9fea5-ce17-450a-97ec-34e64bc31bc7"]
+[description:"fix xmonad configuration" due:"1399327200" end:"1399382822" entry:"1399370685" modified:"1399382822" project:"ccie" status:"completed" tags:"aha" uuid:"755d4323-f47a-4a36-aed1-9aa805b6ab67"]
 [description:"read principles at http:\/\/12factor.net" due:"1399240800" end:"1399299483" entry:"1399285469" modified:"1399299483" project:"ror.bestpractices" start:"1399285482" status:"completed" uuid:"71cd4ed7-9809-4f5a-a7e2-fe14c8546751"]
 [description:"rails in action" due:"1399327200" end:"1399296606" entry:"1399199761" modified:"1399296606" project:"ror.rails-in-action" start:"1399201085" status:"completed" tags:"aha" uuid:"10e338a8-8f1b-4dbe-b46f-e4b543a35958"]
 [description:"chapter 9" due:"1399240800" end:"1399296606" entry:"1399269143" modified:"1399296606" project:"ror.rails-in-action" status:"completed" uuid:"3227317f-7c14-468c-9e73-f91ee0deb791"]

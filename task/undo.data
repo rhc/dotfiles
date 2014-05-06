@@ -2345,3 +2345,14 @@ time 1399383026
 old [description:"display battery icon with xmobar" due:"1399327200" entry:"1399383020" project:"arch.xmonad" status:"pending" uuid:"80d9fea5-ce17-450a-97ec-34e64bc31bc7"]
 new [description:"display battery icon with xmobar" due:"1399327200" entry:"1399383020" modified:"1399383026" project:"arch.xmonad" start:"1399383026" status:"pending" uuid:"80d9fea5-ce17-450a-97ec-34e64bc31bc7"]
 ---
+time 1399391374
+old [description:"display battery icon with xmobar" due:"1399327200" entry:"1399383020" modified:"1399383026" project:"arch.xmonad" start:"1399383026" status:"pending" uuid:"80d9fea5-ce17-450a-97ec-34e64bc31bc7"]
+new [description:"display battery icon with xmobar" due:"1399327200" end:"1399391374" entry:"1399383020" modified:"1399391374" project:"arch.xmonad" start:"1399383026" status:"completed" uuid:"80d9fea5-ce17-450a-97ec-34e64bc31bc7"]
+---
+time 1399391413
+old [annotation_1394013121:"http:\/\/www.haskell.org\/haskellwiki\/Xmonad\/Config_archive\/John_Goerzen%27s_Configuration" description:"install xmobar" due:"1393970400" entry:"1394003711" modified:"1394013121" priority:"H" project:"lpi" status:"pending" uuid:"e70c0840-6b40-43ea-ad87-2c1bb7ada918"]
+new [annotation_1394013121:"http:\/\/www.haskell.org\/haskellwiki\/Xmonad\/Config_archive\/John_Goerzen%27s_Configuration" description:"install xmobar" due:"1393970400" end:"1399391413" entry:"1394003711" modified:"1399391413" priority:"H" project:"lpi" status:"completed" uuid:"e70c0840-6b40-43ea-ad87-2c1bb7ada918"]
+---
+time 1399391477
+new [description:"describe my setup in dotfiles\/readme.asciidoc" due:"1399327200" entry:"1399391477" project:"arch.drp" status:"pending" uuid:"ac31eca0-1c9e-48e5-9c66-8353b24e5d35"]
+---
