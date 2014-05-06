@@ -30,14 +30,14 @@ image:images/google-chrome-logo.png[height=64]
 image:images/ruby-logo.png[height=128]
 image:images/rails-logo.jpe[height=128]
 image:images/rvm-logo.png[height=128]
+image:images/bootstrap-logo.png[height=128]
 image:images/postgresql-logo.jpe[height=128]
-
 
 image:images/anki-logo.png[height=64]
 image:images/gns3-logo.jpe[height=64]
 image:images/wireshark-logo.jpe[height=64]
 
-=== Criteria
+=== Selection  criteria
 
 This is the list of programs I use to get things done quickly.
 Like my good friend http://kmandla.wordpress.com/software/[Mandla], 
@@ -72,7 +72,7 @@ But if you manage to capture all three and have a clever interface or a smooth l
 then I embrace thee through the power of the internets._
 
 
-You can find below my 'list' loosely grouped in the following categories: 
+You can find below my programs loosely grouped in the following categories: 
 Internet,
 Multimedia,
 Utilities,

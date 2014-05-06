@@ -102,3 +102,4 @@
 [description:"arduino" due:"2147378400" entry:"1399375495" project:"cash" status:"pending" uuid:"766bd61d-ed0a-47f5-aeb6-01aeb6fd729d"]
 [description:"describe my setup in dotfiles\/readme.asciidoc" due:"1399327200" entry:"1399391477" project:"arch.drp" status:"pending" uuid:"ac31eca0-1c9e-48e5-9c66-8353b24e5d35"]
 [description:"sound icon to status bar" due:"2147378400" entry:"1399393106" project:"lpi" status:"pending" uuid:"1ce02e9e-234a-4a6c-b88b-59f7f22c9675"]
+[description:"check if transfer reflected on fnb credit card" due:"1399413600" entry:"1399411434" project:"cash.fnb" status:"pending" uuid:"d3f51e01-4273-49cf-bc27-943af4cb8e14"]
