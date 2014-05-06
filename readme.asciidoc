@@ -39,6 +39,7 @@ image:images/wireshark-logo.jpe[height=64]
 image:images/nmap-logo.jpe[height=64]
 image:images/nessus-logo.jpe[height=64]
 image:images/tripwire-logo.jpe[height=64]
+image:images/ssh-logo.jpe[height=64]
 
 image:images/vlc-logo.png[height=48]
 image:images/inkscape-logo.jpe[height=48]
