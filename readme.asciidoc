@@ -18,9 +18,10 @@
 
 == My list of applications
 
-image:images/linux-logo.jpe[height=192]
+// image:images/linux-logo.jpe[height=192]
 image:images/archlinux-logo.png[height=192]
 image:images/vim_on_fire.gif[height=192]
+image:images/asciidoc-logo.png[height=128]
 image:images/git-logo.png[height=128]
 image:images/mozilla-firefox-logo.png[height=128]
 image:images/xmonad-logo.jpg[height=128]
@@ -166,12 +167,13 @@ Other
 - Screen locker: xscreensaver
 - Hash checker: md5sum
 - Encryption: gnupg, pgp ? 
-
+- Router simulator: gns
 
 
 === System 
 
 - Operating system: Arch Linux
+- Virtual server: virtualbox
 
 === Science
 
