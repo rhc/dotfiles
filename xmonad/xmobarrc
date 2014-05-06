@@ -1,14 +1,29 @@
 Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = TopW L 90
+       , position = TopW L 100
        , commands = [ Run Weather "EGPF" ["-t"," <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
                     , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run BatteryP ["BAT0"]
+                        ["-t","<acstatus><left>%"         
+                        ,"-L" ,"10"         
+                        ,"-H","80"         
+                        ,"-p","3"         
+                        ,"--"         
+                        ,"-i","<fc=yellow><icon=/home/ckyony/dotfiles/xmobar/icons/ac15.xbm/></fc>"         
+                        ,"-O","<fc=yellow><icon=/home/ckyony/dotfiles/xmobar/icons/ac15.xbm/></fc>"         
+                        ,"-o","<fc=#EEEEEE><icon=/home/ckyony/dotfiles/xmobar/icons/batt5full.xbm/></fc>"         
+                        ,"-L","-15"         
+                        ,"-H","-5"         
+                        ,"-l","lightblue"         
+                        ,"-m","green"         
+                        ,"-h","red"]         
+                        30
                     , Run Date "%a %b %_d %l:%M" "date" 10
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% *    <fc=#ee9a00>%date%</fc> | %EGPF%"
+       , template = "%StdinReader% }{ %cpu% | %battery%  <fc=#ee9a00>%date%</fc> | %EGPF%"
        }

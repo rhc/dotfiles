@@ -7,6 +7,10 @@ import System.IO
 
 myTerminal = "/usr/bin/urxvt"
 myModMask = mod1Mask
+myWorkspaces = ["1:dev","2","3","4:vm","5:media","6","7","8","9:server"]
+myNormalBorderColor = "#7c7c7c"
+myFocusedBorderColor = "red"
+myBorderWidth = 2
 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar"
@@ -17,10 +21,14 @@ main = do
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
+        , borderWidth = myBorderWidth
         , terminal = myTerminal
         , modMask = myModMask
+        , normalBorderColor = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
+        , workspaces = myWorkspaces
         } `additionalKeys`
-        [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
+        [ ((mod1Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        , ((0, xK_Print), spawn "scrot")
+        , ((0, xK_Print), spawn "/usr/bin/scrot")
         ]
