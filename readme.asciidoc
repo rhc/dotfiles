@@ -22,11 +22,14 @@ I tend to follow these 4 criteria:
 
 Do one thing, and only one thing :::
 
-  Everybody likes a flexible program. 
-  But I don’t like software that tries to do too much at once. 
-  For example, I resent music management software suites or photo management applications. 
-  I manage the photos. I manage the music. The application shows it, or plays it. Period. 
-  If you try to be all things at once to me, you will only disappoint.
+[italic]
+----
+Everybody likes a flexible program. 
+But I don’t like software that tries to do too much at once. 
+For example, I resent music management software suites or photo management applications. 
+I manage the photos. I manage the music. The application shows it, or plays it. Period. 
+If you try to be all things at once to me, you will only disappoint.
+----
 
 Do that one thing well ::: 
 
