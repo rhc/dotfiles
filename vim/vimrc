@@ -26,7 +26,6 @@ Bundle 'vim-scripts/tlib'
 
  
 " Setup Bundle Support 
-execute pathogen#infect()
 syntax on " syntax highlighting
 filetype plugin indent on " Automatically detect file types.
 set encoding=utf-8
@@ -169,9 +168,7 @@ let g:dbext_default_history_file = '~/.vim/dbext_sql_history.txt'
 
 source ~/.vim/abbreviations.txt
 
-
-
-imap <F2>  <C-R>=strftime("%Y-%m-%d %a %H:%M")<CR>
+imap <F2>  <c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>
 nmap <F2>  a<C-R>=strftime("%Y-%m-%d %a %H:%M")<CR><ESC>
 imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>

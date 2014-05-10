@@ -64,6 +64,10 @@ I tend to select programs that:
 . Don’t drag my system down
 . Do it in style
 
+I prefer CLI over GUI. 
+I like to enable Vim keybindings accross all programs. 
+
+
 You can find below my programs loosely grouped in the following categories: 
 Internet,
 Multimedia,

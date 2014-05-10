@@ -2362,3 +2362,378 @@ new [description:"sound icon to status bar" due:"2147378400" entry:"1399393106" 
 time 1399411434
 new [description:"check if transfer reflected on fnb credit card" due:"1399413600" entry:"1399411434" project:"cash.fnb" status:"pending" uuid:"d3f51e01-4273-49cf-bc27-943af4cb8e14"]
 ---
+time 1399444065
+old [description:"xxxxx" due:"2147378400" entry:"1399301370" project:"ccie" status:"pending" uuid:"b93eda70-e6de-4485-bf5f-f0663856ba37"]
+new [description:"xxxxx" due:"2147378400" end:"1399444061" entry:"1399301370" modified:"1399444065" project:"ccie" status:"deleted" uuid:"b93eda70-e6de-4485-bf5f-f0663856ba37"]
+---
+time 1399444098
+old [description:"create first rails application with john" due:"1398808800" entry:"1398723416" project:"family.john" status:"pending" uuid:"6ea70458-bddd-4fbb-86b2-d17439a5031a"]
+new [description:"create first rails application with john" due:"1398808800" end:"1399444098" entry:"1398723416" modified:"1399444098" project:"family.john" status:"completed" uuid:"6ea70458-bddd-4fbb-86b2-d17439a5031a"]
+---
+time 1399444136
+old [description:"call chantal" due:"1395266400" entry:"1395309509" project:"social" status:"pending" uuid:"662b49a1-5a08-4df1-a0e6-d320aab21694"]
+new [description:"call chantal" due:"1401573600" entry:"1395309509" modified:"1399444136" project:"social" status:"pending" uuid:"662b49a1-5a08-4df1-a0e6-d320aab21694"]
+---
+time 1399444153
+old [description:"weekly review" due:"1395525600" entry:"1395128054" project:"tm" status:"pending" uuid:"0e57912e-65b2-4853-a518-a4f09037c129"]
+new [description:"weekly review" due:"1399759200" entry:"1395128054" modified:"1399444153" project:"tm" status:"pending" uuid:"0e57912e-65b2-4853-a518-a4f09037c129"]
+---
+time 1399444177
+old [description:"6km loop @6m30" due:"1400867471" entry:"1399139471" project:"run" status:"pending" tags:"aha" uuid:"ecdcf384-ac51-41c4-9346-ad5e45924945"]
+new [description:"6km loop @6m30" due:"1400867471" end:"1399444174" entry:"1399139471" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"ecdcf384-ac51-41c4-9346-ad5e45924945"]
+---
+time 1399444177
+old [description:"6km loop @6m00" due:"1403027523" entry:"1399139523" project:"run" status:"pending" tags:"aha" uuid:"c5fe582e-ceb0-4458-b1e2-a07b7f816492"]
+new [description:"6km loop @6m00" due:"1403027523" end:"1399444177" entry:"1399139523" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"c5fe582e-ceb0-4458-b1e2-a07b7f816492"]
+---
+time 1399444177
+old [description:"6km loop @5m30" due:"1404755561" entry:"1399139561" project:"run" status:"pending" tags:"aha" uuid:"81265782-f232-4bd0-9e41-d12ee6a2fdd6"]
+new [description:"6km loop @5m30" due:"1404755561" end:"1399444177" entry:"1399139561" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"81265782-f232-4bd0-9e41-d12ee6a2fdd6"]
+---
+time 1399444177
+old [description:"6km loop @5m15" due:"1406915638" entry:"1399139638" project:"run" status:"pending" tags:"aha" uuid:"29ca949f-b2f8-4fe3-a2ed-c23ef9672e42"]
+new [description:"6km loop @5m15" due:"1406915638" end:"1399444177" entry:"1399139638" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"29ca949f-b2f8-4fe3-a2ed-c23ef9672e42"]
+---
+time 1399444177
+old [description:"6km loop @5m10" due:"1408643654" entry:"1399139654" project:"run" status:"pending" tags:"aha" uuid:"5ca790ec-9ad8-4d10-afa5-c2b19fa2dcf6"]
+new [description:"6km loop @5m10" due:"1408643654" end:"1399444177" entry:"1399139654" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"5ca790ec-9ad8-4d10-afa5-c2b19fa2dcf6"]
+---
+time 1399444177
+old [description:"6km loop @5m05" due:"1410371677" entry:"1399139677" project:"run" status:"pending" tags:"aha" uuid:"eb583e84-944c-4ad9-a584-3481580edb3e"]
+new [description:"6km loop @5m05" due:"1410371677" end:"1399444177" entry:"1399139677" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"eb583e84-944c-4ad9-a584-3481580edb3e"]
+---
+time 1399444177
+old [description:"6km loop @5m00" due:"1412099690" entry:"1399139690" project:"run" status:"pending" tags:"aha" uuid:"556a0d57-5e14-4643-9e02-2249b416c950"]
+new [description:"6km loop @5m00" due:"1412099690" end:"1399444177" entry:"1399139690" modified:"1399444177" project:"run" status:"completed" tags:"aha" uuid:"556a0d57-5e14-4643-9e02-2249b416c950"]
+---
+time 1399444289
+old [description:"describe my setup in dotfiles\/readme.asciidoc" due:"1399327200" entry:"1399391477" project:"arch.drp" status:"pending" uuid:"ac31eca0-1c9e-48e5-9c66-8353b24e5d35"]
+new [annotation_1399444289:"create my github site" description:"describe my setup in dotfiles\/readme.asciidoc" due:"1399327200" entry:"1399391477" modified:"1399444289" project:"arch.drp" status:"pending" uuid:"ac31eca0-1c9e-48e5-9c66-8353b24e5d35"]
+---
+time 1399444684
+old [description:"check if transfer reflected on fnb credit card" due:"1399413600" entry:"1399411434" project:"cash.fnb" status:"pending" uuid:"d3f51e01-4273-49cf-bc27-943af4cb8e14"]
+new [description:"check if transfer reflected on fnb credit card" due:"1399413600" end:"1399444684" entry:"1399411434" modified:"1399444684" project:"cash.fnb" status:"completed" uuid:"d3f51e01-4273-49cf-bc27-943af4cb8e14"]
+---
+time 1399444880
+new [description:"setup backup and restore procedures for my machine" due:"1399500000" entry:"1399444880" project:"arch.drp" status:"pending" uuid:"ca68c80e-5de0-454d-8735-2598104b60e2"]
+---
+time 1399444914
+old [description:"increase partition for arch" due:"1396303200" entry:"1395536503" priority:"H" project:"arch" status:"pending" uuid:"9b6af23d-c091-4851-9962-e5b268fcf124"]
+new [depends:"ca68c80e-5de0-454d-8735-2598104b60e2" description:"increase partition for arch" due:"1396303200" entry:"1395536503" modified:"1399444914" priority:"H" project:"arch" status:"pending" uuid:"9b6af23d-c091-4851-9962-e5b268fcf124"]
+---
+time 1399444979
+old [description:"read chap multicast" due:"1391983200" entry:"1392043345" status:"pending" uuid:"14f08d3a-686c-4fae-a9d3-d9e75dbc43b6"]
+new [description:"read chap multicast" due:"1391983200" entry:"1392043345" modified:"1399444979" project:"ccie" status:"pending" uuid:"14f08d3a-686c-4fae-a9d3-d9e75dbc43b6"]
+---
+time 1399445087
+old [description:"problem 185 master mind" due:"1396389600" entry:"1396430223" modified:"1396430234" project:"euler" status:"pending" uuid:"5e9b73a6-fb64-477a-b4d3-f7cc4fc37d10"]
+new [description:"problem 185 master mind" due:"1401660000" entry:"1396430223" modified:"1399445087" project:"euler" status:"pending" uuid:"5e9b73a6-fb64-477a-b4d3-f7cc4fc37d10"]
+---
+time 1399445136
+old [description:"read chap multicast" due:"1391983200" entry:"1392043345" modified:"1399444979" project:"ccie" status:"pending" uuid:"14f08d3a-686c-4fae-a9d3-d9e75dbc43b6"]
+new [description:"read chap multicast" due:"1391983200" end:"1399445136" entry:"1392043345" modified:"1399445136" project:"ccie" status:"completed" uuid:"14f08d3a-686c-4fae-a9d3-d9e75dbc43b6"]
+---
+time 1399445288
+old [description:"synchronise firefox data" due:"1391983200" entry:"1392045254" modified:"1393228756" priority:"H" project:"arch.firefox" status:"pending" uuid:"b50bc2a7-3596-4346-b981-5e26cf7e87a7"]
+new [description:"synchronise firefox data" due:"1391983200" entry:"1392045254" modified:"1399445288" priority:"H" project:"arch.firefox" start:"1399445288" status:"pending" uuid:"b50bc2a7-3596-4346-b981-5e26cf7e87a7"]
+---
+time 1399445559
+old [description:"synchronise firefox data" due:"1391983200" entry:"1392045254" modified:"1399445288" priority:"H" project:"arch.firefox" start:"1399445288" status:"pending" uuid:"b50bc2a7-3596-4346-b981-5e26cf7e87a7"]
+new [description:"synchronise firefox data" due:"1391983200" end:"1399445559" entry:"1392045254" modified:"1399445559" priority:"H" project:"arch.firefox" start:"1399445288" status:"completed" uuid:"b50bc2a7-3596-4346-b981-5e26cf7e87a7"]
+---
+time 1399445570
+old [description:"sync firefox browser" due:"1392069600" entry:"1392064264" project:"lpi.firefox" status:"pending" uuid:"bd764365-d3b1-427d-81ab-0bb381ec8fcc"]
+new [description:"sync firefox browser" due:"1392069600" end:"1399445570" entry:"1392064264" modified:"1399445570" project:"lpi.firefox" status:"completed" uuid:"bd764365-d3b1-427d-81ab-0bb381ec8fcc"]
+---
+time 1399445586
+old [description:"reduce task number below 50" due:"1396216800" entry:"1396279321" modified:"1399271417" project:"tm" start:"1399271417" status:"pending" uuid:"5e70ee89-2714-4afa-8e20-9c991ea5e793"]
+new [description:"reduce task number below 50" due:"1396216800" end:"1399445586" entry:"1396279321" modified:"1399445586" project:"tm" start:"1399271417" status:"completed" uuid:"5e70ee89-2714-4afa-8e20-9c991ea5e793"]
+---
+time 1399445670
+old [description:"install pygments" due:"1394143200" entry:"1394177032" project:"lpi.asciidoc" status:"pending" uuid:"53898214-3cf0-4b25-aa70-08686833164e"]
+new [description:"install pygments" due:"1394143200" entry:"1394177032" modified:"1399445670" project:"lpi.asciidoc" start:"1399445670" status:"pending" uuid:"53898214-3cf0-4b25-aa70-08686833164e"]
+---
+time 1399445802
+new [description:"automatically update pacman db every day with cron" due:"2147378400" entry:"1399445802" project:"arch.drp" status:"pending" uuid:"1d3fdd19-358b-42fb-b7b2-7902676d9ee7"]
+---
+time 1399448157
+new [description:"install asciidoc bootstrap backend" due:"1399413600" end:"1399448157" entry:"1399448157" project:"lpi.asciidoc" status:"completed" uuid:"01cd5a3c-0c74-4547-b2a8-96f7598f5dce"]
+---
+time 1399450599
+old [description:"install pygments" due:"1394143200" entry:"1394177032" modified:"1399445670" project:"lpi.asciidoc" start:"1399445670" status:"pending" uuid:"53898214-3cf0-4b25-aa70-08686833164e"]
+new [description:"install pygments" due:"1394143200" end:"1399450599" entry:"1394177032" modified:"1399450599" project:"lpi.asciidoc" start:"1399445670" status:"completed" uuid:"53898214-3cf0-4b25-aa70-08686833164e"]
+---
+time 1399450763
+old [description:"claim my name on about.me" due:"1398808800" entry:"1398875991" project:"cash" status:"pending" uuid:"87fd90a6-c81f-4ce0-91f8-2555e7c921fc"]
+new [description:"claim my name on about.me" due:"1398808800" end:"1399450755" entry:"1398875991" modified:"1399450763" project:"cash" status:"deleted" uuid:"87fd90a6-c81f-4ce0-91f8-2555e7c921fc"]
+---
+time 1399450779
+old [description:"better looking fonts in Firefox or chrome" due:"1398981600" entry:"1399067306" project:"arch.browser" status:"pending" uuid:"21eeeadf-6b38-4c1c-86f6-c5531006eee2"]
+new [description:"better looking fonts in Firefox or chrome" due:"1401400800" entry:"1399067306" modified:"1399450779" project:"arch.browser" status:"pending" uuid:"21eeeadf-6b38-4c1c-86f6-c5531006eee2"]
+---
+time 1399450813
+old [description:"function to add and start task" due:"1401573600" entry:"1399102275" project:"tm.task" status:"pending" uuid:"872fe8aa-2aba-4d87-b042-64913aa60461"]
+new [description:"function to add and start task" due:"1401573600" entry:"1399102275" modified:"1399450813" project:"tm.task" start:"1399450813" status:"pending" uuid:"872fe8aa-2aba-4d87-b042-64913aa60461"]
+---
+time 1399450891
+new [description:"re agile web development" due:"1399500000" entry:"1399450891" project:"ror.agile-web-development" status:"pending" tags:"aha" uuid:"08337d2e-578b-4b67-b57b-9a71affad0b4"]
+---
+time 1399450915
+old [description:"function to add and start task" due:"1401573600" entry:"1399102275" modified:"1399450813" project:"tm.task" start:"1399450813" status:"pending" uuid:"872fe8aa-2aba-4d87-b042-64913aa60461"]
+new [depends:"08337d2e-578b-4b67-b57b-9a71affad0b4" description:"function to add and start task" due:"1401573600" entry:"1399102275" modified:"1399450915" project:"tm.task" start:"1399450813" status:"pending" uuid:"872fe8aa-2aba-4d87-b042-64913aa60461"]
+---
+time 1399451538
+new [description:"read chapter 1" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"fbec9873-b1d4-4259-ae2f-cdbda8460086"]
+---
+time 1399451538
+new [description:"read chapter 2" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b84872ea-f2b3-473a-92ac-2a41e3d887bc"]
+---
+time 1399451538
+new [description:"read chapter 3" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"c8e66be9-267d-4492-a04c-3cf1c1e9aa55"]
+---
+time 1399451538
+new [description:"read chapter 4" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"9220fef2-de70-42b1-87b3-e28f65949269"]
+---
+time 1399451538
+new [description:"read chapter 5" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"ebceb671-acc6-4811-9828-228b70a07912"]
+---
+time 1399451538
+new [description:"read chapter 6" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"0630b79b-4ba7-4480-92a9-f88482704319"]
+---
+time 1399451538
+new [description:"read chapter 7" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"476e0128-9f89-43d2-bca8-073f290d8e50"]
+---
+time 1399451538
+new [description:"read chapter 8" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"c883f1ab-641d-4834-b3ac-03b3f5523864"]
+---
+time 1399451538
+new [description:"read chapter 9" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"39505946-d8c1-4129-9725-816789844dbb"]
+---
+time 1399451538
+new [description:"read chapter 10" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"1488acc8-adad-4cdd-aef8-81f66b6c3abc"]
+---
+time 1399451538
+new [description:"read chapter 11" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"e7290d55-25b4-4cd3-aea2-5ed6629d63f8"]
+---
+time 1399451538
+new [description:"read chapter 12" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"4fa4568f-47e5-45c2-89cc-3bad4bef1a87"]
+---
+time 1399451538
+new [description:"read chapter 13" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"819fcde8-9fbc-45d7-b6ec-f39457f10cbb"]
+---
+time 1399451538
+new [description:"read chapter 14" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"094df58d-9952-4fa7-b0fa-878f69b6af2b"]
+---
+time 1399451538
+new [description:"read chapter 15" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b1976fd9-d9a1-4a10-937d-136c3e19a27d"]
+---
+time 1399451538
+new [description:"read chapter 16" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"a3890cba-2702-40c3-98e5-b5103ceda81d"]
+---
+time 1399451538
+new [description:"read chapter 17" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"73f8679d-6c60-4466-93a6-979f57fcf523"]
+---
+time 1399451538
+new [description:"read chapter 18" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"d384ade7-016d-4d03-97d9-ec0fe458b801"]
+---
+time 1399451538
+new [description:"read chapter 19" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"0574af9a-4760-4ced-a324-4d14ce01f801"]
+---
+time 1399451538
+new [description:"read chapter 20" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b032d9c1-9efb-4160-af85-1ad96b178266"]
+---
+time 1399451538
+new [description:"read chapter 21" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"08621141-5c7e-4640-930c-fa5c67b7ba04"]
+---
+time 1399451538
+new [description:"read chapter 22" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"14fded46-dd3c-407e-ae80-a666443fd448"]
+---
+time 1399451538
+new [description:"read chapter 23" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"937fb6e0-b079-4b5b-b990-917ef41c3469"]
+---
+time 1399451538
+new [description:"read chapter 24" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"a866624b-6788-44b5-92f6-b43bebddff40"]
+---
+time 1399451538
+new [description:"read chapter 25" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"f87108bc-6e67-42c1-8c5a-ff23f9cf0882"]
+---
+time 1399451644
+old [description:"read chapter 1" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"fbec9873-b1d4-4259-ae2f-cdbda8460086"]
+new [description:"read chapter 1" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451639" status:"pending" uuid:"fbec9873-b1d4-4259-ae2f-cdbda8460086"]
+---
+time 1399451644
+old [description:"read chapter 2" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b84872ea-f2b3-473a-92ac-2a41e3d887bc"]
+new [description:"read chapter 2" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"b84872ea-f2b3-473a-92ac-2a41e3d887bc"]
+---
+time 1399451644
+old [description:"read chapter 3" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"c8e66be9-267d-4492-a04c-3cf1c1e9aa55"]
+new [description:"read chapter 3" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"c8e66be9-267d-4492-a04c-3cf1c1e9aa55"]
+---
+time 1399451644
+old [description:"read chapter 4" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"9220fef2-de70-42b1-87b3-e28f65949269"]
+new [description:"read chapter 4" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"9220fef2-de70-42b1-87b3-e28f65949269"]
+---
+time 1399451644
+old [description:"read chapter 5" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"ebceb671-acc6-4811-9828-228b70a07912"]
+new [description:"read chapter 5" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"ebceb671-acc6-4811-9828-228b70a07912"]
+---
+time 1399451644
+old [description:"read chapter 6" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"0630b79b-4ba7-4480-92a9-f88482704319"]
+new [description:"read chapter 6" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"0630b79b-4ba7-4480-92a9-f88482704319"]
+---
+time 1399451644
+old [description:"read chapter 7" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"476e0128-9f89-43d2-bca8-073f290d8e50"]
+new [description:"read chapter 7" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"476e0128-9f89-43d2-bca8-073f290d8e50"]
+---
+time 1399451644
+old [description:"read chapter 8" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"c883f1ab-641d-4834-b3ac-03b3f5523864"]
+new [description:"read chapter 8" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"c883f1ab-641d-4834-b3ac-03b3f5523864"]
+---
+time 1399451644
+old [description:"read chapter 9" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"39505946-d8c1-4129-9725-816789844dbb"]
+new [description:"read chapter 9" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"39505946-d8c1-4129-9725-816789844dbb"]
+---
+time 1399451644
+old [description:"read chapter 10" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"1488acc8-adad-4cdd-aef8-81f66b6c3abc"]
+new [description:"read chapter 10" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"1488acc8-adad-4cdd-aef8-81f66b6c3abc"]
+---
+time 1399451644
+old [description:"read chapter 11" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"e7290d55-25b4-4cd3-aea2-5ed6629d63f8"]
+new [description:"read chapter 11" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"e7290d55-25b4-4cd3-aea2-5ed6629d63f8"]
+---
+time 1399451644
+old [description:"read chapter 12" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"4fa4568f-47e5-45c2-89cc-3bad4bef1a87"]
+new [description:"read chapter 12" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"4fa4568f-47e5-45c2-89cc-3bad4bef1a87"]
+---
+time 1399451644
+old [description:"read chapter 13" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"819fcde8-9fbc-45d7-b6ec-f39457f10cbb"]
+new [description:"read chapter 13" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"819fcde8-9fbc-45d7-b6ec-f39457f10cbb"]
+---
+time 1399451644
+old [description:"read chapter 14" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"094df58d-9952-4fa7-b0fa-878f69b6af2b"]
+new [description:"read chapter 14" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"094df58d-9952-4fa7-b0fa-878f69b6af2b"]
+---
+time 1399451644
+old [description:"read chapter 15" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b1976fd9-d9a1-4a10-937d-136c3e19a27d"]
+new [description:"read chapter 15" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"b1976fd9-d9a1-4a10-937d-136c3e19a27d"]
+---
+time 1399451644
+old [description:"read chapter 16" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"a3890cba-2702-40c3-98e5-b5103ceda81d"]
+new [description:"read chapter 16" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"a3890cba-2702-40c3-98e5-b5103ceda81d"]
+---
+time 1399451644
+old [description:"read chapter 17" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"73f8679d-6c60-4466-93a6-979f57fcf523"]
+new [description:"read chapter 17" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"73f8679d-6c60-4466-93a6-979f57fcf523"]
+---
+time 1399451644
+old [description:"read chapter 18" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"d384ade7-016d-4d03-97d9-ec0fe458b801"]
+new [description:"read chapter 18" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"d384ade7-016d-4d03-97d9-ec0fe458b801"]
+---
+time 1399451644
+old [description:"read chapter 19" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"0574af9a-4760-4ced-a324-4d14ce01f801"]
+new [description:"read chapter 19" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"0574af9a-4760-4ced-a324-4d14ce01f801"]
+---
+time 1399451644
+old [description:"read chapter 20" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"b032d9c1-9efb-4160-af85-1ad96b178266"]
+new [description:"read chapter 20" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"b032d9c1-9efb-4160-af85-1ad96b178266"]
+---
+time 1399451644
+old [description:"read chapter 21" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"08621141-5c7e-4640-930c-fa5c67b7ba04"]
+new [description:"read chapter 21" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"08621141-5c7e-4640-930c-fa5c67b7ba04"]
+---
+time 1399451644
+old [description:"read chapter 22" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"14fded46-dd3c-407e-ae80-a666443fd448"]
+new [description:"read chapter 22" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"14fded46-dd3c-407e-ae80-a666443fd448"]
+---
+time 1399451644
+old [description:"read chapter 23" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"937fb6e0-b079-4b5b-b990-917ef41c3469"]
+new [description:"read chapter 23" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"937fb6e0-b079-4b5b-b990-917ef41c3469"]
+---
+time 1399451644
+old [description:"read chapter 24" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"a866624b-6788-44b5-92f6-b43bebddff40"]
+new [description:"read chapter 24" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"a866624b-6788-44b5-92f6-b43bebddff40"]
+---
+time 1399451644
+old [description:"read chapter 25" due:"1399413600" entry:"1399451538" project:"ror.agile-web-development" status:"pending" uuid:"f87108bc-6e67-42c1-8c5a-ff23f9cf0882"]
+new [description:"read chapter 25" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"f87108bc-6e67-42c1-8c5a-ff23f9cf0882"]
+---
+time 1399451736
+old [description:"log study hours with rails app" due:"1399154400" entry:"1399074775" project:"ror" status:"pending" uuid:"773cb89b-6a1e-4cf2-adfe-118083df491b"]
+new [depends:"fbec9873-b1d4-4259-ae2f-cdbda8460086,b84872ea-f2b3-473a-92ac-2a41e3d887bc,c8e66be9-267d-4492-a04c-3cf1c1e9aa55,9220fef2-de70-42b1-87b3-e28f65949269,ebceb671-acc6-4811-9828-228b70a07912,0630b79b-4ba7-4480-92a9-f88482704319,476e0128-9f89-43d2-bca8-073f290d8e50,c883f1ab-641d-4834-b3ac-03b3f5523864,39505946-d8c1-4129-9725-816789844dbb,1488acc8-adad-4cdd-aef8-81f66b6c3abc,e7290d55-25b4-4cd3-aea2-5ed6629d63f8,4fa4568f-47e5-45c2-89cc-3bad4bef1a87,819fcde8-9fbc-45d7-b6ec-f39457f10cbb,094df58d-9952-4fa7-b0fa-878f69b6af2b,b1976fd9-d9a1-4a10-937d-136c3e19a27d,a3890cba-2702-40c3-98e5-b5103ceda81d,73f8679d-6c60-4466-93a6-979f57fcf523,d384ade7-016d-4d03-97d9-ec0fe458b801,0574af9a-4760-4ced-a324-4d14ce01f801,b032d9c1-9efb-4160-af85-1ad96b178266,08621141-5c7e-4640-930c-fa5c67b7ba04,14fded46-dd3c-407e-ae80-a666443fd448,937fb6e0-b079-4b5b-b990-917ef41c3469,a866624b-6788-44b5-92f6-b43bebddff40,f87108bc-6e67-42c1-8c5a-ff23f9cf0882" description:"log study hours with rails app" due:"1399154400" entry:"1399074775" modified:"1399451736" project:"ror" status:"pending" uuid:"773cb89b-6a1e-4cf2-adfe-118083df491b"]
+---
+time 1399452177
+new [description:"install mysqlserver" due:"1399413600" entry:"1399452177" project:"ror" status:"pending" uuid:"2e444671-446e-400e-9e36-1104c779b885"]
+---
+time 1399454944
+new [description:"install postgres server" due:"1399413600" entry:"1399454944" project:"ror.agile-web-development" status:"pending" uuid:"c3d0cf49-36b3-4a03-a25a-42adac10d107"]
+---
+time 1399455172
+old [description:"install mysqlserver" due:"1399413600" entry:"1399452177" project:"ror" status:"pending" uuid:"2e444671-446e-400e-9e36-1104c779b885"]
+new [description:"install mysqlserver" due:"1399413600" end:"1399455170" entry:"1399452177" modified:"1399455172" project:"ror" status:"deleted" uuid:"2e444671-446e-400e-9e36-1104c779b885"]
+---
+time 1399457604
+old [description:"install postgres server" due:"1399413600" entry:"1399454944" project:"ror.agile-web-development" status:"pending" uuid:"c3d0cf49-36b3-4a03-a25a-42adac10d107"]
+new [description:"install postgres server" due:"1399413600" end:"1399457604" entry:"1399454944" modified:"1399457604" project:"ror.agile-web-development" status:"completed" uuid:"c3d0cf49-36b3-4a03-a25a-42adac10d107"]
+---
+time 1399459175
+old [description:"read chapter 1" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451639" status:"pending" uuid:"fbec9873-b1d4-4259-ae2f-cdbda8460086"]
+new [description:"read chapter 1" due:"1399413600" end:"1399459175" entry:"1399451538" modified:"1399459175" project:"ror.agile-web-development" start:"1399451639" status:"completed" uuid:"fbec9873-b1d4-4259-ae2f-cdbda8460086"]
+---
+time 1399460651
+new [description:"setup unicorn for rails" due:"1404644651" entry:"1399460651" project:"ror.unicorn" status:"pending" uuid:"213bb27b-b1bf-4ada-b3f2-919dfe940669"]
+---
+time 1399460874
+new [description:"use fibonacci layout" due:"1399500000" entry:"1399460874" project:"ror.layout" status:"pending" uuid:"d1011c27-5afd-4134-9678-35a5c88cb7f7"]
+---
+time 1399462409
+old [description:"read security features data plane" due:"1399586400" entry:"1386951692" modified:"1399300939" project:"ccie" status:"pending" uuid:"46f26b04-77ad-44b4-b964-41b24193ec75"]
+new [description:"read security features data plane" due:"1399586400" end:"1399462409" entry:"1386951692" modified:"1399462409" project:"ccie" status:"completed" uuid:"46f26b04-77ad-44b4-b964-41b24193ec75"]
+---
+time 1399462409
+old [description:"read duplex rules" due:"1399586400" entry:"1389892522" modified:"1399300939" project:"ccie" status:"pending" uuid:"e8de0f35-ebfd-4e5b-ad10-7a3bfc7c469b"]
+new [description:"read duplex rules" due:"1399586400" end:"1399462409" entry:"1389892522" modified:"1399462409" project:"ccie" status:"completed" uuid:"e8de0f35-ebfd-4e5b-ad10-7a3bfc7c469b"]
+---
+time 1399463340
+old [description:"read chapter 2" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"b84872ea-f2b3-473a-92ac-2a41e3d887bc"]
+new [description:"read chapter 2" due:"1399413600" end:"1399463337" entry:"1399451538" modified:"1399463340" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"b84872ea-f2b3-473a-92ac-2a41e3d887bc"]
+---
+time 1399463340
+old [description:"read chapter 3" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"c8e66be9-267d-4492-a04c-3cf1c1e9aa55"]
+new [description:"read chapter 3" due:"1399413600" end:"1399463340" entry:"1399451538" modified:"1399463340" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"c8e66be9-267d-4492-a04c-3cf1c1e9aa55"]
+---
+time 1399463340
+old [description:"read chapter 4" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"9220fef2-de70-42b1-87b3-e28f65949269"]
+new [description:"read chapter 4" due:"1399413600" end:"1399463340" entry:"1399451538" modified:"1399463340" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"9220fef2-de70-42b1-87b3-e28f65949269"]
+---
+time 1399464430
+old [description:"read chapter 5" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"ebceb671-acc6-4811-9828-228b70a07912"]
+new [description:"read chapter 5" due:"1399413600" end:"1399464430" entry:"1399451538" modified:"1399464430" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"ebceb671-acc6-4811-9828-228b70a07912"]
+---
+time 1399470404
+new [description:"learn how to create haml view automatically" due:"1399586400" entry:"1399470404" project:"ror.agi" status:"pending" uuid:"21e963bd-3aba-473e-8074-40f9e720f98f"]
+---
+time 1399470441
+old [description:"learn how to create haml view automatically" due:"1399586400" entry:"1399470404" project:"ror.agi" status:"pending" uuid:"21e963bd-3aba-473e-8074-40f9e720f98f"]
+new [description:"learn how to create haml view automatically" due:"1399586400" entry:"1399470404" modified:"1399470441" project:"ror.agile-web-development" status:"pending" uuid:"21e963bd-3aba-473e-8074-40f9e720f98f"]
+---
+time 1399472599
+new [description:"progress bar of the download by firefox on xmobar" due:"2147378400" entry:"1399472599" project:"arch.xmonad" status:"pending" tags:"nicetohave" uuid:"31f97c9a-780a-4a8e-980c-08d95e98a579"]
+---
+time 1399475550
+old [description:"read chapter 6" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"0630b79b-4ba7-4480-92a9-f88482704319"]
+new [description:"read chapter 6" due:"1399413600" end:"1399475550" entry:"1399451538" modified:"1399475550" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"0630b79b-4ba7-4480-92a9-f88482704319"]
+---
+time 1399479354
+old [description:"read chapter 7" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"476e0128-9f89-43d2-bca8-073f290d8e50"]
+new [description:"read chapter 7" due:"1399413600" end:"1399479354" entry:"1399451538" modified:"1399479354" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"476e0128-9f89-43d2-bca8-073f290d8e50"]
+---
+time 1399483199
+new [description:"read caching with rails" due:"2147378400" entry:"1399483199" project:"ror.railsguide" status:"pending" uuid:"28362b9e-1c03-476b-a554-3c328d0153c0"]
+---
+time 1399483357
+old [description:"read chapter 8" due:"1399413600" entry:"1399451538" modified:"1399451644" project:"ror.agile-web-development" start:"1399451644" status:"pending" uuid:"c883f1ab-641d-4834-b3ac-03b3f5523864"]
+new [description:"read chapter 8" due:"1399413600" end:"1399483357" entry:"1399451538" modified:"1399483357" project:"ror.agile-web-development" start:"1399451644" status:"completed" uuid:"c883f1ab-641d-4834-b3ac-03b3f5523864"]
+---
+time 1399718303
+new [description:"typing-club practice in pk" due:"1399759200" entry:"1399718303" project:"tm" status:"pending" uuid:"9660fb9b-ec7a-431e-80ff-808e1d4272fd"]
+---

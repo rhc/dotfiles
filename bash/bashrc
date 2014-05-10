@@ -70,7 +70,6 @@ path_prepend () {
 #TODO: add the directory only once
 
 path_prepend  "/usr/local/heroku/bin"   # Add heroku to PATH
-path_prepend  "~/bin"   # Add personal home/bin
 path_prepend  "~/.cabal/bin"   # Add personal home/bin
 path_prepend  "~/.xmonad/bin"   # Add personal home/bin
 
@@ -82,7 +81,8 @@ export _JAVA_AWT_WM_NONPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 export AWT_TOOLKIT= MToolKit
 
-# locale
-source ~/.profile
 
-export PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
+# RV
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
+
