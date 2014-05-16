@@ -90,6 +90,7 @@ set wildignore+=*.pdf
 set wildignore+=*.png
 set wildignore+=*.jpg
 set wildignore+=*.gif
+autocmd FileType help wincmd L " open help window in vertical split
 
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set scrolljump=5 " lines to scroll when cursor leaves screen
