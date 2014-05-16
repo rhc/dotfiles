@@ -2737,3 +2737,9 @@ new [description:"read chapter 8" due:"1399413600" end:"1399483357" entry:"13994
 time 1399718303
 new [description:"typing-club practice in pk" due:"1399759200" entry:"1399718303" project:"tm" status:"pending" uuid:"9660fb9b-ec7a-431e-80ff-808e1d4272fd"]
 ---
+time 1399796892
+new [description:"use minitest for the code in my applications" due:"1399759200" entry:"1399796892" project:"ror.pk" status:"pending" uuid:"505d865a-4db7-4a99-9f8a-79c96800db57"]
+---
+time 1399806385
+new [description:"Guardfile to vim ft=ruby" due:"2147378400" entry:"1399806385" project:"ror" status:"pending" uuid:"94708b7e-4180-4b1b-9e49-7876ae3e80f2"]
+---

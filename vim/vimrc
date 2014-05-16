@@ -85,7 +85,12 @@ set ignorecase " case insensitive search
 set smartcase " case sensitive when uc present
 set wildmenu " show list instead of just completing
 set wildignorecase " case insensitivity for the filename completion"
-set wildmode=list:longest,full " command <Tab> completion, list matches, then longest common part, then all.
+set wildmode=list,longest,full " command <Tab> completion, list matches, then longest common part, then all.
+set wildignore+=*.pdf
+set wildignore+=*.png
+set wildignore+=*.jpg
+set wildignore+=*.gif
+
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set scrolljump=5 " lines to scroll when cursor leaves screen
 set scrolloff=3 " minimum lines to keep above and below cursor

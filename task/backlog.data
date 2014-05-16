@@ -698,3 +698,5 @@
 {"description":"read caching with rails","due":"20380117T220000Z","entry":"20140507T171959Z","project":"ror.railsguide","status":"pending","uuid":"28362b9e-1c03-476b-a554-3c328d0153c0"}
 {"description":"read chapter 8","due":"20140506T220000Z","end":"20140507T172237Z","entry":"20140507T083218Z","modified":"20140507T172237Z","project":"ror.agile-web-development","start":"20140507T083404Z","status":"completed","uuid":"c883f1ab-641d-4834-b3ac-03b3f5523864"}
 {"description":"typing-club practice in pk","due":"20140510T220000Z","entry":"20140510T103823Z","project":"tm","status":"pending","uuid":"9660fb9b-ec7a-431e-80ff-808e1d4272fd"}
+{"description":"use minitest for the code in my applications","due":"20140510T220000Z","entry":"20140511T082812Z","project":"ror.pk","status":"pending","uuid":"505d865a-4db7-4a99-9f8a-79c96800db57"}
+{"description":"Guardfile to vim ft=ruby","due":"20380117T220000Z","entry":"20140511T110625Z","project":"ror","status":"pending","uuid":"94708b7e-4180-4b1b-9e49-7876ae3e80f2"}
