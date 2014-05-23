@@ -103,7 +103,7 @@ Rake::Task["test:run"].enhance ["test:features"]
 run "bundle exec guard init minitest"
 
 remove_file "Guardfile"
-guardfile = %q{
+create_file "Guardfile", %q{
 # vim: ft=ruby
 
 guard :minitest,  spring: 'rake test' do
@@ -140,14 +140,13 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
 }
-create_file "Guardfile", guardfile
  
 #Add spring to bins and start spring
 run 'spring binstub --all'
  
 #Fix README.md
-run "rm README.rdoc"
-run "touch readme.asciidoc"
+remove_file "README.rdoc"
+create_file "readme.asciidoc"
  
 #Initialize local Git repository and Initial Commit
 git :init
@@ -159,6 +158,3 @@ run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"na
 git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
 git push: "origin master"
  
-#TODO
-#add custom error pages
-#continue to add gems and config the
