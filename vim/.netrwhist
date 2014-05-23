@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/ckyony/dotfiles/vim/bundle/.vundle'
-let g:netrw_dirhist_2='/home/ckyony/dotfiles/vim/bundle'
-let g:netrw_dirhist_3='/home/ckyony/dotfiles/vim/bundle/vundle'
-let g:netrw_dirhist_4='/home/ckyony/dotfiles/vim/bundle'
-let g:netrw_dirhist_5='/home/ckyony/dotfiles/vim/bundle/vundle'
-let g:netrw_dirhist_6='/etc/asciidoc/filters'
-let g:netrw_dirhist_7='/etc/asciidoc/filters/source'
-let g:netrw_dirhist_8='/home/ckyony/repo/promise-keeper/db/migrate'
-let g:netrw_dirhist_9='/home/ckyony/repo/promise-keeper/app/views/promises'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ckyony/repo/promise-keeper/test/features'
+let g:netrw_dirhist_2='/home/ckyony/repo/template1'
+let g:netrw_dirhist_3='/home/ckyony/repo'
+let g:netrw_dirhist_4='/home/ckyony/repo/template1/test'

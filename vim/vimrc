@@ -85,7 +85,7 @@ set ignorecase " case insensitive search
 set smartcase " case sensitive when uc present
 set wildmenu " show list instead of just completing
 set wildignorecase " case insensitivity for the filename completion"
-set wildmode=list,longest,full " command <Tab> completion, list matches, then longest common part, then all.
+set wildmode=longest,list,full " command <Tab> completion, list matches, then longest common part, then all.
 set wildignore+=*.pdf
 set wildignore+=*.png
 set wildignore+=*.jpg
@@ -106,8 +106,6 @@ vnoremap / /\v
 nnoremap ? /\v
 vnoremap ? ?\v
 cnoremap %s/ %s/\v
-
-
 
 set foldenable " auto fold code
 

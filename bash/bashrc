@@ -33,6 +33,7 @@ export GREP_OPTIONS="--color"
 export EDITOR="vim"
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
+export GITHUB_USER='rhc'
 set -o vi
 
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
@@ -52,11 +53,8 @@ source ~/repo/rails_completion/rails.bash
 
 export SGML_CATALOG_FILES=/etc/xml/catalog
 
-## # Proxy environment variable
-#source ~/.work-proxy
-
 # improve rendering by disabling pango
-#export MOZ_DISABLE_PANGO=1
+export MOZ_DISABLE_PANGO=1
 
 path_prepend () {
     if [ -d "$1" ]; then
@@ -82,7 +80,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 export AWT_TOOLKIT= MToolKit
 
 
-# RV
+# RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
 
