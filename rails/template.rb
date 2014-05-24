@@ -8,6 +8,7 @@
 # --database=postgresql 
 # -m ~/dotfiles/rails/template.rb
 #
+inject_into_file "Gemfile", "ruby '#{RUBY_VERSION}'", after: "source 'https://rubygems.org'\n"
 
 # security
 # gem 'devise'
@@ -40,7 +41,23 @@ gem 'thin'
   #gem 'minitest-colorize' , group: [:test]
   #}
 
+# production {
+  gem "rails_12factor"
+  #}
+
 run "bundle install"
+
+# Reload the browser on file changes
+environment nil, env: 'development' do
+  <<-eos
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  eos
+end
+
+# Use SASS extension 
+run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
+# add a line for asset pipeline compatibility
+# config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
 generate "simple_form:install --bootstrap"
  
@@ -58,7 +75,7 @@ environment %q[
  
 # setup minitest-rails-capybara and pride in test_helper
 remove_file "test/test_helper.rb"
-create_file "test/test_helper.rb", %q{ 
+create_file "test/test_helper.rb", %q[ 
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
@@ -82,7 +99,7 @@ end
 
 #Capybara driver
 Capybara.javascript_driver = :webkit
- }
+]
 
 #create postgres DB for postgress.app 
 #Adds default user to username for development and test
