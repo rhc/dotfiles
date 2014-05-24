@@ -51,7 +51,7 @@ generate('minitest:install')
 #config minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
-    g.test_framework :mini_test, spec: true, fixture_replacement: :factory_girl, fixture: true
+    g.test_framework :minitest, spec: true, fixture_replacement: :factory_girl, fixture: true
   end
 ]
 
