@@ -35,7 +35,7 @@ gem 'thin'
 # test {
   gem 'minitest-rails' , group: [:test]
   gem 'minitest-rails-capybara' , group: [:test]
-  gem 'factory_girl_rails' , group: [:test]
+  gem 'factory_girl_rails' , group: [:test, :development] 
   #gem 'minitest-focus' , group: [:test]
   #gem 'minitest-colorize' , group: [:test]
   #}
@@ -49,9 +49,11 @@ generate('minitest:install')
 
  
 #config minitest Spec DSL and Fixtures defaults in config/application.rb
-environment "config.generators do |g|\n g.test_framework :mini_test, spec: true, fixture: false\n end"
-
-#TODO:
+environment %q[ 
+  config.generators do |g|
+    g.test_framework :mini_test, spec: true, fixture_replacement: :factory_girl, fixture: true
+  end
+]
 
  
 # setup minitest-rails-capybara and pride in test_helper
@@ -158,3 +160,8 @@ run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"na
 git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
 git push: "origin master"
  
+#TODO
+# cache partials results in development
+# read caching with rails in the RailsGuide
+# config.action_controller.perform_caching = true
+#
