@@ -2,33 +2,34 @@ set nocompatible " must be first line
 
 " Setup Vundle
 filetype off
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle'
 
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'Raimondi/delimitMate'
-Bundle 'SirVer/ultisnips'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'dagwieers/asciidoc-vim'
-Bundle 'honza/vim-snippets'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/dbext.vim'
-Bundle 'vim-scripts/gnuplot.vim'
-Bundle 'vim-scripts/tabular'
-Bundle 'vim-scripts/tlib'
-Bundle 'croaky/vim-colors-github'
-
- 
-" Setup Bundle Support 
-syntax on " syntax highlighting
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Raimondi/delimitMate'
+Plugin 'SirVer/ultisnips'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'dagwieers/asciidoc-vim'
+Plugin 'honza/vim-snippets'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/dbext.vim'
+Plugin 'vim-scripts/gnuplot.vim'
+Plugin 'vim-scripts/tabular'
+Plugin 'vim-scripts/tlib'
+Plugin 'croaky/vim-colors-github'
+call vundle#end()
 filetype plugin indent on " Automatically detect file types.
+
+
+
+syntax on " syntax highlighting
 set encoding=utf-8
 scriptencoding utf-8
 

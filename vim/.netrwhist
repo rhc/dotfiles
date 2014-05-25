@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/ckyony/repo/promise-keeper/test/features'
 let g:netrw_dirhist_2='/home/ckyony/repo/template1'
 let g:netrw_dirhist_3='/home/ckyony/repo'
 let g:netrw_dirhist_4='/home/ckyony/repo/template1/test'
+let g:netrw_dirhist_5='/home/ckyony/repo/rails-bootstrap/app/models'
+let g:netrw_dirhist_6='/home/ckyony/repo/rails-bootstrap/app/models/concerns'
+let g:netrw_dirhist_7='/home/ckyony/repo/rails-bootstrap/app/models'
+let g:netrw_dirhist_8='/home/ckyony/repo/rails-bootstrap/app'
+let g:netrw_dirhist_9='/home/ckyony/repo/rails-bootstrap/app/controllers'

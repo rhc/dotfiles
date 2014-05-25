@@ -1,6 +1,5 @@
 /task/*
 
  
-vim/bundle/vundle/doc/tags
-vim/bundle/vundle/.netrwhist
-vim/.netrwhist
+vim/bundle/Vundle.vim/doc/tags
+vim/**/*/.netrwhist
