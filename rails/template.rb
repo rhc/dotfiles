@@ -1,5 +1,4 @@
 # rails app template
-# vim: fdm=marker fmr={,}
 #
 # Run using $ rails new the_application_name -m /path/to/template.rb
 #
@@ -14,50 +13,65 @@ inject_into_file "Gemfile", "ruby '#{RUBY_VERSION}'", after: "source 'https://ru
 # gem 'devise'
 gem 'thin'
 
-# Front-end {
-  gem 'haml-rails'
-  gem 'bootstrap-sass'
-  gem 'font-awesome-rails'
-  gem 'bootstrap-datepicker-rails'
-  gem 'bootstrap-will_paginate'
-  gem 'simple_form'
-  #}
+gem 'haml-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-will_paginate'
+gem 'simple_form'
+# gem 'high_voltage'
 
-# development { 
-  gem 'guard-minitest' , group: [:development]
-  gem 'guard-livereload' , group: [:development]
-  gem 'rack-livereload' , group: [:development]
-  gem 'libnotify' , group: [:development]
-  gem 'better_errors' , group: [:development]
-  gem 'quiet_assets' , group: [:development]
-  gem 'pry-rails' , group: [:development]
-  #}
+gemgroup :development do 
+  gem 'guard-bundler'
+  gem 'guard-minitest' 
+  gem 'guard-livereload' 
+  gem 'rack-livereload' 
+  gem 'libnotify' 
+  gem 'better_errors' 
+  #gem 'binding_of_caller', platforms: :mri_21
+  gem 'quiet_assets' 
+  gem 'pry-rails' 
+  gem 'rails_layout'
+end
 
-# test {
-  gem 'minitest-rails' , group: [:test]
-  gem 'minitest-rails-capybara' , group: [:test]
-  gem 'factory_girl_rails' , group: [:test, :development] 
-  #gem 'minitest-focus' , group: [:test]
-  #gem 'minitest-colorize' , group: [:test]
-  #}
+gemgroup :test do 
+  gem 'minitest-rails' 
+  gem 'minitest-rails-capybara' 
+  gem 'faker'
+  # gem 'database_cleaner'
+  #gem 'minitest-focus' 
+  #gem 'minitest-colorize' 
+end
 
-# production {
+gemgroup :production do
   gem "rails_12factor"
-  #}
+end
+
+gem 'factory_girl_rails' , group: [:test, :development] 
+
 
 run "bundle install"
 
 # Reload the browser on file changes
 environment nil, env: 'development' do
   <<-eos
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  config.middleware.use Rack::LiveReload
   eos
 end
 
 # Use SASS extension 
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
-# add a line for asset pipeline compatibility
+# add a line for asset pipeline compatibility for rails 4.0
 # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+# setup bootstrap
+create_file "app/assets/stylesheets/custom.css.scss", %q[
+ import "bootstrap";
+]
+
+insert_into_file "app/assets/javascripts/application.js", after: "//= require turbolinks" do
+  "//= require bootstrap"
+end
 
 generate "simple_form:install --bootstrap"
  
@@ -157,6 +171,10 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+end
+
+guard :bundler do
+  watch('Gemfile')
 end
 }
  

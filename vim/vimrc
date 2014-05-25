@@ -23,6 +23,7 @@ Bundle 'vim-scripts/dbext.vim'
 Bundle 'vim-scripts/gnuplot.vim'
 Bundle 'vim-scripts/tabular'
 Bundle 'vim-scripts/tlib'
+Bundle 'croaky/vim-colors-github'
 
  
 " Setup Bundle Support 
