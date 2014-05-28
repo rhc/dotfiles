@@ -83,6 +83,8 @@ generate('minitest:install')
 environment %q[ 
   config.generators do |g|
     g.test_framework :minitest, spec: true, fixture_replacement: :factory_girl, fixture: true
+    g.helper false
+    g.assets false
   end
 ]
 
