@@ -21,20 +21,22 @@ gem 'bootstrap-will_paginate'
 gem 'simple_form'
 # gem 'high_voltage'
 
-gemgroup :development do 
+gem_group :development do 
   gem 'guard-bundler'
   gem 'guard-minitest' 
   gem 'guard-livereload' 
   gem 'rack-livereload' 
   gem 'libnotify' 
   gem 'better_errors' 
-  #gem 'binding_of_caller', platforms: :mri_21
+  gem 'binding_of_caller', platforms: :mri_21
   gem 'quiet_assets' 
   gem 'pry-rails' 
   gem 'rails_layout'
+  gem 'rails_best_practices'
+  #gem 'bullet'
 end
 
-gemgroup :test do 
+gem_group :test do 
   gem 'minitest-rails' 
   gem 'minitest-rails-capybara' 
   gem 'faker'
@@ -43,11 +45,9 @@ gemgroup :test do
   #gem 'minitest-colorize' 
 end
 
-gemgroup :production do
+gem_group :production do
   gem "rails_12factor"
 end
-
-gem 'factory_girl_rails' , group: [:test, :development] 
 
 
 run "bundle install"
@@ -66,10 +66,10 @@ run "mv app/assets/stylesheets/application.css app/assets/stylesheets/applicatio
 
 # setup bootstrap
 create_file "app/assets/stylesheets/custom.css.scss", %q[
- import "bootstrap";
+ @import "bootstrap";
 ]
 
-insert_into_file "app/assets/javascripts/application.js", after: "//= require turbolinks" do
+insert_into_file "app/assets/javascripts/application.js", after: "//= require turbolinks\n" do
   "//= require bootstrap"
 end
 
@@ -82,12 +82,33 @@ generate('minitest:install')
 #config minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
-    g.test_framework :minitest, spec: true, fixture_replacement: :factory_girl, fixture: true
+    g.test_framework :minitest, spec: true, fixture: true
     g.helper false
     g.assets false
   end
 ]
 
+#TODO
+#insert_into_file "config/environments/development.rb" , after: "Rails.application.configure do" do
+#%q[
+#    config.after_initialize do
+#      Bullet.enable = true
+#      Bullet.alert = true 
+#      Bullet.bullet_logger = true
+#      Bullet.console = true
+#      Bullet.growl = false 
+#      Bullet.xmpp = { :account  => 'bullets_account@jabber.org',
+#                      :password => 'bullets_password_for_jabber',
+#                      :receiver => 'your_account@jabber.org',
+#                      :show_online_status => true }
+#      Bullet.rails_logger = true
+#      Bullet.bugsnag = true
+#      Bullet.airbrake = true
+#      Bullet.add_footer = true
+#      Bullet.stacktrace_includes = [ 'your_gem', 'your_middleware' ]
+#  end
+#  ]
+#end
  
 # setup minitest-rails-capybara and pride in test_helper
 remove_file "test/test_helper.rb"
@@ -97,7 +118,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
-require "#{Rails.root}/db/seeds.rb"
 
 require "minitest/pride"
 #require 'minitest/focus'

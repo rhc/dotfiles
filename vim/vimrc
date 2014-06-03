@@ -1,12 +1,13 @@
 set nocompatible " must be first line
+set encoding=utf-8
+scriptencoding utf-8
 
 " Setup Vundle
 filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle'
-
+Plugin 'gmarik/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
@@ -23,15 +24,12 @@ Plugin 'vim-scripts/dbext.vim'
 Plugin 'vim-scripts/gnuplot.vim'
 Plugin 'vim-scripts/tabular'
 Plugin 'vim-scripts/tlib'
-Plugin 'croaky/vim-colors-github'
+
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
 
 
-
 syntax on " syntax highlighting
-set encoding=utf-8
-scriptencoding utf-8
 
 set shortmess+=afilmnrxoOtT " abbrev. of messages (avoids 'hit enter')
 set virtualedit=onemore " allow for cursor beyond last character
@@ -147,8 +145,7 @@ nmap <silent> <leader>5b ebys5w*<ESC>
 nmap <silent> <leader>6b ebys6w*<ESC>
 
 
-" fast terminal
-" set ttyfast
+set ttyfast " send more characters for redraws"
 
 "source vimrc each time I save it
 if has("autocmd")
@@ -178,8 +175,8 @@ imap <F2>  <c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>
 nmap <F2>  a<C-R>=strftime("%Y-%m-%d %a %H:%M")<CR><ESC>
 imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>
-vnoremap P "*p
-nnoremap P "*p
+vnoremap P "+gP
+nnoremap P "+gP
 nnoremap Y "*y
 vnoremap Y "*y
 
