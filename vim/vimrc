@@ -81,7 +81,10 @@ set laststatus=2
 
 set backspace=indent,eol,start " backspace for dummys
 set linespace=0 " No extra spaces between rows
-set nu " Line numbers on
+set number " Line numbers on
+set cursorline 
+set cursorcolumn
+set fillchars+=vert:│  "Neat vertical window separator line
 "set showmatch " show matching brackets/parenthesis
 set incsearch " find as you type search
 set nohlsearch " highlight search terms
