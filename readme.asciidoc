@@ -5,13 +5,34 @@
 
 - To keep all my configuration files under version control
 
-== Process to install on a new machine
+== Setup
 
-. Git clone the repository into $HOME/dotfiles 
-. Symlink $HOME/.vim to $HOME/dotfiles/vim
-. Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
-. Symlink $HOME/.vimrc to $HOME/dotfiles/vimrc
-. Launch Vim and run the Ex command :BundleInstall
+#TODO: This section is under construction
+
+Clone the repo
+
+----
+git clone https://github.com/rhc/dotfiles.git
+----
+
+Link the dotfiles
+
+----
+rake link
+----
+
+Install the dependencies
+
+----
+rake pacman
+----
+
+
+Bootstrap 
+
+----
+rake bootstrap:vim
+----
 
 
 

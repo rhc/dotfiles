@@ -84,11 +84,11 @@ set linespace=0 " No extra spaces between rows
 set number " Line numbers on
 set cursorline 
 set cursorcolumn
-set fillchars+=vert:│  "Neat vertical window separator line
 "set showmatch " show matching brackets/parenthesis
 set incsearch " find as you type search
 set nohlsearch " highlight search terms
 set winminheight=0 " windows can be 0 line high
+set fillchars+=vert:│  "Neat vertical window separator line
 set ignorecase " case insensitive search
 set smartcase " case sensitive when uc present
 set wildmenu " show list instead of just completing
@@ -114,6 +114,13 @@ vnoremap / /\v
 nnoremap ? /\v
 vnoremap ? ?\v
 cnoremap %s/ %s/\v
+
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 set foldenable " auto fold code
 
