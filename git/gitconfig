@@ -1,0 +1,12 @@
+[user]
+	email = ckyony@changamuka.com
+	name = Christian Kyony
+[alias]
+	co = checkout
+	ctags = !.git/hooks/ctags
+[core]
+	editor = vim
+[push]
+	default = matching
+[init]
+	templatedir = ~/.git_template

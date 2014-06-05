@@ -124,6 +124,7 @@ Science.
 - Ruby version management: rvm
 - Version control system: git
 - CSS front-end framework: bootstrap
+- Source file indexer: ctags
 
 === Utilities
 
