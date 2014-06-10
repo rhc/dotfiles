@@ -29,6 +29,7 @@ Plugin 'vim-scripts/dbext.vim'
 Plugin 'vim-scripts/gnuplot.vim'
 Plugin 'vim-scripts/tabular'
 Plugin 'vim-scripts/tlib'
+Plugin 'croaky/vim-colors-github'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.

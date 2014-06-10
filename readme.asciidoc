@@ -36,7 +36,6 @@ rake bootstrap:vim
 
 
 
-
 == My list of applications
 
 // image:images/linux-logo.jpe[height=192]
@@ -108,6 +107,7 @@ Science.
 - Email client: gmail
 - Instant messaging: pidgin ?, 
 - IRC client: irssi
+- Tunneling reverse proxy: ngrok
 
 - Text editor: Vim 
 - Display manager: XMonad
