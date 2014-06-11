@@ -4,10 +4,6 @@
 #
 # Executed by startx (run your window manager from here)
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources 
 setxkbmap -option caps:escape
 xset +fp /usr/share/fonts/local
@@ -25,7 +21,7 @@ xsetroot -cursor_name left_ptr
 #xset s off
 
 # disable the touchpad while typing
-syndaeamon  -d -k -i 2 &
+syndaeamon  -d -k -i 1.5
 
 #dzen2 -ta r -fg '#a8a3f7' -bg '#3f3c6d' -fn '-*-terminus-medium-r-normal--16-*' -e "button1=exec:xterm" & 
 urxvt &
