@@ -21,7 +21,7 @@ xsetroot -cursor_name left_ptr
 #xset s off
 
 # disable the touchpad while typing
-syndaeamon  -d -k -i 1.5
+/usr/bin/syndaemon  -d -k -i 0.6
 
 #dzen2 -ta r -fg '#a8a3f7' -bg '#3f3c6d' -fn '-*-terminus-medium-r-normal--16-*' -e "button1=exec:xterm" & 
 urxvt &
