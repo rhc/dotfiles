@@ -49,7 +49,7 @@ image:images/google-chrome-logo.png[height=128]
 image:images/xmonad-logo.jpg[height=128]
 image:images/ruby-logo.png[height=128]
 image:images/rails-logo.jpe[height=128]
-image:images/rvm-logo.png[height=64]
+image:images/rbenv-logo.png[height=64]
 image:images/bootstrap-logo.png[height=64]
 // image:images/haml-logo.png[height=64]
 image:images/postgresql-logo.jpe[height=128]
@@ -142,7 +142,7 @@ Science.
 
 - programming language: ruby
 - Web framework: rails
-- Ruby version management: rvm
+- Ruby version management: rbenv
 - Version control system: git
 - CSS front-end framework: bootstrap
 - Source file indexer: ctags
