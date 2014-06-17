@@ -30,6 +30,7 @@ Plugin 'vim-scripts/gnuplot.vim'
 Plugin 'vim-scripts/tabular'
 Plugin 'vim-scripts/tlib'
 Plugin 'croaky/vim-colors-github'
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
@@ -200,6 +201,7 @@ set autowriteall " automatically write a file when leaving a modified buffer
 
 " Gemmfile, Rakefile, Vagrantfile, Thorfile are Ruby"
 au BufRead, BufNewFile {Gemfile, Rakefile, Vagrantfile,Thorfile,config.ru} set ft=ruby
+au BufRead, BufNewFile *.adoc setfiletype asciidoc
 
 " enable compiler support for ruby
 compiler ruby

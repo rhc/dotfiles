@@ -7,8 +7,6 @@
 # --database=postgresql 
 # -m ~/dotfiles/rails/template.rb
 #
-inject_into_file "Gemfile", "ruby '#{RUBY_VERSION}'", after: "source 'https://rubygems.org'\n"
-
 # security
 # gem 'devise'
 gem 'thin'
@@ -18,7 +16,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-will_paginate'
-gem 'simple_form'
+gem 'simple_form', '3.1.0.rc1', github: 'plataformatec/simple_form'
 # gem 'high_voltage'
 
 gem_group :development do 
@@ -40,9 +38,6 @@ gem_group :test do
   gem 'minitest-rails' 
   gem 'minitest-rails-capybara' 
   gem 'faker'
-  # gem 'database_cleaner'
-  #gem 'minitest-focus' 
-  #gem 'minitest-colorize' 
 end
 
 gem_group :production do
@@ -70,7 +65,7 @@ create_file "app/assets/stylesheets/custom.css.scss", %q[
 ]
 
 insert_into_file "app/assets/javascripts/application.js", after: "//= require turbolinks\n" do
-  "//= require bootstrap"
+  "//= require bootstrap\n"
 end
 
 generate "simple_form:install --bootstrap"
