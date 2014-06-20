@@ -101,7 +101,7 @@ Science.
 
 - Network manager: netcl
 - Web browser: firefox, chrome
-- Add-ons web browser: pentadactyl
+- Add-ons web browser: pentadactyl, todoist
 - Youtube downloader: youtube-dl
 - Bit torrent client: transmission
 - Email client: gmail
@@ -111,7 +111,7 @@ Science.
 
 - Text editor: Vim 
 - Display manager: XMonad
-- Task manager: Task
+- Task manager: Todoist, Task
 - Screen saver: xscreensaver 
 - Softphone: skype, hangout 
 - News aggregator: newsbeuter ?
@@ -165,7 +165,7 @@ Science.
 - application launcher: dmenu
 - finance: gnucash ?, ledger ?
 - Time management: taskwarrior, wyrd (oneday)
-- Login manager: xdm, gdm, slim
+- Login manager: slim, gdm
 
 === Documents
 
@@ -201,6 +201,8 @@ Science.
 
 - Operating system: Arch Linux
 - Virtual server: virtualbox
+- System and service manager: systemd
+- Job scheduler: systemd/cron
 
 === Science
 

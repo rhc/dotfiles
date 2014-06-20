@@ -6,7 +6,7 @@
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources 
 setxkbmap -option caps:escape
-xset +fp /usr/share/fonts/local
+#xset +fp /usr/share/fonts/local
 xset fp rehash
 xsetroot -cursor_name left_ptr
 
@@ -21,10 +21,9 @@ xsetroot -cursor_name left_ptr
 #xset s off
 
 # disable the touchpad while typing
-/usr/bin/syndaemon  -d -k -i 0.6
+/usr/bin/syndaemon  -d -k -i 1
 
-#dzen2 -ta r -fg '#a8a3f7' -bg '#3f3c6d' -fn '-*-terminus-medium-r-normal--16-*' -e "button1=exec:xterm" & 
-urxvt &
+/usr/bin/urxvt &
 firefox &
 
 # auto mount disk in /media with no configuration 

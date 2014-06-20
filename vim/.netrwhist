@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/ckyony/repo/simple_form-bootstrap/app'
 let g:netrw_dirhist_2='/home/ckyony/repo/simple_form-bootstrap/app/assets'
 let g:netrw_dirhist_3='/home/ckyony/repo/simple_form-bootstrap/app/assets/javascripts'
 let g:netrw_dirhist_4='/home/ckyony/dotfiles/vim/asciidoc'
 let g:netrw_dirhist_5='/home/ckyony/dotfiles/vim/asciidoc/ftdetect'
+let g:netrw_dirhist_6='/home/ckyony/repo/ccie/app/views/topics'

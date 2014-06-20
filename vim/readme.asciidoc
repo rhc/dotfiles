@@ -1,0 +1,13 @@
+
+
+== Tips
+
+=== Use my Vim's settings when running as root
+
+
+----
+su -
+cd /root
+ln -s /home/ckyony/dotfiles/vim/ .vim
+ln -s /home/ckyony/dotfiles/vim/vimrc .vimrc
+----
