@@ -146,6 +146,7 @@ Science.
 - Version control system: git
 - CSS front-end framework: bootstrap
 - Source file indexer: ctags
+- Headless Webkit: phantomjs
 
 === Utilities
 
@@ -203,6 +204,7 @@ Science.
 - Virtual server: virtualbox
 - System and service manager: systemd
 - Job scheduler: systemd/cron
+- Self-monitoring, analysis and reporting: smartmontools
 
 === Science
 

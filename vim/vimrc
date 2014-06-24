@@ -146,9 +146,6 @@ nnoremap ; :
 " when you forgot to sudo before editing a file
 cmap sw  w  !sudo tee % >/dev/null 
 
-" plugins are good
-
-
 let mapleader=","
 "quick edit/reload the vimrc file
 nmap <silent> <leader>v :tabedit $MYVIMRC<CR>

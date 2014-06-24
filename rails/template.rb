@@ -16,7 +16,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-will_paginate'
-gem 'simple_form', '3.1.0.rc1', github: 'plataformatec/simple_form'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
 # gem 'high_voltage'
 
 gem_group :development do 
@@ -80,6 +80,7 @@ environment %q[
     g.test_framework :minitest, spec: true, fixture: true
     g.helper false
     g.assets false
+    g.view_specs false
   end
 ]
 

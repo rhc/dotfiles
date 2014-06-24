@@ -16,7 +16,6 @@ iabb lenght length
 iabb cfgr (config-router)#
 iabb cmd command
 iabb cmds commands
-iabb db database
 iabb dbs databases
 iabb defn definition
 iabb dont don't
