@@ -198,7 +198,7 @@ set autowriteall " automatically write a file when leaving a modified buffer
 
 " Gemmfile, Rakefile, Vagrantfile, Thorfile are Ruby"
 au BufRead, BufNewFile {Gemfile, Rakefile, Vagrantfile,Thorfile,config.ru} set ft=ruby
-au BufRead, BufNewFile *.adoc setfiletype asciidoc
+au BufRead, BufNewFile *.asciidoc,*.adoc set ft=asciidoc
 
 " enable compiler support for ruby
 compiler ruby
