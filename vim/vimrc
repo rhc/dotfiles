@@ -31,7 +31,7 @@ Plugin 'vim-scripts/tabular'
 Plugin 'vim-scripts/tlib'
 Plugin 'croaky/vim-colors-github'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'slim-template/vim-slim-git'
+Plugin 'slim-template/vim-slim.git'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
