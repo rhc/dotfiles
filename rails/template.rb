@@ -11,7 +11,7 @@
 # gem 'devise'
 gem 'thin'
 
-gem 'haml-rails'
+gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
