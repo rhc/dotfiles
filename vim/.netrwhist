@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/ckyony/repo/simple_form-bootstrap/app'
-let g:netrw_dirhist_2='/home/ckyony/repo/simple_form-bootstrap/app/assets'
-let g:netrw_dirhist_3='/home/ckyony/repo/simple_form-bootstrap/app/assets/javascripts'
-let g:netrw_dirhist_4='/home/ckyony/dotfiles/vim/asciidoc'
-let g:netrw_dirhist_5='/home/ckyony/dotfiles/vim/asciidoc/ftdetect'
-let g:netrw_dirhist_6='/home/ckyony/repo/ccie/app/views/topics'
-let g:netrw_dirhist_7='/home/ckyony/certifications/ruby/rails-in-action'
-let g:netrw_dirhist_8='/home/ckyony/dotfiles/vim'
-let g:netrw_dirhist_9='/home/ckyony/dotfiles/vim/autoload'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ckyony/repo/page-object'
+let g:netrw_dirhist_2='/home/ckyony/repo/page-object/spec'
+let g:netrw_dirhist_3='/home/ckyony/repo/page-object/spec/models'
+let g:netrw_dirhist_4='/home/ckyony/repo/page-object/spec/features'
