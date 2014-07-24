@@ -164,7 +164,7 @@ Science.
 - Terminal multiplexer: tmux
 - Window manager: xmonad
 - application launcher: dmenu
-- finance: gnucash ?, ledger ?
+- finance: gnucash 
 - Time management: taskwarrior, wyrd (oneday)
 - Login manager: slim, gdm
 

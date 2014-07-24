@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/ckyony/repo/page-object'
-let g:netrw_dirhist_2='/home/ckyony/repo/page-object/spec'
-let g:netrw_dirhist_3='/home/ckyony/repo/page-object/spec/models'
-let g:netrw_dirhist_4='/home/ckyony/repo/page-object/spec/features'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ckyony/repo/rails-bootstrap/app/assets/stylesheets'
+let g:netrw_dirhist_2='/home/ckyony/repo/ticketee/app/assets/stylesheets'
+let g:netrw_dirhist_3='/home/ckyony/repo/ticketee/app/views/devise'
+let g:netrw_dirhist_4='/home/ckyony/repo/ticketee/app/views/devise/passwords'
+let g:netrw_dirhist_5='/home/ckyony/repo/ticketee/app/views/devise'
+let g:netrw_dirhist_6='/home/ckyony/repo/ticketee/app/views'
+let g:netrw_dirhist_7='/home/ckyony/repo/ticketee/app/views/devise'
+let g:netrw_dirhist_8='/home/ckyony/repo/ticketee/app/views/devise/registrations'
+let g:netrw_dirhist_9='/home/ckyony/repo/ticketee/app/policies'

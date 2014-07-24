@@ -97,8 +97,6 @@ iabb req requirements
 iabb reqd required
 iabb rtg routing
 iabb rx reception
-iabb sce service
-iabb sces services
 iabb snr senior
 iabb std standard
 iabb svr server

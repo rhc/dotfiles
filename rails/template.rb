@@ -13,11 +13,9 @@ gem 'thin'
 
 gem 'slim-rails'
 gem 'bootstrap-sass'
-gem 'font-awesome-rails'
-gem 'bootstrap-datepicker-rails'
-gem 'bootstrap-will_paginate'
 gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form'
-# gem 'high_voltage'
+gem 'high_voltage'
+gem 'pundit'
 
 gem_group :development do 
   gem 'guard-bundler'
@@ -53,6 +51,33 @@ environment nil, env: 'development' do
   config.middleware.use Rack::LiveReload
   eos
 end
+
+initializer("pundit.rb", %q[
+# Extends the ApplicationController to add Pundit for authorization.
+# Modify this file to change the behavior of an unauthorized error.
+# Restart the server after modification of this file
+
+module PunditHelper
+  extend ActiveSupport::Concern
+
+  included do
+    include Pundit
+    rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  end
+  
+  private
+
+  def user_not_authorized
+    flash[:alert] = "Access denied."
+    redirect_to (request.referrer || root_path)
+  end
+end
+
+ApplicationController.send :include, PunditHelper
+])
+
+#
+# rails g pundit:install
 
 # Use SASS extension 
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
@@ -209,9 +234,11 @@ git add: "."
 git commit: "-a -m 'Initial commit'"
  
 #Create remote repo on Github and push
-run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
-git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
-git push: "origin master"
+if yes?("Create repo on Github?(y/n)") 
+  run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
+  git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
+  git push: "origin master"
+end
  
 #TODO
 # cache partials results in development

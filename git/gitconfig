@@ -10,3 +10,5 @@
 	default = matching
 [init]
 	templatedir = ~/.git_template
+[color]
+	ui = true
