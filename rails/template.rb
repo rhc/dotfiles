@@ -41,7 +41,6 @@ gem_group :production do
   gem "rails_12factor"
 end
 
-
 run "bundle install"
 
 # minitest test_helper
@@ -51,8 +50,8 @@ def source_paths
   Array(super) + [File.join(File.expand_path(File.dirname(__FILE__)), 'custom')]
 end
 
-#create postgres DB for postgress.app 
-#Adds default user to username for development and test
+# create postgres DB for postgress.app 
+# add default user to username for development and test
 run "psql -c 'DROP DATABASE IF EXISTS #{app_path}_development;'"
 run "psql -c 'DROP DATABASE IF EXISTS #{app_path}_test;'"
 run "psql -c 'CREATE DATABASE #{app_path}_development;'"
@@ -60,8 +59,7 @@ run "psql -c 'CREATE DATABASE #{app_path}_test;'"
 run "sed -i  '1,54 s/username: #{app_path}/username: #{ENV['USER']}/' config/database.yml"
 
 
-
-#config minitest Spec DSL and Fixtures defaults in config/application.rb
+# config minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
     g.test_framework :minitest, spec: true, fixture: true
@@ -70,7 +68,6 @@ environment %q[
     g.view_specs false
   end
 ]
-
 
 # Bootstrap3
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
@@ -153,7 +150,7 @@ end
 comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"
  
-#Add minitest features to Rake task
+# add minitest features to Rake task
 rakefile "minitest-features.rake", %q{
 Rails::TestTask.new("test:features" => "test:prepare") do |t|
   t.pattern = "test/features/**/*_test.rb"
@@ -167,7 +164,7 @@ run 'spring binstub --all'
  
 #Fix README.md
 remove_file "README.rdoc"
-create_file "readme.asciidoc"
+create_file "readme.adoc"
  
 #Initialize local Git repository and Initial Commit
 git :init
@@ -175,14 +172,14 @@ git add: "."
 git commit: "-a -m 'Initial commit'"
 
  
-#Create remote repo on Github and push
+# create remote repo on Github and push
 if yes?("Create repo on Github?  \033[33m(y/n)\033[0m") 
   run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
   git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
   git push: "origin master"
 end
  
-
+run "echo 'Voila! Have (a lot of) fun' "
 
 
 

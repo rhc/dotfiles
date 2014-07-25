@@ -4,6 +4,7 @@
 [alias]
 	co = checkout
 	ctags = !.git/hooks/ctags
+  sb = status -sb
 [core]
 	editor = vim
 [push]
