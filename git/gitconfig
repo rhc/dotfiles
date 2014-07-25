@@ -5,6 +5,7 @@
 	co = checkout
 	ctags = !.git/hooks/ctags
   sb = status -sb
+	cam = commit -am
 [core]
 	editor = vim
 [push]
