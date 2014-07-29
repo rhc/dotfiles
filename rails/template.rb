@@ -142,8 +142,8 @@ environment nil, env: 'development' do
 end
  
 # setup minitest-rails-capybara and pride in test_helper
+remove_file "test_helper.rb"
 inside 'test' do 
-  remove_file "test_helper.rb"
   copy_file "test_helper.rb"
 end
 
