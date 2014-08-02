@@ -38,7 +38,7 @@ rake bootstrap:vim
 
 == My list of applications
 
-// image:images/linux-logo.jpe[height=192]
+// image:images/linux-logo.jpg[height=192]
 image:images/archlinux-logo.png[height=192]
 // image:images/vim_on_fire.gif[height=192]
 image:images/vim-logo.png[height=192]
@@ -48,28 +48,28 @@ image:images/mozilla-firefox-logo.png[height=128]
 image:images/google-chrome-logo.png[height=128]
 image:images/xmonad-logo.jpg[height=128]
 image:images/ruby-logo.png[height=128]
-image:images/rails-logo.jpe[height=128]
+image:images/rails-logo.jpg[height=128]
 image:images/rbenv-logo.png[height=64]
 image:images/bootstrap-logo.png[height=64]
 // image:images/haml-logo.png[height=64]
-image:images/postgresql-logo.jpe[height=128]
+image:images/postgresql-logo.jpg[height=128]
 image:images/libreoffice-logo.png[height=64]
 
-image:images/gns3-logo.jpe[height=64]
-image:images/wireshark-logo.jpe[height=64]
-image:images/nmap-logo.jpe[height=64]
-image:images/nessus-logo.jpe[height=64]
+image:images/gns3-logo.jpg[height=64]
+image:images/wireshark-logo.jpg[height=64]
+image:images/nmap-logo.jpg[height=64]
+image:images/nessus-logo.jpg[height=64]
 image:images/tripwire-logo.png[height=64]
 image:images/openssh-logo.png[height=64]
 
 image:images/anki-logo.png[height=64,title="Anki"]
 image:images/vlc-logo.png[height=48,title="VLC"]
-image:images/inkscape-logo.jpe[height=48,title="Inkscape"]
+image:images/inkscape-logo.jpg[height=48,title="Inkscape"]
 image:images/gimp-logo.jpg[height=48,title="GIMP"]
 image:images/graphviz-logo.png[height=48,title="Graphviz"]
-image:images/calibre-logo.jpe[height=48,title="Calibre"]
+image:images/calibre-logo.jpg[height=48,title="Calibre"]
 image:images/virtualbox-logo.png[title="Oracle Virtual Box", height=48]
-image:images/transmission-logo.jpe[title="Transmission Bittorrent", height=48]
+image:images/transmission-logo.jpg[title="Transmission Bittorrent", height=48]
 
 
 === Selection  criteria
@@ -136,7 +136,7 @@ Science.
 - Video editor:
 - Screencast: ?
 - Collection manager: xbmc
-- Graph visualization: graphviz
+- Graph visualization: http://www.graphviz.org[graphviz] 
 
 === Development
 
@@ -150,23 +150,24 @@ Science.
 
 === Utilities
 
-- Partition tools:
-- Shell: bash, zsh (oneday?)
-- Terminal emulator: urxvt, Termite (oneday?), tilda
-- Comparison: vimdiff
-- Disk usage: filelight ?, ncdu ? 
-- Clock synchronization: ntpd
-- System monitoring: conky?, htop, 
-- System information viewer: alsi?, 
-- Clipboard manager: xclip
-- Wallpaper setter: feh
-- Package management: pacman, packer 
-- Terminal multiplexer: tmux
-- Window manager: xmonad
-- application launcher: dmenu
-- finance: gnucash 
-- Time management: taskwarrior, wyrd (oneday)
-- Login manager: slim, gdm
+. Partition tools:
+. Shell: bash, zsh (oneday?)
+. Terminal emulator: urxvt, Termite (oneday?), tilda
+. Comparison: vimdiff
+. Disk usage: filelight ?, ncdu ? 
+. Clock synchronization: ntpd
+. System monitoring: conky?, htop, 
+. System information viewer: alsi?, 
+. Clipboard manager: xclip
+. Wallpaper setter: feh
+. Package management: pacman, packer 
+. Terminal multiplexer: tmux
+. Window manager: xmonad
+. Notification daemon: dunst
+. application launcher: dmenu
+. finance: gnucash 
+. Time management: taskwarrior, wyrd (oneday)
+. Login manager: slim, gdm
 
 === Documents
 

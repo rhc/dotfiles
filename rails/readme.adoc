@@ -1,0 +1,28 @@
+= My Rails application generator
+
+== Features
+
+I am using a Rails application generator 
+so I can hit the ground running when I start a new Rails project.
+
+My template generates an app with these libraries all ready to go:
+
+- Core Stack
+* Rails 4.1
+* PostgreSQL
+* Slim
+* Sass
+* Bootstrap
+* Simple Form
+
+- Testing
+* minitest 
+* Capybara
+//* Poltergeist
+
+- Development
+* Guard for minitest, livereload, bundlet
+//* Foreman, Simplecov, Cane, Awesome Print, Mailcatcher
+
+
+- 

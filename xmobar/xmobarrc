@@ -7,8 +7,8 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run BatteryP ["BAT0"]
                         ["-t","<acstatus><left>%"         
-                        ,"-L" ,"10"         
-                        ,"-H","90"         
+                        ,"-L" ,"-12"         
+                        ,"-H","-10"         
                         ,"-p","3"         
                         ,"--"         
                         ,"-i","<fc=yellow><icon=/home/ckyony/dotfiles/xmobar/icons/ac15.xbm/></fc>"         

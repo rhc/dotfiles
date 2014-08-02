@@ -3,8 +3,6 @@
 # Run using $ rails new the_application_name -m /path/to/template.rb
 #
 # cat ~/.railsrc
-# --skip-test-unit
-# --database=postgresql 
 # -m ~/dotfiles/rails/template.rb
 #
 gem 'thin'
@@ -142,7 +140,7 @@ environment nil, env: 'development' do
 end
  
 # setup minitest-rails-capybara and pride in test_helper
-remove_file "test_helper.rb"
+remove_file "test/test_helper.rb"
 inside 'test' do 
   copy_file "test_helper.rb"
 end
