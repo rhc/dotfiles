@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/ckyony/repo/rails-devise-pundit/app/controllers'
-let g:netrw_dirhist_2='/home/ckyony/repo/rails-devise-pundit/app'
-let g:netrw_dirhist_3='/home/ckyony/repo/rails-devise-pundit/app/policies'
-let g:netrw_dirhist_4='/home/ckyony/dotfiles/git'
-let g:netrw_dirhist_5='/home/ckyony/repo/ck/config/initializers'
-let g:netrw_dirhist_6='/home/ckyony/repo/ck/app/views/pages'
-let g:netrw_dirhist_7='/home/ckyony/repo/ticketee/test/features'
-let g:netrw_dirhist_8='/home/ckyony/dotfiles/rails'
-let g:netrw_dirhist_9='/home/ckyony/repo/ticketee/app/policies'
+let g:netrw_dirhist_cnt =0
