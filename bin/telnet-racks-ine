@@ -1,0 +1,11 @@
+#!/usr/bin/expect -f
+  set timeout 20
+	set Username "rs5rack4"
+	set Password "beness"
+	spawn telnet racks.ine.com
+	expect "Username: "
+	send "$Username\r"
+	expect "Password: "
+	send "$Password\r"
+	interact
+exit

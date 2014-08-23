@@ -23,13 +23,15 @@ xsetroot -cursor_name left_ptr
 # disable the touchpad while typing
 /usr/bin/syndaemon  -d -k -i 1
 
-/usr/bin/urxvt &
 firefox &
 
 # auto mount disk in /media with no configuration 
 udiskie --tray &
 
 pulseaudio --start &
+
+# launch terminal
+/usr/bin/urxvt &
 exec xmonad
 
 
