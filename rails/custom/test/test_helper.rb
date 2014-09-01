@@ -4,9 +4,11 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
 
-require "minitest/pride"
+#require "minitest/pride"
+require 'minitest/reporters'
 #require 'minitest/focus'
 #require 'minitest/colorize'
+Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!

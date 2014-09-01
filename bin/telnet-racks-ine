@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
   set timeout 20
-	set Username "rs5rack5"
-	set Password "xoness"
+	set Username "rs5rack2"
+	set Password "foment"
   set Device [lindex $argv 0]
 	spawn telnet racks.ine.com
 	expect "Username: "
@@ -9,9 +9,7 @@
 	expect "Password: "
 	send "$Password\r"
   expect "Enter Selection: "
-  send "$Device\r"
+  send "$Device\r\r\r"
   send "\r"
-  send "\r"
-  send "configure terminal\r"
 	interact
 exit

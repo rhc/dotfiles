@@ -6,7 +6,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.Accordion
 import System.IO
 
-myTerminal = "/usr/bin/urxvt"
+myTerminal = "/usr/bin/terminator -b"
 myModMask = mod1Mask
 myWorkspaces = ["1:dev","2","3","4:vm","5:media","6","7","8","9:server"]
 myNormalBorderColor = "grey"

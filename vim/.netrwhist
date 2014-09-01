@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/ckyony/certifications/ccie/study-notes/book'
 let g:netrw_dirhist_2='/home/ckyony/certifications/ccie/ine/v5/labs'
+let g:netrw_dirhist_3='/home/ckyony/repo/ccie/app/views/dashboard'
+let g:netrw_dirhist_4='/etc/modules-load.d'
