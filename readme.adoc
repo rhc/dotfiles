@@ -124,6 +124,7 @@ Science.
 
 - Image viewer: feh
 - Raster editor: gimp, imagemagick
+- Poster printing: posterazor
 - Vector graphics: dia, inkscape, 
 - 3D modeling/rendering: blender
 - Screen capture: scrot

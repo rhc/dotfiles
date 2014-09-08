@@ -26,12 +26,12 @@ xsetroot -cursor_name left_ptr
 firefox &
 
 # auto mount disk in /media with no configuration 
-#udiskie --tray &
+udiskie --tray &
 
 pulseaudio --start &
 
 # launch terminal
-/usr/bin/urxvt &
+/usr/bin/terminator - b &
 exec xmonad
 
 
