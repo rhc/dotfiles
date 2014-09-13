@@ -31,6 +31,7 @@ end
 
 gem 'minitest-rails' 
 gem_group :test do 
+  gem 'minitest-reporters'
   gem 'minitest-rails-capybara' 
   gem 'faker'
 end
@@ -60,7 +61,7 @@ run "sed -i  '1,54 s/username: #{app_path}/username: #{ENV['USER']}/' config/dat
 # config minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
-    g.test_framework :minitest, spec: true, fixture: true
+    g.test_framework :minitest, spec: false, fixture: true
     g.helper false
     g.assets false
     g.view_specs false
@@ -69,6 +70,8 @@ environment %q[
 
 # Bootstrap3
 run "mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss"
+#TODO: add custom.css.scss
+#
 remove_file 'app/assets/javascripts/application.js'
 # add a line for asset pipeline compatibility for rails 4.0
 # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
@@ -141,9 +144,7 @@ end
  
 # setup minitest-rails-capybara and pride in test_helper
 remove_file "test/test_helper.rb"
-inside 'test' do 
-  copy_file "test_helper.rb"
-end
+copy_file "test/test_helper.rb"
 
 comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"
