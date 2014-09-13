@@ -80,28 +80,11 @@ remove_file 'app/assets/javascripts/application.js'
 generate 'layout:install bootstrap3'
 generate "simple_form:install --bootstrap"
 remove_file 'app/views/layouts/_navigation_links.html.erb'
-inside 'app' do
-  inside 'views' do
-    inside 'layouts' do
-      template '_navigation_links.html.slim'
-    end
-  end
-end
+copy_file 'app/views/layouts/_navigation_links.html.slim'
 
 generate 'model user name role:integer'
 run 'rake db:migrate'
-
-remove_file 'app/models/user.rb'
-create_file( 'app/models/user.rb', %q[
-class User < ActiveRecord::Base
-  enum role: [:user, :admin]
-  after_initialize :set_default_role, :if => :new_record?
-
-  def set_default_role
-    self.role ||= :user
-  end
-end
-] )
+copy_file 'user.rb', 'app/models/user.rb', :force => true
 
 generate 'pages:home'
 generate 'pages:about'
@@ -122,13 +105,7 @@ generate 'pundit:install'
 generate 'pages:users --force'
 generate 'pages:authorized --force'
 
-inside 'config' do
-  inside 'initializers' do
-    template 'hide_passwords_in_logs.rb'
-  end
-end
-run 'mv config/initializers/hide_passwords_in_logs.rb config/initializers/filter_parameter_logging.rb'
-
+copy_file 'config/initializers/hide_passwords_in_logs.rb'
  
 #### Guard, 
 # guard-minitest
@@ -143,20 +120,13 @@ environment nil, env: 'development' do
 end
  
 # setup minitest-rails-capybara and pride in test_helper
-remove_file "test/test_helper.rb"
-copy_file "test/test_helper.rb"
+copy_file 'test_helper.rb', 'test/test_helper.rb', :force => true
 
 comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"
  
 # add minitest features to Rake task
-rakefile "minitest-features.rake", %q{
-Rails::TestTask.new("test:features" => "test:prepare") do |t|
-  t.pattern = "test/features/**/*_test.rb"
-end
-Rake::Task["test:run"].enhance ["test:features"]
-}
-
+copy_file 'minitest-features.rake', 'lib/tasks/minitest-features.rake'
  
 #Add spring to bins and start spring
 run 'spring binstub --all'
