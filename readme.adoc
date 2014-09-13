@@ -52,7 +52,7 @@ image:images/rails-logo.jpe[height=128]
 image:images/rbenv-logo.png[height=64]
 image:images/bootstrap-logo.png[height=64]
 // image:images/haml-logo.png[height=64]
-image:images/postgresql-logo.jpg[height=128]
+image:images/postgresql-logo.jpe[height=128]
 image:images/libreoffice-logo.png[height=64]
 
 image:images/gns3-logo.jpe[height=64]
