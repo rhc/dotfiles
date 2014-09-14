@@ -5,36 +5,36 @@
 
 - To keep all my configuration files under version control
 
-== Setup
-
-#TODO: This section is under construction
-
-Clone the repo
-
-----
-git clone https://github.com/rhc/dotfiles.git
-----
-
-Link the dotfiles
-
-----
-rake link
-----
-
-Install the dependencies
-
-----
-rake pacman
-----
-
-
-Bootstrap 
-
-----
-rake bootstrap:vim
-----
-
-
+// == Setup
+//
+// #TODO: This section is under construction
+//
+// Clone the repo
+//
+// ----
+// git clone https://github.com/rhc/dotfiles.git
+// ----
+//
+// Link the dotfiles
+//
+// ----
+// rake link
+// ----
+//
+// Install the dependencies
+//
+// ----
+// rake pacman
+// ----
+//
+//
+// Bootstrap 
+//
+// ----
+// rake bootstrap:vim
+// ----
+//
+//
 
 == My list of applications
 
