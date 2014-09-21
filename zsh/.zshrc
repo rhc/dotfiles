@@ -48,7 +48,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails)
+plugins=(rails zsh-syntax-highlighting)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -136,3 +136,7 @@ export BROWSER=/usr/bin/firefox
 #local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 #PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}'
 
+
+# frequently used directories
+setopt auto_cd
+cdpath=($HOME/certifications)

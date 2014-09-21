@@ -22,6 +22,7 @@ gem_group :development do
   gem 'better_errors' 
   gem 'binding_of_caller', platforms: :mri_21
   gem 'quiet_assets' 
+  gem 'pry-byebug'
   gem 'pry-rails' 
   gem 'rails_layout'
   gem 'rails_best_practices'
@@ -120,7 +121,8 @@ environment nil, env: 'development' do
 end
  
 # setup minitest-rails-capybara and pride in test_helper
-copy_file 'test_helper.rb', 'test/test_helper.rb', :force => true
+copy_file 'test_helper.rb', 'test/test_helper.rb', force: true
+copy_file 'backtrace_silencers', 'config/initializers/backtrace_silencers', force: true
 
 comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"

@@ -1,0 +1,13 @@
+dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:50)
+1. select * from users;
+2. select * from assets;
+3. select * from tickets;
+4. select id, email, roles.* from users join roles on roles.id = users.role.id;
+5. select * from permissions;
+6. select id, email from users;
+7. select right(url,7) , title from videos;
+8. select id, right(url,7), title from videos;
+9. select id, right(url,7) from videos;
+10. select id, right(url,4) from videos;
+11. select id, right(left,4) from videos;
+12. select * from videos;
