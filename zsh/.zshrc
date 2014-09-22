@@ -97,6 +97,7 @@ alias rmdir='rm -rf'
 alias cdbook='cd ~/certifications/ccie/study-notes/book/'
 alias typist='gtypist --personal-best --word-processor --always-sure --silent --show-errors'
 alias ti='~/dotfiles/bin/telnet-racks-ine'
+alias beg='bundle exec guard'
 
 #export HISTSIZE=10000
 #export HISTFILESIZE=1000000
