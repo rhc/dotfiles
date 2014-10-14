@@ -33,6 +33,7 @@ Plugin 'croaky/vim-colors-github'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
