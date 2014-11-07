@@ -8,6 +8,7 @@
 gem 'thin'
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'high_voltage'
 gem 'devise'
@@ -62,7 +63,7 @@ run "sed -i  '1,54 s/username: #{app_path}/username: #{ENV['USER']}/' config/dat
 # config minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
-    g.test_framework :minitest, spec: false, fixture: true
+    g.test_framework :minitest, spec: true, fixture: true
     g.helper false
     g.assets false
     g.view_specs false
@@ -80,6 +81,7 @@ remove_file 'app/assets/javascripts/application.js'
 # setup bootstrap
 generate 'layout:install bootstrap3'
 generate "simple_form:install --bootstrap"
+copy_file 'app/assets/stylesheets/font-config.scss' # for awesome-fonts
 remove_file 'app/views/layouts/_navigation_links.html.erb'
 copy_file 'app/views/layouts/_navigation_links.html.slim'
 
@@ -93,6 +95,7 @@ generate 'clean:gemfile'
 generate 'clean:routes'
 
 # generate 'analytics:google'
+
 
 # Devise
 generate 'devise:install'
@@ -122,7 +125,7 @@ end
  
 # setup minitest-rails-capybara and pride in test_helper
 copy_file 'test_helper.rb', 'test/test_helper.rb', force: true
-copy_file 'backtrace_silencers', 'config/initializers/backtrace_silencers', force: true
+copy_file 'config/initializers/backtrace_silencers.rb', force: true
 
 comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"

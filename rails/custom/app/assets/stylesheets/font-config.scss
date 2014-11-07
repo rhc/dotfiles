@@ -1,0 +1,16 @@
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+
+.fa.big {
+  font-size: 500px;
+
+  .inverse {
+    color: white;
+    background: black;
+  }
+  
+  .red {
+    color: red; 
+  }
+}

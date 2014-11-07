@@ -34,6 +34,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
@@ -71,6 +72,7 @@ autocmd BufReadPost *
 
 " colors 
 set t_Co=256
+
 set background=dark " Assume a dark background
 colorscheme jellybeans
 hi clear SpellBad
