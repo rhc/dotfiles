@@ -87,7 +87,7 @@ copy_file 'app/views/layouts/_navigation_links.html.slim'
 
 generate 'model user name role:integer'
 run 'rake db:migrate'
-copy_file 'user.rb', 'app/models/user.rb', :force => true
+copy_file 'app/models/user.rb', :force => true
 
 generate 'pages:home'
 generate 'pages:about'
@@ -123,7 +123,7 @@ environment nil, env: 'development' do
   eos
 end
  
-# setup minitest-rails-capybara and pride in test_helper
+# setup minitest-rails-capybara in test_helper
 copy_file 'test_helper.rb', 'test/test_helper.rb', force: true
 copy_file 'config/initializers/backtrace_silencers.rb', force: true
 

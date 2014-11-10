@@ -10,9 +10,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'kien/ctrlp.vim'
+" Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jlangston/tomorrow-night-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
@@ -35,6 +38,7 @@ Plugin 'slim-template/vim-slim.git'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.

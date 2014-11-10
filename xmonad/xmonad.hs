@@ -4,6 +4,8 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.Accordion
+import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.SetWMName
 import System.IO
 
 myTerminal = "/usr/bin/terminator -b"
@@ -12,6 +14,7 @@ myWorkspaces = ["1:dev","2","3","4:vm","5:media","6","7","8","9:server"]
 myNormalBorderColor = "grey"
 myFocusedBorderColor = "red"
 myBorderWidth = 2
+
 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar"
