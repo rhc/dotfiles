@@ -61,7 +61,7 @@ tabConfig = defaultTheme {
   inactiveColor = "#000000"
 }
 
--- Promp style.
+-- Prompt style.
 myXPConfig :: XPConfig
 myXPConfig = defaultXPConfig {
   font = "xft:Terminus-12"

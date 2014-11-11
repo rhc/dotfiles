@@ -1,3 +1,4 @@
 /task/*
 vim/.netrwhist*
 vim/bundle/Vundle.vim/doc/tags
+xmonad/history
