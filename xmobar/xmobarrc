@@ -9,10 +9,11 @@ Config { font = "-misc-fixed-*-*-*-*-15-*-*-*-*-*-*-*"
        , persistent = False
        , hideOnStart = False
        , commands = [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
+                      Run Battery ["-S", "on", "-t", "<left>"] 30, 
                       Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{  <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ <fc=#7c3131> %battery%</fc> <fc=#ee9a00>%date%</fc>"
        }
 
