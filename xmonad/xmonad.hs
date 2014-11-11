@@ -1,27 +1,11 @@
---
--- xmonad example config file for xmonad-0.9
---
--- A template showing all available configuration hooks,
--- and how to override the defaults in your own xmonad.hs conf file.
---
--- Normally, you'd only override those defaults you care about.
---
--- NOTE: Those updating from earlier xmonad versions, who use
--- EwmhDesktops, safeSpawn, WindowGo, or the simple-status-bar
--- setup functions (dzen, xmobar) probably need to change
--- xmonad.hs, please see the notes below, or the following
--- link for more details:
---
--- http://www.haskell.org/haskellwiki/Xmonad/Notable_changes_since_0.8
---
-
 import Data.List
 import Data.Monoid
 import Data.Ratio ((%))
 import System.Exit
+import System.IO
 import XMonad
-import XMonad.Actions.SpawnOn
 import XMonad.Actions.GridSelect
+import XMonad.Actions.SpawnOn
 import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.FadeInactive
@@ -30,45 +14,52 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.Grid
 import XMonad.Layout.IM
+import XMonad.Layout.Spiral
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Tabbed
+import XMonad.Layout.ThreeColumns
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Reflect
 import XMonad.Prompt
 import XMonad.Prompt.Shell
+import XMonad.Util.Run
+
 import qualified Data.Map as M
 import qualified XMonad.Actions.Search as S
 import qualified XMonad.StackSet as W
 
+myTerminal = "urxvt +ls"
 
 myIconDir = "~/.xmonad/icons"
 
--- The preferred terminal program, which is used in a binding below and by
--- certain contrib modules.
-myTerminal = "urxvt +ls"
-
--- Whether focus follows the mouse pointer.
-myFocusFollowsMouse = True
+myFocusFollowsMouse = True -- Whether focus follows the mouse pointer.
 
 -- Width of the window border in pixels.
 myBorderWidth = 1
 
--- modMask lets you specify which modkey you want to use. The default
--- is mod1Mask ("left alt").  You may also consider using mod3Mask
--- ("right alt"), which does not conflict with emacs keybindings. The
--- "windows key" is usually mod4Mask.
+-- modMask lets you specify which modkey you want to use. 
+-- The default is mod1Mask ("left alt").  You may also consider using mod3Mask
+-- ("right alt"), which does not conflict with emacs keybindings. 
+-- The "windows key" is usually mod4Mask.
 myModMask = mod1Mask
 
 -- The default number of workspaces (virtual screens) and their names.
--- By default we use numeric strings, but any string may be used as a
--- workspace name. The number of workspaces is determined by the length
--- of this list.
---
-myWorkspaces = ["1:code","2:Web","3","4","5","6","7:Gimp","8:Chat","9:Monitor"]
+myWorkspaces = ["1:code","2:","3","4","5:media","6","7:Gimp","8:Chat","9:Monitor"]
 
 -- Border colors for unfocused and focused windows, respectively.
-myNormalBorderColor  = "#000000"
--- myFocusedBorderColor = myNormalBorderColor
-myFocusedBorderColor = "#FCFCFC"
+myNormalBorderColor  = "#123456"
+myFocusedBorderColor = "#ff0000"
+
+-- Colors for text and backgrounds of each tab when in "Tabbed" layout.
+--
+tabConfig = defaultTheme {
+  activeBorderColor = "#7C7C7C",
+  activeTextColor = "#CEFFAC",
+  activeColor = "#000000",
+  inactiveBorderColor = "#7C7C7C",
+  inactiveTextColor = "#EEEEEE",
+  inactiveColor = "#000000"
+}
 
 -- Promp style.
 myXPConfig :: XPConfig
@@ -79,7 +70,7 @@ myXPConfig = defaultXPConfig {
     , bgHLight = "#000000"
     , fgHLight = "#ffffff"
     , promptBorderWidth = 0
-    , height = 20
+    , height = 40
 }
 
 ------------------------------------------------------------------------
@@ -151,7 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
 
-    -- Search the Google
+    -- Search with Google
     , ((modm             , xK_s     ), S.promptSearch myXPConfig S.google)
 
     -- Open GridSelect
@@ -215,7 +206,7 @@ myLayout = onWorkspace "7:Gimp" gimpLayout $
     skypeRatio = (1%4)
     skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "Chats")) `And` (Not (Role "CallWindowForm"))
 
-    standardLayouts = avoidStruts  $ (tiled ||| Mirror tiled ||| Full)
+    standardLayouts = avoidStruts  $ (tiled ||| spiral (6/7) ||| tabbed shrinkText tabConfig ||| Full)
 
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
@@ -276,6 +267,16 @@ myLogHook = fadeInactiveLogHook fadeAmount
           >> updatePointer (Relative 0.5 0.5)
           where fadeAmount = 0.8
 
+myPP = xmobarPP {
+  ppCurrent = xmobarColor "#93a1a1" "",
+  ppTitle = xmobarColor "green" "" . shorten 50,
+  ppHiddenNoWindows = xmobarColor "#073642" "",
+  ppHidden = xmobarColor "#586e75" "",
+  ppLayout = xmobarColor "#586e75" ""
+}
+
+myBar = "~/.cabal/bin/xmobar"
+
 ------------------------------------------------------------------------
 -- Startup hook
 
@@ -285,10 +286,6 @@ myLogHook = fadeInactiveLogHook fadeAmount
 --
 -- By default, do nothing.
 --
--- * NOTE: EwmhDesktops users should use the 'ewmh' function from
--- XMonad.Hooks.EwmhDesktops to modify their defaultConfig as a whole.
--- It will add initialization of EWMH support to your custom startup
--- hook by combining it with ewmhDesktopsStartup.
 --
 myStartupHook = do
               setWMName "LG3D"
@@ -299,7 +296,8 @@ myStartupHook = do
 -- Keybinding to toggle the gap for the status bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
-main = xmonad defaults
+main = do
+  xmonad =<< statusBar myBar myPP toggleStrutsKey defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -319,6 +317,9 @@ defaults = defaultConfig {
   layoutHook         = myLayout,
   manageHook         = myManageHook <+> manageDocks <+> manageSpawn,
   handleEventHook    = myEventHook,
-  logHook            = myLogHook,
-  startupHook        = myStartupHook
+  startupHook        = myStartupHook,
+  logHook            = myLogHook <+> dynamicLogWithPP xmobarPP { 
+    ppTitle = xmobarColor "blue" "" . shorten 50,
+    ppLayout = const "" -- to disable the layout info on xmobar
+  }
 }
