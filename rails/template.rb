@@ -88,6 +88,9 @@ copy_file 'app/views/layouts/_navigation_links.html.slim'
 generate 'model user name role:integer'
 run 'rake db:migrate'
 copy_file 'app/models/user.rb', :force => true
+copy_file 'test/fixtures/users.yml', :force => true
+copy_file 'test/models/user_test.rb', :force => true
+
 
 generate 'pages:home'
 generate 'pages:about'
