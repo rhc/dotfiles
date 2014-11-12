@@ -1,19 +1,27 @@
-Config { font = "-misc-fixed-*-*-*-*-15-*-*-*-*-*-*-*"
-       , borderColor = "black"
-       , border = TopB
+Config { font = "-*-Fixed-Bold-R-Normal-*-12-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = Top
-       , lowerOnStart = True
-       , pickBroadest = False
-       , persistent = False
-       , hideOnStart = False
-       , commands = [ Run Date "%a %b %_d %Y %H:%M:%S" "date" 10,
-                      Run Battery ["-S", "on", "-t", "<left>"] 30, 
-                      Run StdinReader
+       , position = TopW L 200
+       , commands = [ Run BatteryP ["BAT0"]
+                        ["-t","<acstatus><left>%"         
+                        ,"-L" ,"10"         
+                        ,"-H","90"         
+                        ,"-p","3"         
+                        ,"--"         
+                        ,"-i","<fc=yellow><icon=/home/ckyony/dotfiles/xmobar/icons/ac15.xbm/></fc>"         
+                        ,"-O","<fc=yellow><icon=/home/ckyony/dotfiles/xmobar/icons/ac15.xbm/></fc>"         
+                        ,"-o","<fc=#EEEEEE><icon=/home/ckyony/dotfiles/xmobar/icons/batt5full.xbm/></fc>"         
+                        ,"-L","-15"         
+                        ,"-H","-5"         
+                        ,"-l","lightblue"         
+                        ,"-m","green"         
+                        ,"-h","red"]         
+                        30
+                    , Run CommandReader "~/.pymodoro/pymodoro.py" "pomodoro"
+                    , Run Date "%a %_d %b %H:%M" "date" 20
+                    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ <fc=#7c3131> %battery%</fc> <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %pomodoro% |  %battery%  <fc=#ee9a00>%date%</fc> "
        }
-

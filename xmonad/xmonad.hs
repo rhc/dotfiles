@@ -151,6 +151,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Run a shell command
     , ((modm              , xK_p     ), shellPrompt myXPConfig)
 
+    -- Run a pomodoro command
+    , ((modm              , xK_n     ), spawn "touch ~/.pomodoro_session")
+
     ]
     ++
 
