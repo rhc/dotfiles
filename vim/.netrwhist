@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/ckyony/repo/template/config/initializers'
-let g:netrw_dirhist_2='/home/ckyony/repo/ccie/app/views/videos'
-let g:netrw_dirhist_3='/home/ckyony/repo/ccie/lib/tasks'
-let g:netrw_dirhist_4='/home/ckyony/repo/bare-rails/test/controllers'
-let g:netrw_dirhist_5='/home/ckyony/repo/ticketee/app/views/tickets'
-let g:netrw_dirhist_6='/home/ckyony/repo/ticketee/test/features'
-let g:netrw_dirhist_7='/home/ckyony/dotfiles/zsh'
-let g:netrw_dirhist_8='/var/lib/postgres/data'
-let g:netrw_dirhist_9='/home/ckyony/repo/ticketee'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/ckyony/repo/prototype/test'
+let g:netrw_dirhist_2='/home/ckyony/repo/prototype/test/fixtures'

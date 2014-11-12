@@ -273,8 +273,9 @@ myLogHook = fadeInactiveLogHook fadeAmount
 myPP = xmobarPP {
   ppCurrent = xmobarColor "#93a1a1" "",
   ppTitle = xmobarColor "green" "" . shorten 50,
-  ppHiddenNoWindows = xmobarColor "#073642" "",
-  ppHidden = xmobarColor "#586e75" "",
+  -- To hide workspaces without window
+  -- ppHiddenNoWindows = xmobarColor "#073642" "",
+  ppHidden = xmobarColor "#7c7c7c" "",
   ppLayout = xmobarColor "#586e75" ""
 }
 
