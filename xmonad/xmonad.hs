@@ -17,6 +17,7 @@ import XMonad.Layout.IM
 import XMonad.Layout.Spiral
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Tabbed
+import XMonad.Util.Scratchpad
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Reflect
@@ -85,6 +86,9 @@ myXPConfig = defaultXPConfig {
     , height = 40
 }
 
+
+
+
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -93,6 +97,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
      -- launch a terminal
     ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+
+     -- launch a scratchpad
+    , ((modm , xK_z), scratchpadSpawnActionTerminal myTerminal)
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -260,6 +267,18 @@ myManageHook = composeAll . concat $
         myCenterFloats = ["Gnome-volume-control", "Gcalctool", "Gnome-screenshot", "Gnome-system-monitor"]
         myMatchAnywhereFloatsC = ["Google","Pidgin"]
         myMatchAnywhereFloatsT = ["VLC"] -- this one is silly for only one string!
+
+-- Scratchpad
+manageScratchPad :: ManageHook
+manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
+  where
+    h = 0.1     -- terminal height, 10%
+    w = 1       -- terminal width, 100%
+    t = 1 - h   -- distance from top edge, 90%
+    l = 1 - w   -- distance from left edge, 0%
+
+
+
 
 ------------------------------------------------------------------------
 -- Event handling
