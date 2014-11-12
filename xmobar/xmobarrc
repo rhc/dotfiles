@@ -1,6 +1,7 @@
 Config { font = "-*-Fixed-Bold-R-Normal-*-12-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
+       , allDesktops = True
        , position = TopW L 200
        , commands = [ Run BatteryP ["BAT0"]
                         ["-t","<acstatus><left>%"         
@@ -17,11 +18,12 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-12-*-*-*-*-*-*-*"
                         ,"-m","green"         
                         ,"-h","red"]         
                         30
-                    , Run CommandReader "~/.pymodoro/pymodoro.py" "pomodoro"
                     , Run Date "%a %_d %b %H:%M" "date" 20
-                    , Run StdinReader
+                    , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %pomodoro% |  %battery%  <fc=#ee9a00>%date%</fc> "
+       , template = "%UnsafeStdinReader% }{ %battery%  <fc=#ee9a00>%date%</fc> "
        }
+
+-- vim: ft=haskell

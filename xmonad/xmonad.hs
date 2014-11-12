@@ -43,8 +43,20 @@ myBorderWidth = 1
 -- The "windows key" is usually mod4Mask.
 myModMask = mod1Mask
 
--- The default number of workspaces (virtual screens) and their names.
-myWorkspaces = ["1:code","2:","3","4","5:media","6","7:Gimp","8:Chat","9:Monitor"]
+-- Clickable workspaces
+-- copied from http://www.arch-ed.dk/xmobar-clickable-workspace
+-- why? because I can (even if I don't use the mouse)
+--
+--
+xmobarEscape = concatMap doubleLts
+  where doubleLts '<' = "<<"
+        doubleLts x   = [x]
+
+myWorkspaces :: [String]        
+myWorkspaces = clickable . (map xmobarEscape) $ ["1:code","2:","3:","4:","5:media","6","7:Gimp","8:Chat","9:Monitor"]
+  where clickable l = [ "<action=xdotool key alt+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
+                          (i,ws) <- zip [1..9] l,                                        
+                          let n = i ]
 
 -- Border colors for unfocused and focused windows, respectively.
 myNormalBorderColor  = "#123456"
@@ -271,9 +283,9 @@ myLogHook = fadeInactiveLogHook fadeAmount
           where fadeAmount = 0.8
 
 myPP = xmobarPP {
-  ppCurrent = xmobarColor "#93a1a1" "",
-  ppTitle = xmobarColor "green" "" . shorten 50,
-  -- To hide workspaces without window
+  ppCurrent = xmobarColor "orange" "",
+  ppTitle = xmobarColor "#586e75" "" . shorten 150,
+  -- To hide workspaces without windows
   -- ppHiddenNoWindows = xmobarColor "#073642" "",
   ppHidden = xmobarColor "#7c7c7c" "",
   ppLayout = xmobarColor "#586e75" ""

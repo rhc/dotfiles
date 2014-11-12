@@ -39,6 +39,7 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'dag/vim2hs'
 "Plugin 'Lokaltog/powerline'
 
 call vundle#end()
