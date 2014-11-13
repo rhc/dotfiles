@@ -78,3 +78,9 @@ export BROWSER=/usr/bin/firefox
 
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+
+# BEGIN Ruboto setup
+source ~/.rubotorc
+# END Ruboto setup
+
