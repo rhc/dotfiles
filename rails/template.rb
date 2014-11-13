@@ -152,11 +152,6 @@ git commit: "-a -m 'Initial commit'"
 # create remote repo on Github or Bitbucket
 
 case  
-when yes?("Create repo on Github?  \033[33m(y/n)\033[0m") 
-  run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
-  git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
-  git push: "origin master"
-# Create Bitbucket Repository
 when yes?("Create repo on Bitbucket? \033[33m(y/n)\033[0m" )
   data = {
     scm: 'git',
@@ -182,6 +177,12 @@ when yes?("Create repo on Bitbucket? \033[33m(y/n)\033[0m" )
   git add: '--all .', commit: "-m 'Initial commit'"
   git remote: "add origin ssh://git@bitbucket.org/#{owner}/#{@app_name.titleize.parameterize}.git"
   git push: "-u origin --all"
+
+when yes?("Create repo on Github?  \033[33m(y/n)\033[0m") 
+  run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
+  git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
+  git push: "origin master"
+
 end
  
 run "echo 'Voila! Have (a lot of) fun' "
