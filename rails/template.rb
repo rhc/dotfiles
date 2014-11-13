@@ -127,7 +127,7 @@ environment nil, env: 'development' do
 end
  
 # setup minitest-rails-capybara in test_helper
-copy_file 'test/test_helper.rb', force: true
+template 'test/test_helper.rb', force: true
 copy_file 'config/initializers/backtrace_silencers.rb', force: true
 
 comment_lines 'config/application.rb', /railtie/
