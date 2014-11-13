@@ -150,7 +150,8 @@ git commit: "-a -m 'Initial commit'"
 
  
 # create remote repo on Github or Bitbucket
-case 
+
+case  
 when yes?("Create repo on Github?  \033[33m(y/n)\033[0m") 
   run "curl -u '#{ENV['GITHUB_USER']}' https://api.github.com/user/repos -d '{\"name\":\"#{app_path}\"}'"
   git remote: "add origin git@github.com:#{ENV['GITHUB_USER']}/#{app_path}.git"
