@@ -18,7 +18,24 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  #
+  def sign_in_as(user)
+    visit  '/'
+    click_link 'Sign in'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: 'topsecret'
+    click_button "Sign in"
+  end
+
+  def define_permission(user, action , thing)
+    Permission.create!(user: user, action: action , thing: thing)
+  end
+
+  def check_permission_box(permission, object)
+    check ["permissions",object.id, permission].join "_"
+  end
+
+  # Add more helper methods to be used by all tests here...
+
 end
 
 #Capybara driver
