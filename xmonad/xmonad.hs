@@ -326,7 +326,6 @@ myStartupHook = do
               setWMName "LG3D"
               spawn "xcompmgr -C"
               -- spawnOn "9:Monitor" "urxvt -e 'htop'"
-
 ------------------------------------------------------------------------
 -- Keybinding to toggle the gap for the status bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
