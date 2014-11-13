@@ -158,8 +158,6 @@ when yes?("Create repo on Github?  \033[33m(y/n)\033[0m")
   git push: "origin master"
 # Create Bitbucket Repository
 when yes?("Create repo on Bitbucket? \033[33m(y/n)\033[0m" )
-  require 'json'
-
   data = {
     scm: 'git',
     is_private: true,
@@ -167,18 +165,21 @@ when yes?("Create repo on Bitbucket? \033[33m(y/n)\033[0m" )
     name: app_name.titleize,
     language: 'ruby'
   }
+  data_fields = data.map {|k,v| k.to_s + "=" + v.to_s}.reduce("") {|accu,i| accu + " --data \"#{i}\""} 
+
   repo_slug = @app_name.titleize.parameterize
-  owner = "#{ENV['BITBUCKET_USER']}"
-  password = "#{ENV['BITBUCKET_PASSWORD']}"
-  credentials = [owner,password].join(":")
+  owner = "ckyony"
+  password = ask("password")
+  credentials = "#{owner}:#{password}"
   # --user 'username:password'
   # --pubkey ~/.ssh/id_rsa.pub # TODO: can we make this work???
   # TODO: what if this fails? can we re-try?
-  run "curl --request POST --user '#{credentials}' --header 'Content-Type: application/json' https://bitbucket.org/api/2.0/repositories/#{owner}/#{repo_slug} --data '#{data.to_json}'"
+  run "echo #{credentials}" 
+  run "curl --request POST --user '#{credentials}' https://bitbucket.org/api/2.0/repositories/#{owner}/#{repo_slug} #{data_fields}"
 
   # Add code to the repository
   git :init
-  git add: '--all .', commit: "-m 'Applied Rails Application Template'"
+  git add: '--all .', commit: "-m 'Initial commit'"
   git remote: "add origin ssh://git@bitbucket.org/#{owner}/#{@app_name.titleize.parameterize}.git"
   git push: "-u origin --all"
 end

@@ -113,6 +113,7 @@ export EDITOR="vim"
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 export GITHUB_USER='rhc'
+export BITBUCKET_USER='ckyony'
 
 bindkey -v
 
@@ -142,3 +143,9 @@ export BROWSER=/usr/bin/firefox
 # frequently used directories
 setopt auto_cd
 cdpath=($HOME/certifications)
+
+
+# BEGIN Ruboto setup
+source ~/.rubotorc
+# END Ruboto setup
+
