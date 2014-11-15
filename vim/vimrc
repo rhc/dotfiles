@@ -107,11 +107,18 @@ set smartcase " case sensitive when uc present
 set wildmenu " show list instead of just completing
 set wildignorecase " case insensitivity for the filename completion"
 set wildmode=longest,list,full " command <Tab> completion, list matches, then longest common part, then all.
-set wildignore+=*.pdf
+set wildignore+=*.pdf,*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*.png
 set wildignore+=*.jpg
 set wildignore+=*.gif
 autocmd FileType help wincmd L " open help window in vertical split
+
+" Exclude files and directories with ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set scrolljump=5 " lines to scroll when cursor leaves screen

@@ -60,7 +60,7 @@ run "psql -c 'CREATE DATABASE #{app_path}_test;'"
 run "sed -i  '1,54 s/username: #{app_path}/username: #{ENV['USER']}/' config/database.yml"
 
 
-# config minitest Spec DSL and Fixtures defaults in config/application.rb
+# confi,        default: 0g minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
     g.test_framework :minitest, spec: true, fixture: true
