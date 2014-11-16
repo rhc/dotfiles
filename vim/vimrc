@@ -120,6 +120,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set scrolljump=5 " lines to scroll when cursor leaves screen
 set scrolloff=3 " minimum lines to keep above and below cursor
@@ -175,6 +176,7 @@ nmap <silent> <leader>3b ebys3w*<ESC>
 nmap <silent> <leader>4b ebys4w*<ESC>
 nmap <silent> <leader>5b ebys5w*<ESC>
 nmap <silent> <leader>6b ebys6w*<ESC>
+nmap <silent> <leader>p <c-p>
 
 
 set ttyfast " send more characters for redraws"
