@@ -8,6 +8,7 @@
 gem 'thin'
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'high_voltage'
