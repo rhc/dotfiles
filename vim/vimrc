@@ -41,7 +41,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'dag/vim2hs'
 Plugin 'sjl/gundo.vim.git'
-Plugin 'rking/ag.vim.git'
+Plugin 'rking/ag.vim'
 "Plugin 'Lokaltog/powerline'
 
 call vundle#end()
