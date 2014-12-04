@@ -148,6 +148,7 @@ Science.
 - CSS front-end framework: bootstrap
 - Source file indexer: ctags
 - Headless Webkit: phantomjs
+- Code-searching tool: the_silver_searcher
 
 === Utilities
 

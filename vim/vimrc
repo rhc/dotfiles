@@ -40,6 +40,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'dag/vim2hs'
+Plugin 'sjl/gundo.vim.git'
+Plugin 'rking/ag.vim.git'
 "Plugin 'Lokaltog/powerline'
 
 call vundle#end()
@@ -111,6 +113,7 @@ set wildignore+=*.pdf,*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*.png
 set wildignore+=*.jpg
 set wildignore+=*.gif
+set lazyredraw " redraw only when necessary
 autocmd FileType help wincmd L " open help window in vertical split
 
 " Exclude files and directories with ctrlp
@@ -236,3 +239,18 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=["~/vim/bundle/vim-snippets/snippets"]
 
 set tags=./tags;
+
+" Gundo
+nnoremap <leader>u :GundoToggle<cr>
+let g:gundo_close_on_revert=1
+
+" Rails.vim 
+"  :Rfea item
+"todo: Add this with projection
+let g:rails_projections = { 
+      \ "test/features/*_test.rb": { 
+            \"command": "feature", 
+            \ "template": "class %SDecorator < SimpleDelegator\nend", 
+            \ "test": [ "test/features/%s" ],
+            \ "affinity": "model" 
+      \ }}
