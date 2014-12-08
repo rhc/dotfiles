@@ -9,11 +9,18 @@ My template generates an app with these libraries all ready to go:
 
 - Core Stack
 * Rails 4.1
+
+- Database
 * PostgreSQL
+
+- UI 
+* Bootstrap
 * Slim
 * Sass
-* Bootstrap
 * Simple Form
+
+- Authentication
+* Devise
 
 - Testing
 * minitest 
@@ -23,6 +30,15 @@ My template generates an app with these libraries all ready to go:
 - Development
 * Guard for minitest, livereload, bundlet
 //* Foreman, Simplecov, Cane, Awesome Print, Mailcatcher
+
+- Version control
+* git with repo on github.com or bitbucket
+
+- Deployment
+* Heroku
+
+//Todo
+// Application Secrets with Figaro
 
 
 - 

@@ -253,3 +253,6 @@ let g:rails_projections = {
             \ "test": [ "test/features/%s" ],
             \ "affinity": "model" 
       \ }}
+
+
+ 

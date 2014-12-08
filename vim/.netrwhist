@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/ckyony/repo/gforce/app/views/attendances'
 let g:netrw_dirhist_2='/home/ckyony/repo/gforce/app/views/performances'
 let g:netrw_dirhist_3='/home/ckyony/repo/awdr40/depot_k/tmp'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/ckyony/repo/awdr40/o'
 let g:netrw_dirhist_5='/home/ckyony/repo/gforce/app/views/tariffs'
 let g:netrw_dirhist_6='/home/ckyony/.local/share/autojump'
 let g:netrw_dirhist_7='/home/ckyony/.local/share'
+let g:netrw_dirhist_8='/home/ckyony/repo/coffee-tutorial'
