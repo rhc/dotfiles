@@ -29,10 +29,10 @@ gem_group :development do
   gem 'rails_layout'
   gem 'rails_best_practices'
   gem 'rails_apps_pages'
+  gem 'rubocop', require: false
   #gem 'bullet'
 end
 
-gem 'minitest-rails' 
 gem_group :test do 
   gem 'minitest-reporters'
   gem 'minitest-rails-capybara' 

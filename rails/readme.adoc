@@ -18,6 +18,7 @@ My template generates an app with these libraries all ready to go:
 * Slim
 * Sass
 * Simple Form
+* Font-Awesome
 
 - Authentication
 * Devise
@@ -37,8 +38,13 @@ My template generates an app with these libraries all ready to go:
 - Deployment
 * Heroku
 
+- Analytics
+* Google analytics (not yet)
+
 //Todo
 // Application Secrets with Figaro
+//
 
 
-- 
+- Static code analyzer
+* Rubocop
