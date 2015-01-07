@@ -116,6 +116,7 @@ export GITHUB_USER='rhc'
 export BITBUCKET_USER='ckyony'
 
 bindkey -v
+bindkey '^r' history-incremental-search-backward
 
 # Reduce the delay from the default 0.4 second to 0.1 second
 # after pressing the <ESC> key
@@ -148,4 +149,15 @@ cdpath=($HOME/certifications)
 # BEGIN Ruboto setup
 source ~/.rubotorc
 # END Ruboto setup
-
+#
+#
+# # to access X selection => didnt work
+# function vi-append-x-selection () { 
+#   RBUFFER=$(xsel -o -p </dev/null)$RBUFFER; 
+# }
+# zle -N vi-append-x-selection
+# bindkey -a '^x' vi-append-x-selection
+# vi-yank-x-selection () { print -rn -- $CUTBUFFER | xsel -i -p; }
+# zle -N vi-yank-x-selection
+# bindkey -a '^Y' vi-yank-x-selection#
+#

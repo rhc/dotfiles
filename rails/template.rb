@@ -5,6 +5,8 @@
 # cat ~/.railsrc
 # -m ~/dotfiles/rails/template.rb
 #
+# Update everything to rails 4.2.0
+#
 gem 'thin'
 gem 'slim-rails'
 gem 'bootstrap-sass'
@@ -21,10 +23,10 @@ gem_group :development do
   gem 'guard-livereload' 
   gem 'rack-livereload' 
   gem 'libnotify' 
-  gem 'better_errors' 
+  gem 'better_errors' # to be replaced by web-console 
   gem 'binding_of_caller', platforms: :mri_21
   gem 'quiet_assets' 
-  gem 'pry-byebug'
+  gem 'pry-byebug'  # to be replaced by byebug
   gem 'pry-rails' 
   gem 'rails_layout'
   gem 'rails_best_practices'
@@ -61,7 +63,7 @@ run "psql -c 'CREATE DATABASE #{app_path}_test;'"
 run "sed -i  '1,54 s/username: #{app_path}/username: #{ENV['USER']}/' config/database.yml"
 
 
-# confi,        default: 0g minitest Spec DSL and Fixtures defaults in config/application.rb
+# minitest Spec DSL and Fixtures defaults in config/application.rb
 environment %q[ 
   config.generators do |g|
     g.test_framework :minitest, spec: true, fixture: true
