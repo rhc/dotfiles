@@ -7,7 +7,8 @@
 #
 # Update everything to rails 4.2.0
 #
-gem 'thin'
+gem 'thin' 
+#todo: replace thin by unicorn
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
@@ -151,6 +152,9 @@ git :init
 git add: "."
 git commit: "-a -m 'Initial commit'"
 
+#todo: configure the application to use SSL in production
+# in config/environments/production.rb
+# config.force_ssl = true
  
 # create remote repo on Github or Bitbucket
 
