@@ -14,6 +14,12 @@ iabb cfgmap (config-map-class)#
 iabb cfgv (config-vrf)#
 iabb lenght length
 iabb cfgr (config-router)#
+iabb cfgrstmp (config-router-stmp)#
+iabb cfgrptmp (config-router-ptmp)#
+iabb cfgraf (config-router-af)#
+iabb cfgvrf (config-vrf)#
+
+
 iabb cmd command
 iabb cmds commands
 iabb dbs databases

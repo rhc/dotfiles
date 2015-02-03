@@ -117,13 +117,14 @@ export BITBUCKET_USER='ckyony'
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
+bindkey  -M vicmd v edit-command-line
 
 # Reduce the delay from the default 0.4 second to 0.1 second
 # after pressing the <ESC> key
 export KEYTIMEOUT=1 
 
 export NODE_PATH=/usr/lib/node_modules
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk/jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
 
 
 export SGML_CATALOG_FILES=/etc/xml/catalog
@@ -161,3 +162,6 @@ source ~/.rubotorc
 # zle -N vi-yank-x-selection
 # bindkey -a '^Y' vi-yank-x-selection#
 #
+wmname LG3D
+export _JAVA_AWT_WM_NONREPARENTING=1
+

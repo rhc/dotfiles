@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/ckyony/repo/sample_app'
 let g:netrw_dirhist_2='/home/ckyony/repo'
+let g:netrw_dirhist_3='/home/ckyony/repo/sample_app/app/views/users'
+let g:netrw_dirhist_4='/usr/lib/jvm/default'
+let g:netrw_dirhist_5='/usr/lib/jvm/default/lib'
+let g:netrw_dirhist_6='/usr/lib/jvm/default'
+let g:netrw_dirhist_7='/home/ckyony/certifications/latex'

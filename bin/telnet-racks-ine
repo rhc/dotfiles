@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
   set timeout 20
-	set username "rs5rack10"
-	set password "cition"
+	set username "rs5rack17"
+	set password "kousion"
   set device [lindex $argv 0]
 	spawn telnet racks.ine.com
 	expect "Username: "
