@@ -42,6 +42,7 @@ Plugin 'dag/vim2hs'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'rking/ag.vim'
 "Plugin 'Lokaltog/powerline'
+"Plugin 'valloric/youcompleteme.git'
 
 call vundle#end()
 filetype plugin indent on " Automatically detect file types.
@@ -144,6 +145,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" automatically resize windows 
+autocmd vimResized * :wincmd =
 
 set foldenable " auto fold code
 
@@ -253,6 +257,7 @@ let g:rails_projections = {
             \ "test": [ "test/features/%s" ],
             \ "affinity": "model" 
       \ }}
+
 
 
  
