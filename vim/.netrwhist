@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/ckyony/repo/upcase'
 let g:netrw_dirhist_2='/home/ckyony/repo/upcase/pointfree-style'
 let g:netrw_dirhist_3='/home/ckyony/tmp'
 let g:netrw_dirhist_4='/home/ckyony/tmp/basic-ip-addressing'
 let g:netrw_dirhist_5='/home/ckyony/tmp'
+let g:netrw_dirhist_6='/storage/ccie/ine/workbook/ine-labs/basic.ip.addressing'
+let g:netrw_dirhist_7='/home/ckyony/repo/gns3-utils/data/projects/ine/ine-files/dynamips/configs'

@@ -100,6 +100,17 @@ alias ti='~/dotfiles/bin/telnet-racks-ine'
 alias beg='bundle exec guard'
 alias ide='~/dotfiles/bin/ide.sh'
 
+alias r1='telnet 127.0.0.1 2001'
+alias r2='telnet 127.0.0.1 2002'
+alias r3='telnet 127.0.0.1 2003'
+alias r4='telnet 127.0.0.1 2004'
+alias r5='telnet 127.0.0.1 2005'
+alias r6='telnet 127.0.0.1 2006'
+alias r7='telnet 127.0.0.1 2007'
+alias r8='telnet 127.0.0.1 2008'
+alias r9='telnet 127.0.0.1 2009'
+alias r10='telnet 127.0.0.1 2010'
+
 #export HISTSIZE=10000
 #export HISTFILESIZE=1000000
 #export HISTCONTROL='erasedups'

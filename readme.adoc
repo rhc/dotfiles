@@ -139,6 +139,7 @@ Science.
 - Screencast: ?
 - Collection manager: xbmc
 - Graph visualization: http://www.graphviz.org[graphviz] 
+- Digital graphics: Processing
 
 === Development
 

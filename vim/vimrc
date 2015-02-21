@@ -41,6 +41,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'dag/vim2hs'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'rking/ag.vim'
+Plugin 'zaiste/tmux.vim'
 "Plugin 'Lokaltog/powerline'
 "Plugin 'valloric/youcompleteme.git'
 
@@ -149,7 +150,8 @@ nnoremap <c-l> <c-w>l
 " automatically resize windows 
 autocmd vimResized * :wincmd =
 
-set foldenable " auto fold code
+" TODO: I need to spend some time to be comfortable with vim folds
+" set foldenable " auto fold code
 
 " Formatting 
 set nowrap " wrap long lines
