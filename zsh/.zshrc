@@ -175,4 +175,6 @@ source ~/.rubotorc
 #
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
+xset -b
 
+source ~/.config/tmuxinator/completion.zsh

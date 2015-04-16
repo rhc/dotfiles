@@ -42,6 +42,9 @@ Plugin 'dag/vim2hs'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'rking/ag.vim'
 Plugin 'zaiste/tmux.vim'
+Plugin 'jceb/vim-orgmode'
+Plugin 'tpope/vim-speeddating'
+Plugin 'itchyny/calendar.vim'
 "Plugin 'Lokaltog/powerline'
 "Plugin 'valloric/youcompleteme.git'
 
@@ -219,8 +222,8 @@ imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>
 vnoremap P "+gP
 nnoremap P "+gP
-nnoremap Y "*y
-vnoremap Y "*y
+nnoremap Y "+y
+vnoremap Y "+y
 
 set autowriteall " automatically write a file when leaving a modified buffer
 
