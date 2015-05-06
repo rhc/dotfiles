@@ -28,6 +28,7 @@ firefox &
 # auto mount disk in /media with no configuration 
 udiskie --tray &
 
+
 pulseaudio --start &
 
 # launch terminal

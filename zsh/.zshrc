@@ -99,6 +99,7 @@ alias typist='gtypist --personal-best --word-processor --always-sure --silent --
 alias ti='~/dotfiles/bin/telnet-racks-ine'
 alias beg='bundle exec guard'
 alias ide='~/dotfiles/bin/ide.sh'
+alias vim='gvim -v'
 
 alias r1='telnet 127.0.0.1 2001'
 alias r2='telnet 127.0.0.1 2002'
@@ -178,3 +179,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 xset -b
 
 source ~/.config/tmuxinator/completion.zsh
+
+# to get rid of grep warnings
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS

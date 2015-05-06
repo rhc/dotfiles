@@ -220,10 +220,10 @@ imap <F2>  <c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>
 nmap <F2>  a<C-R>=strftime("%Y-%m-%d %a %H:%M")<CR><ESC>
 imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>
-vnoremap P "+gP
-nnoremap P "+gP
-nnoremap Y "+y
-vnoremap Y "+y
+vnoremap P <ESC>"+gP
+nnoremap P <ESC>"+gP
+nnoremap Y <ESC>"+y
+vnoremap Y <ESC>"+y
 
 set autowriteall " automatically write a file when leaving a modified buffer
 
@@ -244,7 +244,7 @@ runtime macros/matchit.vim
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["~/vim/bundle/vim-snippets/snippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 set tags=./tags;
 
