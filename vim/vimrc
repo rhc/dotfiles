@@ -220,6 +220,7 @@ imap <F2>  <c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>
 nmap <F2>  a<C-R>=strftime("%Y-%m-%d %a %H:%M")<CR><ESC>
 imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>
+set clipboard=unnamedplus
 vnoremap P <ESC>"+gP
 nnoremap P <ESC>"+gP
 nnoremap Y <ESC>"+y
