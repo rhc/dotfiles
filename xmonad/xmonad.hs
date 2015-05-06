@@ -1,4 +1,9 @@
 import XMonad
 import XMonad.Config.Gnome
 
-main = xmonad gnomeConfig
+myTerminal = "urxvt"
+
+main = xmonad gnomeConfig 
+  {
+    terminal = myTerminal
+  }
