@@ -12,6 +12,7 @@ myLayout = tiled ||| Full
     delta = 3/100 -- increment when resizing panes
 
 main = xmonad gnomeConfig 
-  {
-    terminal = myTerminal
+  { terminal = myTerminal
+  , layoutHook = smartBorders $ myLayout
   }
+
