@@ -2,7 +2,7 @@
 
 == Features supported
 
-* [ ] smartBorders: the borders are automatically hidden when there is only one window
+* [x] smartBorders: the borders are automatically hidden when there is only one window
 * [ ] M-a displays the current time on top using dzen2
 * [ ] M-p launches dmenu
 * [ ] S-M-a kills the current window
