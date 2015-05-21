@@ -28,7 +28,6 @@ iabb dont don't
 iabb eg e.g.
 iabb eqn equation
 iabb eqns equations
-iabb fr Frame Relay
 iabb grp group
 iabb grps groups
 iabb gt =>
@@ -117,5 +116,11 @@ iabb vn VLAN
 iabb vns VLANs
 iabb wo without
 iabb xn Christian
+
+"French
+iabb modele modèle
+iabb modeles modèles
+iabb reseau réseau
+iabb reseaux  réseaux
 
 " end of the file

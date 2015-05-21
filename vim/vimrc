@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jlangston/tomorrow-night-vim'
@@ -98,7 +97,6 @@ set noerrorbells " don't beep"
 "statusline
 set laststatus=2
 
-set backspace=indent,eol,start " backspace for dummys
 set linespace=0 " No extra spaces between rows
 set number " Line numbers on
 set cursorline 
@@ -162,7 +160,7 @@ set autoindent " indent at the same level of the previous line
 set shiftwidth=2 " use indents of 2 spaces
 set expandtab " tabs are spaces, not tabs
 set tabstop=2 " an indentation every two columns
-set softtabstop=2 " let backspace delete indent
+"set softtabstop=2 " let backspace delete indent
 set matchpairs+=<:> " match, to be used with %
 "set pastetoggle=<F12> " pastetoggle (sane indentation on pastes)
 
@@ -171,7 +169,7 @@ set matchpairs+=<:> " match, to be used with %
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
 
-
+" set digraph if working with French file
 
 " when you forgot to sudo before editing a file
 cmap sw  w  !sudo tee % >/dev/null 
@@ -188,6 +186,22 @@ nmap <silent> <leader>4b ebys4w*<ESC>
 nmap <silent> <leader>5b ebys5w*<ESC>
 nmap <silent> <leader>6b ebys6w*<ESC>
 nmap <silent> <leader>p <c-p>
+
+" copy the configuration of routers 
+nmap <silent> <leader>r1 /R1<CR>yip<ESC>
+nmap <silent> <leader>r2 /R2<CR>yip<ESC>
+nmap <silent> <leader>r3 /R3<CR>yip<ESC>
+nmap <silent> <leader>r4 /R4<CR>yip<ESC>
+nmap <silent> <leader>r5 /R5<CR>yip<ESC>
+nmap <silent> <leader>r6 /R6<CR>yip<ESC>
+nmap <silent> <leader>r7 /R7<CR>yip<ESC>
+nmap <silent> <leader>r8 /R8<CR>yip<ESC>
+nmap <silent> <leader>r9 /R9<CR>yip<ESC>
+nmap <silent> <leader>r10 /R10<CR>yip<ESC>
+nmap <silent> <leader>s1 /S1<CR>yip<ESC>
+nmap <silent> <leader>s2 /S2<CR>yip<ESC>
+nmap <silent> <leader>s3 /S3<CR>yip<ESC>
+nmap <silent> <leader>s4 /S4<CR>yip<ESC>
 
 
 set ttyfast " send more characters for redraws"

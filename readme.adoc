@@ -101,7 +101,7 @@ Science.
 === Internet
 
 - Network manager: netcl
-- Web browser: firefox, chrome
+- Web browser: firefox, chrome, vimb(?)
 - Add-ons web browser: pentadactyl, todoist
 - Youtube downloader: youtube-dl
 - Bit torrent client: transmission
@@ -142,6 +142,8 @@ Science.
 - Digital graphics: Processing
 - Video/DVD ripper and encoder: transcode
 - AVI joiner: transcode with avimerge
+- Radio service: rpd
+
 
 === Development
 
@@ -213,6 +215,7 @@ Science.
 - System and service manager: systemd
 - Job scheduler: systemd/cron
 - Self-monitoring, analysis and reporting: smartmontools
+- File manager: vifm, ranger(?)
 
 === Science
 

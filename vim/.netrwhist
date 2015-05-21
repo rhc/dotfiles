@@ -1,8 +1,8 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ckyony/.vimperator/info/default'
-let g:netrw_dirhist_2='/media/1CB8B94CB8B92564/movies'
-let g:netrw_dirhist_3='/home/ckyony/dotfiles/vim/bundle/vim-snippets/snippets'
-let g:netrw_dirhist_4='/home/ckyony/dotfiles/xmobar'
-let g:netrw_dirhist_5='/home/ckyony/repo/hacker-rank-contests'
-let g:netrw_dirhist_6='/home/ckyony/dotfiles/xmonad'
+let g:netrw_dirhist_1='/home/ckyony/repo/aur/gns3-server'
+let g:netrw_dirhist_2='/storage/ccie/ine/workbook/labs'
+let g:netrw_dirhist_3='/storage/ccie/ine/workbook/labs/ipv6'
+let g:netrw_dirhist_4='/storage/ccie/ine/workbook/labs'
+let g:netrw_dirhist_5='/storage/ccie/ine/workbook/labs/ipv6'
+let g:netrw_dirhist_6='/home/ckyony/repo/vimonad/bin'

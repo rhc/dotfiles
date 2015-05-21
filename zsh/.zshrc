@@ -145,6 +145,7 @@ export SGML_CATALOG_FILES=/etc/xml/catalog
 export MOZ_DISABLE_PANGO=1
 
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/repo/asciidoctor-pdf/bin:$HOME/repo/asciidoctor-fopub/
 
 # To use Firefox from urlscan in mutt
 export BROWSER=/usr/bin/firefox
@@ -183,3 +184,5 @@ source ~/.config/tmuxinator/completion.zsh
 # to get rid of grep warnings
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
+
+
