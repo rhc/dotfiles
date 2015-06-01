@@ -1,8 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ckyony/repo/aur/gns3-server'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/storage/ccie/ine/workbook/labs/security'
 let g:netrw_dirhist_2='/storage/ccie/ine/workbook/labs'
-let g:netrw_dirhist_3='/storage/ccie/ine/workbook/labs/ipv6'
-let g:netrw_dirhist_4='/storage/ccie/ine/workbook/labs'
-let g:netrw_dirhist_5='/storage/ccie/ine/workbook/labs/ipv6'
-let g:netrw_dirhist_6='/home/ckyony/repo/vimonad/bin'
+let g:netrw_dirhist_3='/storage/ccie/ine/workbook/labs/qos'
+let g:netrw_dirhist_4='/storage/ccie/command-references'

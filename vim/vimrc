@@ -44,6 +44,7 @@ Plugin 'zaiste/tmux.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
 Plugin 'itchyny/calendar.vim'
+Plugin 'sukima/xmledit'
 "Plugin 'Lokaltog/powerline'
 "Plugin 'valloric/youcompleteme.git'
 

@@ -1,6 +1,6 @@
 #!/usr/bin/expect -f
   set timeout 20
-	set username "rs5rack2"
+	set username "rs5rack18"
 	set password "cciechal"
   set device [lindex $argv 0]
 	spawn telnet racks.ine.com

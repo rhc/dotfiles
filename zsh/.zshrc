@@ -100,6 +100,7 @@ alias ti='~/dotfiles/bin/telnet-racks-ine'
 alias beg='bundle exec guard'
 alias ide='~/dotfiles/bin/ide.sh'
 alias vim='gvim -v'
+alias now='task due:today'
 
 alias r1='telnet 127.0.0.1 2001'
 alias r2='telnet 127.0.0.1 2002'
@@ -185,4 +186,12 @@ source ~/.config/tmuxinator/completion.zsh
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
+# set dual monitors
+dual () {
+    xrandr --output VGA-0 --primary --left-of HDMI-0 --output HDMI-0 --auto
+}
 
+# set single monitor
+single () {
+    xrandr --output HDMI-0 --off
+}

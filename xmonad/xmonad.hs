@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Config.Gnome
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.EZConfig
@@ -205,7 +206,7 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+-- myStartupHook = 
 
 ------------------------------------------------------------------------
 -- Run xmonad with the settings you specify. No need to modify this.
@@ -237,5 +238,7 @@ defaults = gnomeConfig {
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
-        startupHook        = myStartupHook
+        startupHook        = do 
+          startupHook gnomeConfig
+          setWMName "LG3D"
         }
