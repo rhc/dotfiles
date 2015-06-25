@@ -1,4 +1,5 @@
 cabb tt tabnew
+
 iabb Prj project
 iabb ak Angelique Kyony
 iabb bb byebug
@@ -18,8 +19,6 @@ iabb cfgrstmp (config-router-stmp)#
 iabb cfgrptmp (config-router-ptmp)#
 iabb cfgraf (config-router-af)#
 iabb cfgvrf (config-vrf)#
-
-
 iabb cmd command
 iabb cmds commands
 iabb dbs databases

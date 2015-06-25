@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Config.Gnome
+-- import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders
 import XMonad.Hooks.DynamicLog
@@ -8,6 +9,7 @@ import Data.Monoid
 import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+
 
 
 myTerminal      = "urxvt"
@@ -196,7 +198,9 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = return ()
+--
+-- myLogHook = XMonad.Actions.UpdatePointer.updatePointer (XMonad.Actions.UpdatePointer.Relative 0.5 0.5)
+myLogHook = return () 
 
 ------------------------------------------------------------------------
 -- Startup hook

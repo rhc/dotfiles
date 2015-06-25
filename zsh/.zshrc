@@ -137,7 +137,7 @@ bindkey  -M vicmd v edit-command-line
 export KEYTIMEOUT=1 
 
 export NODE_PATH=/usr/lib/node_modules
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
 
 
 export SGML_CATALOG_FILES=/etc/xml/catalog
@@ -180,6 +180,8 @@ wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
 xset -b
 
+export INE_RACK=xrs5rack1
+
 source ~/.config/tmuxinator/completion.zsh
 
 # to get rid of grep warnings
@@ -188,10 +190,10 @@ unset GREP_OPTIONS
 
 # set dual monitors
 dual () {
-    xrandr --output VGA-0 --primary --left-of HDMI-0 --output HDMI-0 --auto
+    xrandr --output eDP1 --auto --primary  --output HDMI1 --left-of eDP1 --auto
 }
 
 # set single monitor
 single () {
-    xrandr --output HDMI-0 --off
+    xrandr --output HDMI1 --off
 }

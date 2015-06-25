@@ -5523,3 +5523,92 @@ new [description:"ip drp" due:"1433196000" entry:"1433163659" modified:"14331636
 time 1433172424
 new [description:"install 2nd monitor" due:"1433109600" entry:"1433172424" modified:"1433172424" project:"ccie" status:"pending" tags:"cramsession" uuid:"c1c84c39-725d-4b4a-bbbf-487b20e10c00"]
 ---
+time 1433192007
+new [description:"read advanced tech slides" due:"1433196000" entry:"1433192007" modified:"1433192007" priority:"H" project:"ccie" status:"pending" uuid:"c00a734e-44e9-41f4-8f56-0a76f9f6f3ee"]
+---
+time 1433192166
+new [description:"write ccie book based on packet capture" entry:"1433192166" modified:"1433192166" project:"ccie" status:"pending" tags:"npd,cash" uuid:"8a1644e9-35c6-492c-ab12-4026869d55e4"]
+---
+time 1433194876
+new [description:"create the topology gns3 iou for cramsession topology" due:"1433196000" entry:"1433194876" modified:"1433194876" project:"ccie" status:"pending" uuid:"4f295ae3-190c-4b6a-a494-4738b4067ed2"]
+---
+time 1433229858
+new [description:"install IOU" due:"1433196000" entry:"1433229858" modified:"1433229858" project:"ccie" status:"pending" uuid:"b6d20c47-80ea-4d07-8239-f8140c324b50"]
+---
+time 1433260570
+new [description:"study the configuration topology" due:"1433196000" entry:"1433260570" modified:"1433260570" project:"ccie" status:"pending" tags:"cramsession" uuid:"337a98e4-c756-46a6-b3c4-6a345b360f56"]
+---
+time 1433263555
+new [description:"sync anki flashcard" due:"1433196000" end:"1433263555" entry:"1433263555" modified:"1433263555" project:"ccie" status:"completed" uuid:"eab77938-1006-4eb7-bcd8-16d9261daf8b"]
+---
+time 1433263664
+new [description:"add tablet to home wifi" due:"1433196000" end:"1433263664" entry:"1433263664" modified:"1433263664" project:"ccie" status:"completed" uuid:"0de6f138-9364-4043-896f-944e2e21efba"]
+---
+time 1433265450
+new [description:"clean local hdd" due:"1433196000" entry:"1433265450" modified:"1433265450" project:"lpi" status:"pending" uuid:"757b3b34-667e-4552-87ff-97d731df7a66"]
+---
+time 1433265465
+new [description:"backup local hdd" due:"1433196000" entry:"1433265465" modified:"1433265465" project:"lpi" status:"pending" uuid:"880e519a-a73b-4aa8-9e6b-c09d910c6ab2"]
+---
+time 1433265483
+old [description:"clean local hdd" due:"1433196000" entry:"1433265450" modified:"1433265450" project:"lpi" status:"pending" uuid:"757b3b34-667e-4552-87ff-97d731df7a66"]
+new [annotation_1433265483:"go below 70%" description:"clean local hdd" due:"1433196000" entry:"1433265450" modified:"1433265483" project:"lpi" status:"pending" uuid:"757b3b34-667e-4552-87ff-97d731df7a66"]
+---
+time 1433312720
+new [description:"read bgp dynamic peers feature" due:"1433282400" entry:"1433312720" modified:"1433312720" project:"ccie" status:"pending" uuid:"99d8c65c-3cd8-4bab-bd7b-44a25b1e6541"]
+---
+time 1433317239
+new [description:"troubleshooting lab 1 ine" due:"1433282400" entry:"1433317239" modified:"1433317239" project:"ccie" status:"pending" uuid:"429d9454-dd10-428f-8e93-6141717b8874"]
+---
+time 1433339561
+new [description:"install asciidoctor - epub3" due:"1433282400" end:"1433339561" entry:"1433339561" modified:"1433339561" project:"ccie" status:"completed" uuid:"be4aa69c-b87b-433b-8fa2-5ce62f745529"]
+---
+time 1433350104
+new [description:"read TCP ACK SYN RST" due:"1433368800" entry:"1433350104" modified:"1433350104" project:"ccie" status:"pending" uuid:"613fac21-d980-47a0-9e2b-2615171017a9"]
+---
+time 1433351552
+new [description:"read bgp enforce - first - as" due:"1433282400" entry:"1433351552" modified:"1433351552" project:"ccie" status:"pending" uuid:"a5022bec-98a0-472c-ad00-3f841b3927b6"]
+---
+time 1433353201
+new [description:"fast - convergence eigrp FS ospf LFA bgp PIC" due:"1433282400" entry:"1433353201" modified:"1433353201" project:"ccie" status:"pending" uuid:"4494f3ea-b966-4397-b06b-ac8cf0d4f9c5"]
+---
+time 1433662358
+new [description:"book fly ticket to jhb" due:"1433628000" end:"1433662358" entry:"1433662358" modified:"1433662358" project:"ccie" status:"completed" uuid:"38e5f32f-8e0e-4363-bf46-40e2808bd268"]
+---
+time 1433662370
+new [description:"buy rack rental at ine" due:"1433628000" end:"1433662370" entry:"1433662370" modified:"1433662370" project:"ccie" status:"completed" uuid:"89939e6b-af25-4ef8-aba5-01a2114df49d"]
+---
+time 1433663106
+new [description:"check INE token balance increased by 100" due:"1433714400" entry:"1433663106" modified:"1433663106" project:"ccie" status:"pending" uuid:"ede236b1-bc9b-43ae-a23d-4430f8cd8264"]
+---
+time 1433787552
+new [description:"read downward bit ospf" due:"1433714400" entry:"1433787552" modified:"1433787552" project:"ccie" status:"pending" uuid:"7c51f989-6a3b-4828-b18d-d28412801060"]
+---
+time 1433787998
+new [description:"read tcp 3 - way handshake" due:"1433714400" entry:"1433787998" modified:"1433787998" project:"ccie" status:"pending" uuid:"bdc9f915-43f0-4af5-92fc-610568283d0a"]
+---
+time 1433868278
+new [description:"CoPP" due:"1433800800" entry:"1433868278" modified:"1433868278" project:"ccie" status:"pending" uuid:"af0c6e01-8618-4c03-9612-169e3d77562d"]
+---
+time 1433868296
+new [description:"GTSM" due:"1433800800" entry:"1433868296" modified:"1433868296" project:"ccie" status:"pending" uuid:"9abd40e5-58bc-4b02-b102-3d8460f5ff27"]
+---
+time 1434021874
+new [description:"download iou image" due:"1433973600" end:"1434021874" entry:"1434021874" modified:"1434021874" project:"ccie" status:"completed" uuid:"c385ba3d-ab11-4e47-9c6b-607b6f2370af"]
+---
+time 1434022338
+new [description:"download c700 - adventerprisek9 - mz - 152 - 4 - s6.bin" due:"1433973600" entry:"1434022338" modified:"1434022338" project:"ccie" status:"pending" uuid:"bbe75779-2cab-4bd0-af2a-b068619595cc"]
+---
+time 1434177288
+new [description:"ruby script to change user name for telnet racks.ine.com" due:"1434146400" entry:"1434177288" modified:"1434177288" project:"ccie" status:"pending" uuid:"015427b2-97c0-4256-b172-e04ad5b7546d"]
+---
+time 1434177301
+old [description:"ruby script to change user name for telnet racks.ine.com" due:"1434146400" entry:"1434177288" modified:"1434177288" project:"ccie" status:"pending" uuid:"015427b2-97c0-4256-b172-e04ad5b7546d"]
+new [description:"ruby script to change user name for telnet racks.ine.com" due:"1434146400" entry:"1434177288" modified:"1434177301" priority:"H" project:"ccie" status:"pending" uuid:"015427b2-97c0-4256-b172-e04ad5b7546d"]
+---
+time 1434467282
+new [description:"sh control - plane host open - ports" due:"1434405600" entry:"1434467282" modified:"1434467282" project:"ccie" status:"pending" uuid:"d43251e1-6d24-4af3-bdb6-9bb6768272cf"]
+---
+time 1434535310
+new [description:"fix qt warning libpng iCCP known incorrect sRGB profile" due:"1434492000" entry:"1434535310" modified:"1434535310" project:"ccie" status:"pending" uuid:"0bc6c704-4e00-4fc9-8e27-6b8158de6741"]
+---

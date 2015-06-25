@@ -102,7 +102,7 @@ set linespace=0 " No extra spaces between rows
 set number " Line numbers on
 set cursorline 
 set cursorcolumn
-"set showmatch " show matching brackets/parenthesis
+set showmatch " show matching brackets/parenthesis
 set incsearch " find as you type search
 set nohlsearch " highlight search terms
 set winminheight=0 " windows can be 0 line high
@@ -173,7 +173,7 @@ nnoremap ; :
 " set digraph if working with French file
 
 " when you forgot to sudo before editing a file
-cmap sw  w  !sudo tee % >/dev/null 
+" cmap sw  w  !sudo tee % >/dev/null 
 
 let mapleader=","
 "quick edit/reload the vimrc file
