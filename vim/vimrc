@@ -45,6 +45,12 @@ Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
 Plugin 'itchyny/calendar.vim'
 Plugin 'sukima/xmledit'
+Plugin 'tyru/open-browser.vim'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'bling/vim-airline'
+Plugin 'vim-scripts/vim-R-plugin'
+Plugin 'kalafut/vim-taskjuggler'
+
 "Plugin 'Lokaltog/powerline'
 "Plugin 'valloric/youcompleteme.git'
 
@@ -240,7 +246,6 @@ vnoremap P <ESC>"+gP
 nnoremap P <ESC>"+gP
 nnoremap Y <ESC>"+y
 vnoremap Y <ESC>"+y
-
 set autowriteall " automatically write a file when leaving a modified buffer
 
 " Gemmfile, Rakefile, Vagrantfile, Thorfile are Ruby"
@@ -280,5 +285,18 @@ let g:rails_projections = {
       \ }}
 
 
+" Open browser
+nmap <leader>w <Plug>(openbrowser-open)
+vmap <leader>w <Plug>(openbrowser-open)
 
- 
+
+" utilities for Project Management
+"TODO: create snipmate shortcut 
+nmap <leader>ls olog start: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
+imap <leader>ls log start: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
+nmap <leader>lp olog pause: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
+imap <leader>lp log pause: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
+nmap <leader>lf olog finish: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
+imap <leader>lf log finish: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
+nmap <leader>lr olog resume: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
+imap <leader>lr log resume: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"

@@ -74,11 +74,8 @@ export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.gem/ruby/2.2.0/bin:$PATH"
 eval "$(rbenv init -)"
-
-
-
 
 alias cls='clear'
 alias ls='ls --color=auto'
@@ -87,7 +84,6 @@ alias r='sudo reboot'
 alias d='date'
 alias x='exit'
 alias lo='libreoffice'
-alias sx='startx'
 alias ah='vim ~/aha/aha.adoc'
 alias kpa='vim ~/aha/kpa.adoc'
 alias eu='cd ~/repo/euler'
@@ -95,6 +91,7 @@ alias di='cd ~/repo/discrete-optimization'
 alias migrate='rake db:migrate && rake db:test:prepare'
 alias rmdir='rm -rf'
 alias cdbook='cd ~/certifications/ccie/study-notes/book/'
+alias cd360='cd ~/certifications/ccie/360/'
 alias typist='gtypist --personal-best --word-processor --always-sure --silent --show-errors'
 alias ti='~/dotfiles/bin/telnet-racks-ine'
 alias beg='bundle exec guard'
@@ -112,6 +109,17 @@ alias r7='telnet 127.0.0.1 2007'
 alias r8='telnet 127.0.0.1 2008'
 alias r9='telnet 127.0.0.1 2009'
 alias r10='telnet 127.0.0.1 2010'
+alias r11='telnet 127.0.0.1 2011'
+alias r12='telnet 127.0.0.1 2012'
+alias r13='telnet 127.0.0.1 2013'
+alias r14='telnet 127.0.0.1 2014'
+alias r15='telnet 127.0.0.1 2015'
+alias r16='telnet 127.0.0.1 2016'
+alias r17='telnet 127.0.0.1 2017'
+alias r18='telnet 127.0.0.1 2018'
+alias r19='telnet 127.0.0.1 2019'
+alias r10='telnet 127.0.0.1 2020'
+alias cdccie="cd ~/certifications/ccie/360/"
 
 #export HISTSIZE=10000
 #export HISTFILESIZE=1000000
@@ -137,9 +145,7 @@ bindkey  -M vicmd v edit-command-line
 export KEYTIMEOUT=1 
 
 export NODE_PATH=/usr/lib/node_modules
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
-
-
+# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
 export SGML_CATALOG_FILES=/etc/xml/catalog
 
 # improve rendering by disabling pango
@@ -151,15 +157,11 @@ export PATH=$PATH:$HOME/repo/asciidoctor-pdf/bin:$HOME/repo/asciidoctor-fopub/
 # To use Firefox from urlscan in mutt
 export BROWSER=/usr/bin/firefox
 
-
 #local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 #PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}'
-
-
 # frequently used directories
 setopt auto_cd
 cdpath=($HOME/certifications)
-
 
 # BEGIN Ruboto setup
 source ~/.rubotorc
@@ -182,7 +184,6 @@ xset -b
 
 export INE_RACK=xrs5rack1
 
-source ~/.config/tmuxinator/completion.zsh
 
 # to get rid of grep warnings
 alias grep="/usr/bin/grep $GREP_OPTIONS"
@@ -190,10 +191,14 @@ unset GREP_OPTIONS
 
 # set dual monitors
 dual () {
-    xrandr --output eDP1 --auto --primary  --output HDMI1 --left-of eDP1 --auto
+    xrandr --output eDP-0 --auto --primary  --output HDMI-0 --left-of eDP-0 --auto
 }
 
 # set single monitor
 single () {
-    xrandr --output HDMI1 --off
+    xrandr --output HDMI-0 --off
 }
+
+
+# 
+export Q_SELECT=5

@@ -5612,3 +5612,86 @@ new [description:"sh control - plane host open - ports" due:"1434405600" entry:"
 time 1434535310
 new [description:"fix qt warning libpng iCCP known incorrect sRGB profile" due:"1434492000" entry:"1434535310" modified:"1434535310" project:"ccie" status:"pending" uuid:"0bc6c704-4e00-4fc9-8e27-6b8158de6741"]
 ---
+time 1436361613
+old [description:"how to open xml document in vim" due:"1433109600" entry:"1433157041" modified:"1433157041" project:"ccie" status:"pending" uuid:"3dee81de-d6d5-462a-b77e-a4fd4040d498"]
+new [description:"how to open xml document in vim" due:"1433109600" end:"1436361613" entry:"1433157041" modified:"1436361613" project:"ccie" status:"completed" uuid:"3dee81de-d6d5-462a-b77e-a4fd4040d498"]
+---
+time 1436361628
+old [depends:"3dee81de-d6d5-462a-b77e-a4fd4040d498" description:"find structure of epub documents" due:"1433109600" entry:"1433157024" modified:"1433157199" project:"ccie" status:"pending" uuid:"e394cb68-420c-4491-a3e9-3576d2af98db"]
+new [depends:"3dee81de-d6d5-462a-b77e-a4fd4040d498" description:"find structure of epub documents" due:"1433109600" end:"1436361628" entry:"1433157024" modified:"1436361628" project:"ccie" status:"completed" uuid:"e394cb68-420c-4491-a3e9-3576d2af98db"]
+---
+time 1436361651
+old [description:"reduce the overdue task in the ccie project from 51 to 25" due:"1432677600" entry:"1432721654" modified:"1432721654" priority:"H" project:"ccie" status:"pending" uuid:"e88b7b12-2904-46bc-bfbb-4709f51bb976"]
+new [description:"reduce the overdue task in the ccie project from 51 to 25" due:"1432677600" entry:"1432721654" modified:"1436361651" priority:"H" project:"ccie" start:"1436361651" status:"pending" uuid:"e88b7b12-2904-46bc-bfbb-4709f51bb976"]
+---
+time 1436361678
+old [description:"Stateful NAT with HSRP" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075444" status:"pending" tags:"labs,services" uuid:"1b49b1fe-9b7b-4da0-99b0-6a7009e8ca97"]
+new [description:"Stateful NAT with HSRP" due:"1432850400" end:"1436361675" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"1b49b1fe-9b7b-4da0-99b0-6a7009e8ca97"]
+---
+time 1436361678
+old [description:"Stateful NAT with Primary \/ Backup" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075450" status:"pending" tags:"labs,services" uuid:"971c2708-55ce-4a93-b1fb-ec1530f87060"]
+new [description:"Stateful NAT with Primary \/ Backup" due:"1432850400" end:"1436361678" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"971c2708-55ce-4a93-b1fb-ec1530f87060"]
+---
+time 1436361678
+old [description:"NAT Virtual Interface" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075450" status:"pending" tags:"labs,services" uuid:"7200095c-8fb8-4e96-a692-2ac37f116bf4"]
+new [description:"NAT Virtual Interface" due:"1432850400" end:"1436361678" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"7200095c-8fb8-4e96-a692-2ac37f116bf4"]
+---
+time 1436361678
+old [description:"NAT Default Interface" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075450" status:"pending" tags:"labs,services" uuid:"c5f7e36c-ec1f-4cf8-a496-55828cfc7c70"]
+new [description:"NAT Default Interface" due:"1432850400" end:"1436361678" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"c5f7e36c-ec1f-4cf8-a496-55828cfc7c70"]
+---
+time 1436361678
+old [description:"Reversible NAT" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075450" status:"pending" tags:"labs,services" uuid:"5ac2cba8-40d7-4fe9-899d-081020d93a4c"]
+new [description:"Reversible NAT" due:"1432850400" end:"1436361678" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"5ac2cba8-40d7-4fe9-899d-081020d93a4c"]
+---
+time 1436361678
+old [description:"Static Extendable NAT" due:"1432850400" entry:"1432723690" modified:"1433075450" project:"ccie" start:"1433075450" status:"pending" tags:"labs,services" uuid:"0ca2f9ca-0f6c-48cb-bc64-d1327e6af1df"]
+new [description:"Static Extendable NAT" due:"1432850400" end:"1436361678" entry:"1432723690" modified:"1436361678" project:"ccie" status:"completed" tags:"labs,services" uuid:"0ca2f9ca-0f6c-48cb-bc64-d1327e6af1df"]
+---
+time 1436361722
+old [description:"read advanced tech slides" due:"1433196000" entry:"1433192007" modified:"1433192007" priority:"H" project:"ccie" status:"pending" uuid:"c00a734e-44e9-41f4-8f56-0a76f9f6f3ee"]
+new [description:"read advanced tech slides" due:"1433196000" end:"1436361722" entry:"1433192007" modified:"1436361722" priority:"H" project:"ccie" status:"completed" uuid:"c00a734e-44e9-41f4-8f56-0a76f9f6f3ee"]
+---
+time 1436361991
+new [description:"check the regular expression in ios" due:"1436306400" entry:"1436361991" modified:"1436361991" priority:"M" project:"ccie" status:"pending" uuid:"91dce4c4-1a0c-4fdf-8275-5ead855a13d1"]
+---
+time 1436362094
+new [description:"setup IOU on my machine" due:"1436306400" entry:"1436362094" modified:"1436362094" priority:"H" project:"ccie" status:"pending" uuid:"72d36525-67a7-461e-94ab-138a4702f7e2"]
+---
+time 1436362102
+old [description:"setup IOU on my machine" due:"1436306400" entry:"1436362094" modified:"1436362094" priority:"H" project:"ccie" status:"pending" uuid:"72d36525-67a7-461e-94ab-138a4702f7e2"]
+new [description:"setup IOU on my machine" due:"1436306400" entry:"1436362094" modified:"1436362102" priority:"H" project:"ccie" start:"1436362102" status:"pending" uuid:"72d36525-67a7-461e-94ab-138a4702f7e2"]
+---
+time 1436363008
+new [description:"- Check the regular expressions for" due:"1436306400" end:"1436363008" entry:"1436363008" modified:"1436363008" project:"ccie" status:"completed" uuid:"3e39a86f-a46f-4e33-b498-48524384785a"]
+---
+time 1436363069
+new [description:"Study regex for searching and filtering IOS CLI commands" due:"1436306400" end:"1436363069" entry:"1436363069" modified:"1436363069" project:"ccie" status:"completed" uuid:"9bbb0189-7ce4-4aed-b8e9-12a2fcb591a6"]
+---
+time 1436365750
+new [description:"ntp notes" due:"1436306400" entry:"1436365750" modified:"1436365750" project:"ccie" status:"pending" uuid:"9ca3c2ad-1095-46de-885f-14dcf8cd30ef"]
+---
+time 1436365766
+new [description:"ntp flashcards" due:"1436392800" entry:"1436365766" modified:"1436365766" project:"ccie" status:"pending" uuid:"4915121a-ef35-4b4b-834d-02673bac11a1"]
+---
+time 1436365776
+old [description:"ntp notes" due:"1436306400" entry:"1436365750" modified:"1436365750" project:"ccie" status:"pending" uuid:"9ca3c2ad-1095-46de-885f-14dcf8cd30ef"]
+new [description:"ntp notes" due:"1436306400" entry:"1436365750" modified:"1436365776" project:"ccie" start:"1436365776" status:"pending" uuid:"9ca3c2ad-1095-46de-885f-14dcf8cd30ef"]
+---
+time 1436365776
+old [description:"ntp flashcards" due:"1436392800" entry:"1436365766" modified:"1436365766" project:"ccie" status:"pending" uuid:"4915121a-ef35-4b4b-834d-02673bac11a1"]
+new [description:"ntp flashcards" due:"1436392800" entry:"1436365766" modified:"1436365776" project:"ccie" start:"1436365776" status:"pending" uuid:"4915121a-ef35-4b4b-834d-02673bac11a1"]
+---
+time 1436482277
+new [description:"flash ip prefix - list" due:"1436479200" entry:"1436482277" modified:"1436482277" project:"ccie" status:"pending" uuid:"96e9700c-b3df-47ca-ad5f-9bf709957d1a"]
+---
+time 1436482440
+new [description:"match ip address prefix - list" due:"1436479200" entry:"1436482440" modified:"1436482440" project:"ccie" status:"pending" tags:"cmd" uuid:"16785ca9-0c43-46bf-8b00-ef53edb93bfb"]
+---
+time 1437736579
+new [description:"take over taskjuggler package" due:"1437688800" entry:"1437736579" modified:"1437736579" project:"ccie" status:"pending" tags:"aha" uuid:"d68db588-379e-4fb5-aaa9-837805e6d15e"]
+---
+time 1438582588
+old [description:"check INE token balance increased by 100" due:"1433714400" entry:"1433663106" modified:"1433663106" project:"ccie" status:"pending" uuid:"ede236b1-bc9b-43ae-a23d-4430f8cd8264"]
+new [description:"check INE token balance increased by 100" due:"1433714400" end:"1438582588" entry:"1433663106" modified:"1438582588" project:"ccie" status:"completed" uuid:"ede236b1-bc9b-43ae-a23d-4430f8cd8264"]
+---

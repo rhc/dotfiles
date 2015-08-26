@@ -19,6 +19,7 @@ iabb cfgrstmp (config-router-stmp)#
 iabb cfgrptmp (config-router-ptmp)#
 iabb cfgraf (config-router-af)#
 iabb cfgvrf (config-vrf)#
+iabb cfgdhcp (dhcp-config)#
 iabb cmd command
 iabb cmds commands
 iabb dbs databases

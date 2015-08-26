@@ -7,7 +7,7 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources 
 setxkbmap -option caps:escape
 #xset +fp /usr/share/fonts/local
-xset fp rehash
+#xset fp rehash
 xsetroot -cursor_name left_ptr
 
 
@@ -32,9 +32,9 @@ udiskie --tray &
 pulseaudio --start &
 
 # launch terminal
-/usr/bin/terminator - b &
-exec xmonad
-
+# exec xmonad
+# exec i3
+# exec startxfce4
 
 
 
