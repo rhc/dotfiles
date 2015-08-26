@@ -1,2 +1,2 @@
 
-xmonad.hs:3:2: parse error on input ‘main’
+xmonad.hs:6:7: parse error on input ‘=’
