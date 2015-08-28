@@ -1,3 +1,0 @@
-#!/bin/sh
-
-top -n 1 -b | head -n "$1"
