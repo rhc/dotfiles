@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_cnt =1
 let g:netrw_dirhist_1='/home/ckyony/aha'
-let g:netrw_dirhist_2='/home/ckyony/aha/aha'
-let g:netrw_dirhist_3='/home/ckyony/aha/aha/.git'
-let g:netrw_dirhist_4='/home/ckyony/aha/aha'
-let g:netrw_dirhist_5='/home/ckyony/dotfiles/xmonad'
-let g:netrw_dirhist_6='/storage/ccie/study-notes/book'
-let g:netrw_dirhist_7='/home/ckyony/changamuka'
-let g:netrw_dirhist_8='/storage/ccie/planning'
-let g:netrw_dirhist_9='/storage/ccie/ine/workbook/labs/lan-switching'

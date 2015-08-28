@@ -3,7 +3,7 @@ import XMonad.Config.Desktop
 
 baseConfig = desktopConfig
  
- main = xmonad  baseConfig
+main = xmonad  baseConfig
      { terminal    = "urxvt"
      , modMask     = mod4Mask
      , borderWidth = 3

@@ -75,6 +75,7 @@ export PATH="/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export PATH="$HOME/.rbenv/bin:$HOME/.gem/ruby/2.2.0/bin:$PATH"
+export PATH="$HOME/dotfiles/vimonad/bin:$PATH"
 eval "$(rbenv init -)"
 
 alias cls='clear'
@@ -198,6 +199,7 @@ dual () {
 single () {
     xrandr --output HDMI-0 --off
 }
+
 
 
 # 
