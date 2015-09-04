@@ -8,6 +8,7 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Config.Gnome
+import XMonad.Layout.NoBorders
 import Data.Monoid
 import System.Exit
 
@@ -156,7 +157,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Full
+myLayoutHook = smartBorders tiled ||| noBorders Full 
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -249,7 +250,7 @@ defaults = gnomeConfig {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = myLayout,
+        layoutHook         = myLayoutHook,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,

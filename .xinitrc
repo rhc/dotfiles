@@ -32,7 +32,7 @@ udiskie --tray &
 pulseaudio --start &
 
 # launch terminal
-exec xmonad
+# exec xmonad
 # exec i3
 # exec startxfce4
 
