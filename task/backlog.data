@@ -1497,3 +1497,4 @@
 {"description":"match ip address prefix - list","due":"20150709T220000Z","entry":"20150709T225400Z","modified":"20150709T225400Z","project":"ccie","status":"pending","tags":["cmd"],"uuid":"16785ca9-0c43-46bf-8b00-ef53edb93bfb"}
 {"description":"take over taskjuggler package","due":"20150723T220000Z","entry":"20150724T111619Z","modified":"20150724T111619Z","project":"ccie","status":"pending","tags":["aha"],"uuid":"d68db588-379e-4fb5-aaa9-837805e6d15e"}
 {"description":"check INE token balance increased by 100","due":"20150607T220000Z","end":"20150803T061628Z","entry":"20150607T074506Z","modified":"20150803T061628Z","project":"ccie","status":"completed","uuid":"ede236b1-bc9b-43ae-a23d-4430f8cd8264"}
+{"description":"review bgp neighbor initiate session","due":"20150908T220000Z","entry":"20150909T072922Z","modified":"20150909T072922Z","project":"ccie","status":"pending","uuid":"f9575228-8999-49f4-8839-6138ed5a1f53"}

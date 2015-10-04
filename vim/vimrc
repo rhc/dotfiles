@@ -50,8 +50,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/vim-R-plugin'
 Plugin 'kalafut/vim-taskjuggler'
-
-"Plugin 'Lokaltog/powerline'
+Plugin 'powerline/powerline'
 "Plugin 'valloric/youcompleteme.git'
 
 call vundle#end()
@@ -195,20 +194,20 @@ nmap <silent> <leader>6b ebys6w*<ESC>
 nmap <silent> <leader>p <c-p>
 
 " copy the configuration of routers 
-nmap <silent> <leader>r1 /R1<CR>yip<ESC>
-nmap <silent> <leader>r2 /R2<CR>yip<ESC>
-nmap <silent> <leader>r3 /R3<CR>yip<ESC>
-nmap <silent> <leader>r4 /R4<CR>yip<ESC>
-nmap <silent> <leader>r5 /R5<CR>yip<ESC>
-nmap <silent> <leader>r6 /R6<CR>yip<ESC>
-nmap <silent> <leader>r7 /R7<CR>yip<ESC>
-nmap <silent> <leader>r8 /R8<CR>yip<ESC>
-nmap <silent> <leader>r9 /R9<CR>yip<ESC>
-nmap <silent> <leader>r10 /R10<CR>yip<ESC>
-nmap <silent> <leader>s1 /S1<CR>yip<ESC>
-nmap <silent> <leader>s2 /S2<CR>yip<ESC>
-nmap <silent> <leader>s3 /S3<CR>yip<ESC>
-nmap <silent> <leader>s4 /S4<CR>yip<ESC>
+nmap <silent> <leader>r1 /R1\s*$<CR>yip<ESC>
+nmap <silent> <leader>r2 /R2\s*$<CR>yip<ESC>
+nmap <silent> <leader>r3 /R3\s*$<CR>yip<ESC>
+nmap <silent> <leader>r4 /R4\s*$<CR>yip<ESC>
+nmap <silent> <leader>r5 /R5\s*$<CR>yip<ESC>
+nmap <silent> <leader>r6 /R6\s*$<CR>yip<ESC>
+nmap <silent> <leader>r7 /R7\s*$<CR>yip<ESC>
+nmap <silent> <leader>r8 /R8\s*$<CR>yip<ESC>
+nmap <silent> <leader>r9 /R9\s*$<CR>yip<ESC>
+nmap <silent> <leader>r10 /R10\s*$<CR>yip<ESC>
+nmap <silent> <leader>s1 /S1\s*$<CR>yip<ESC>
+nmap <silent> <leader>s2 /S2\s*$<CR>yip<ESC>
+nmap <silent> <leader>s3 /S3\s*$<CR>yip<ESC>
+nmap <silent> <leader>s4 /S4\s*$<CR>yip<ESC>
 
 
 set ttyfast " send more characters for redraws"

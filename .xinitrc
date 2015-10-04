@@ -17,19 +17,19 @@ xsetroot -cursor_name left_ptr
 #setterm -blank 0 -powerdown 0
 
 # turn off black Screensaver
-/usr/bin/xscreensaver -no-splash &
+#/usr/bin/xscreensaver -no-splash &
 #xset s off
 
 # disable the touchpad while typing
 /usr/bin/syndaemon  -d -k -i 1
 
-firefox &
+# firefox &
 
 # auto mount disk in /media with no configuration 
-udiskie --tray &
+# udiskie --tray &
 
 
-pulseaudio --start &
+# pulseaudio --start &
 
 # launch terminal
 # exec xmonad

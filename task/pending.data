@@ -169,3 +169,4 @@
 [description:"flash ip prefix - list" due:"1436479200" entry:"1436482277" modified:"1436482277" project:"ccie" status:"pending" uuid:"96e9700c-b3df-47ca-ad5f-9bf709957d1a"]
 [description:"match ip address prefix - list" due:"1436479200" entry:"1436482440" modified:"1436482440" project:"ccie" status:"pending" tags:"cmd" uuid:"16785ca9-0c43-46bf-8b00-ef53edb93bfb"]
 [description:"take over taskjuggler package" due:"1437688800" entry:"1437736579" modified:"1437736579" project:"ccie" status:"pending" tags:"aha" uuid:"d68db588-379e-4fb5-aaa9-837805e6d15e"]
+[description:"review bgp neighbor initiate session" due:"1441749600" entry:"1441783762" modified:"1441783762" project:"ccie" status:"pending" uuid:"f9575228-8999-49f4-8839-6138ed5a1f53"]

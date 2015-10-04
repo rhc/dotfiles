@@ -5695,3 +5695,6 @@ time 1438582588
 old [description:"check INE token balance increased by 100" due:"1433714400" entry:"1433663106" modified:"1433663106" project:"ccie" status:"pending" uuid:"ede236b1-bc9b-43ae-a23d-4430f8cd8264"]
 new [description:"check INE token balance increased by 100" due:"1433714400" end:"1438582588" entry:"1433663106" modified:"1438582588" project:"ccie" status:"completed" uuid:"ede236b1-bc9b-43ae-a23d-4430f8cd8264"]
 ---
+time 1441783762
+new [description:"review bgp neighbor initiate session" due:"1441749600" entry:"1441783762" modified:"1441783762" project:"ccie" status:"pending" uuid:"f9575228-8999-49f4-8839-6138ed5a1f53"]
+---
