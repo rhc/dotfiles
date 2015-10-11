@@ -119,9 +119,14 @@ alias r16='telnet 127.0.0.1 2016'
 alias r17='telnet 127.0.0.1 2017'
 alias r18='telnet 127.0.0.1 2018'
 alias r19='telnet 127.0.0.1 2019'
-alias r10='telnet 127.0.0.1 2020'
-alias cdccie="cd ~/certifications/ccie/360/"
+alias r20='telnet 127.0.0.1 2020'
 
+alias cdccie="cd ~/certifications/ccie/360/"
+alias pac='packer -S --noedit' 
+alias lab='~/bin/start-lab-session'
+
+# rename on steroids
+autoload zmv 
 #export HISTSIZE=10000
 #export HISTFILESIZE=1000000
 #export HISTCONTROL='erasedups'
@@ -146,7 +151,7 @@ bindkey  -M vicmd v edit-command-line
 export KEYTIMEOUT=1 
 
 export NODE_PATH=/usr/lib/node_modules
-# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/
 export SGML_CATALOG_FILES=/etc/xml/catalog
 
 # improve rendering by disabling pango
@@ -190,17 +195,23 @@ export INE_RACK=xrs5rack1
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
+# TODO: detect automatically the second monitor
 # set dual monitors
 dual () {
-    xrandr --output eDP-0 --auto --primary  --output HDMI-0 --left-of eDP-0 --auto
+    xrandr --output eDP1 --auto --primary  --output HDMI1 --left-of eDP1 --mode 1366x768
 }
 
 # set single monitor
 single () {
-    xrandr --output HDMI-0 --off
+    xrandr --output HDMI1 --off
 }
 
+# # Powerline
+# if [[ -r /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then 
+#   source /usr/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh 
+# fi
 
+. /etc/profile.d/vte.sh
 
 # 
 export Q_SELECT=5

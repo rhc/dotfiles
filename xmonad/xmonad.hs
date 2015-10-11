@@ -15,7 +15,7 @@ import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal      = "urxvt"
+myTerminal      = "termite"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
