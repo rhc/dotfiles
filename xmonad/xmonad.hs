@@ -1,13 +1,13 @@
 -- 
 --
 --
--- Terminal: urxvt 
+-- Terminal: termite 
 -- Focus follows the mouse pointer
 --
 
 import XMonad
 import XMonad.Hooks.DynamicLog
-import XMonad.Config.Gnome
+import XMonad.Config.Desktop
 import XMonad.Layout.NoBorders
 import Data.Monoid
 import System.Exit
@@ -123,7 +123,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+        | (key, sc) <- zip [xK_w, xK_e, xK_r] [1,0,2] -- was [0..], changed to match my screen order
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
@@ -234,7 +234,7 @@ main = xmonad =<< xmobar defaults
 --
 -- No need to modify this.
 --
-defaults = gnomeConfig {
+defaults = desktopConfig {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
