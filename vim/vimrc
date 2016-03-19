@@ -2,65 +2,61 @@ set nocompatible " must be first line
 set encoding=utf-8
 scriptencoding utf-8
 
-" Setup Vundle
 filetype off
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'croaky/vim-colors-github'
+Plug 'dag/vim2hs'
+Plug 'honza/vim-snippets'
+Plug 'itchyny/calendar.vim'
+Plug 'jceb/vim-orgmode'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kalafut/vim-taskjuggler'
+Plug 'kana/vim-textobj-user'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mileszs/ack.vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/syntastic'
+Plug 'SirVer/ultisnips'
+Plug 'sjl/gundo.vim'
+Plug 'slim-template/vim-slim'
+Plug 'sukima/xmledit'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'
+Plug 'tyru/open-browser.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/dbext.vim'
+Plug 'vim-scripts/gnuplot.vim'
+Plug 'vim-scripts/tabular'
+Plug 'vim-scripts/tlib'
+Plug 'vim-scripts/vim-R-plugin'
+Plug 'zaiste/tmux.vim'
+Plug 'altercation/vim-colors-solarized'
+"TODO
+"Plug 'janko-m/vim-test'
+call plug#end()
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'kien/ctrlp.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'vim-scripts/gnuplot.vim'
-Plugin 'vim-scripts/tabular'
-Plugin 'vim-scripts/tlib'
-Plugin 'croaky/vim-colors-github'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'chriskempson/base16-vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'dag/vim2hs'
-Plugin 'sjl/gundo.vim.git'
-Plugin 'rking/ag.vim'
-Plugin 'zaiste/tmux.vim'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
-Plugin 'itchyny/calendar.vim'
-Plugin 'sukima/xmledit'
-Plugin 'tyru/open-browser.vim'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'bling/vim-airline'
-Plugin 'vim-scripts/vim-R-plugin'
-Plugin 'kalafut/vim-taskjuggler'
-Plugin 'jiangmiao/auto-pairs'
-" Plugin 'edkolev/tmuxline.vim'
-"Plugin 'valloric/youcompleteme.git'
-
-call vundle#end()
 filetype plugin indent on " Automatically detect file types.
-
-
 syntax on " syntax highlighting
 
 set shortmess+=afilmnrxoOtT " abbrev. of messages (avoids 'hit enter')
 set virtualedit=onemore " allow for cursor beyond last character
 set history=1000 " Store a ton of history (default is 20)
-"todo-- save undo levels to disk"
+"TODO-- save undo levels to disk"
 set nospell " spell checking on
 
 "! to be redo in coffee script syntax"
@@ -70,26 +66,17 @@ hi link coffeeReservedError NONE
 au BufNewFile, BufReadPost *.coffee setl foldmethod=indent nofoldenable
 "!end"
 
-" backups
+"  no backups
 set nobackup
 set noswapfile
-""set backupdir=~/tmp/backup
-""set directory=~/tmp/swp
 "au BufWinLeave * silent! mkview "make vim save view (state) (folds, cursor, etc)
 "au BufWinEnter * silent! loadview "make vim load view (state) (folds, cursor, etc)
 
-
-
-" if !exists('g:airline_symbols')
-"   " let g:airline_symbols = {}
-" endif
-" let g:airline_symbols.space = "\ua0"
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \ exe "normal g`\"" |
     \ endif
-
 
 " colors 
 set t_Co=256
@@ -99,7 +86,6 @@ colorscheme jellybeans
 hi clear SpellBad
 hi SpellBad cterm=undercurl
 set tabpagemax=15 " only show 15 tabs
-set showmode " display the current mode
 set title 
 set visualbell " don't beep"
 set noerrorbells " don't beep"
@@ -135,6 +121,20 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+" Silver Searcher https://github.com/ggreer/the_silver_searcher
+"TODO Speed up but remove the conditional
+"TODO Create a script to check Vim dependencies so you don't check them every time
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0 
+endif
+
 
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set scrolljump=5 " lines to scroll when cursor leaves screen
@@ -144,7 +144,7 @@ set gdefault " the /g flag on :s substitutions by default
 set modeline 
 set modelines=5
 
-""--todo: set magic=very
+""--TODO: set magic=very
 nnoremap / /\v
 vnoremap / /\v
 nnoremap ? /\v
@@ -157,6 +157,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+"TODO: Navigation
+" Switch between the last 2 files
+nnoremap <leader><leader> <c-^>
 
 " automatically resize windows 
 autocmd vimResized * :wincmd =
@@ -173,7 +177,7 @@ set tabstop=2 " an indentation every two columns
 "set softtabstop=2 " let backspace delete indent
 set matchpairs+=<:> " match, to be used with %
 "set pastetoggle=<F12> " pastetoggle (sane indentation on pastes)
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`', '<':'>'}
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 
 " Key (re)Mappings 
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
@@ -233,7 +237,8 @@ set listchars=""
 "nmap <leader>fl :FufLine<CR>
 "nmap <leader>fr :FufRenewCache<CR>
 
-"dbext database plugin
+" dbext database plugin
+" TODO: only for .sql files
 "let g:dbext_default_profile = 'type=MYSQL:user=root:passwd=kyamukende:dbname=otrs:extra=-t'
 let g:dbext_default_profile_ODBC = 'type=ODBC:dsnname=acdis:user=acapp_otrs:passwd=kyamukende:dbname=acdis'
 let g:dbext_default_history_file = '~/.vim/dbext_sql_history.txt'
@@ -244,7 +249,7 @@ imap <F2>  <c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>
 nmap <F2>  a<C-R>=strftime("%Y-%m-%d %a %H:%M")<CR><ESC>
 imap <F3> <C-R>=strftime("%H%M")<CR>
 nmap <F3> a<C-R>=strftime("%H%M")<CR><esc>
-set clipboard=unnamedplus
+set clipboard=unnamed
 vnoremap P <ESC>"+gP
 nnoremap P <ESC>"+gP
 nnoremap Y <ESC>"+y
@@ -281,7 +286,7 @@ let g:gundo_close_on_revert=1
 
 " Rails.vim 
 "  :Rfea item
-"todo: Add this with projection
+"TODO: Add this with projection
 let g:rails_projections = { 
       \ "test/features/*_test.rb": { 
             \"command": "feature", 
@@ -306,10 +311,21 @@ imap <leader>lf log finish: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
 nmap <leader>lr olog resume: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
 imap <leader>lr log resume: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
 
-
 " Airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 let g:airline_theme='zenburn'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set guifont=Inconsolata\ for\ Powerline:h14
 set noshowmode
+
+" " Vim-test
+" " To be combined with tslime 
+" nnoremap <silent> <Leader>t :TestFile<CR>
+" nnoremap <silent> <Leader>s :TestNearest<CR>
+" nnoremap <silent> <Leader>l :TestLast<CR>
+" nnoremap <silent> <Leader>a :TestSuite<CR>
+" nnoremap <silent> <leader>=> :TestVisit<CR>
