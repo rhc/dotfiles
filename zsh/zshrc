@@ -1,0 +1,5 @@
+export path="$home/.bin:$path"
+
+# recommended by brew doctor
+export path="/usr/local/bin:$path"
+eval "$(rbenv init - --no-rehash)"
