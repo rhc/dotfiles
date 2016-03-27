@@ -5,8 +5,8 @@ scriptencoding utf-8
 filetype off
 call plug#begin('~/.vim/bundle')
 
-Plug 'chriskempson/base16-vim'
-Plug 'croaky/vim-colors-github'
+
+Plug 'altercation/vim-colors-solarized'
 Plug 'dag/vim2hs'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/calendar.vim'
@@ -45,7 +45,7 @@ Plug 'vim-scripts/tabular'
 Plug 'vim-scripts/tlib'
 Plug 'vim-scripts/vim-R-plugin'
 Plug 'zaiste/tmux.vim'
-Plug 'altercation/vim-colors-solarized'
+
 "TODO
 "Plug 'janko-m/vim-test'
 call plug#end()
@@ -161,6 +161,9 @@ nnoremap <c-l> <c-w>l
 "TODO: Navigation
 " Switch between the last 2 files
 nnoremap <leader><leader> <c-^>
+map gl :buffers<CR>
+map gb :bnext<CR>
+map gB :bprev<CR>
 
 " automatically resize windows 
 autocmd vimResized * :wincmd =
@@ -316,6 +319,7 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+let g:airline_symbols.linenr = "|"
 let g:airline_theme='zenburn'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1

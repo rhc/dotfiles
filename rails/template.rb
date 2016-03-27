@@ -5,15 +5,14 @@
 # cat ~/.railsrc
 # -m ~/dotfiles/rails/template.rb
 #
-# Update everything to rails 4.2.0
 #
 gem 'thin' 
-#todo: replace thin by unicorn
+#todo: replace thin by puma
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
-gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
+gem 'simple_form'
 gem 'high_voltage'
 gem 'devise'
 gem 'pundit'
@@ -23,11 +22,12 @@ gem_group :development do
   gem 'guard-minitest' 
   gem 'guard-livereload' 
   gem 'rack-livereload' 
-  gem 'libnotify' 
-  gem 'better_errors' # to be replaced by web-console 
-  gem 'binding_of_caller', platforms: :mri_21
+  #gem 'libnotify' 
+  #gem 'terminal-notifier-guard'
+  gem 'better_errors' 
+  gem 'binding_of_caller'
   gem 'quiet_assets' 
-  gem 'pry-byebug'  # to be replaced by byebug
+  gem 'pry-byebug'  
   gem 'pry-rails' 
   gem 'rails_layout'
   gem 'rails_best_practices'
