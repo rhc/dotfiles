@@ -161,7 +161,7 @@ git commit: "-a -m 'Initial commit'"
 # config.force_ssl = true
 
 #todo Add .rubycop.yml
-copy_file '.rubycop.yml' 
+copy_file '.rubocop.yml' 
 
 # create remote repo on Github or Bitbucket
 
