@@ -1,0 +1,25 @@
+
+
+== change Sudo 
+
+Add yourself in the wheel group
+
+----
+sudo dscl . -append /Groups/wheel GroupMembership MyUserName
+----
+
+== ngrok
+
+brew install ngrok
+gem install github-auth
+
+
+== Cisco AnyConnect 
+
+
+brew install openconnect
+brew cask install 
+
+
+
+

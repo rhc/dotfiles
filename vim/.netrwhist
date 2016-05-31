@@ -1,7 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/christiank/dotfiles'
-let g:netrw_dirhist_2='/Users/christiank'
-let g:netrw_dirhist_3='/Users/christiank/repo/play_me/test/features'
-let g:netrw_dirhist_4='/Users/christiank/repo/play_me/app/views/playlists'
-let g:netrw_dirhist_5='/Users/christiank/repo/play_me/app/views/parties'
+let g:netrw_dirhist_cnt =0

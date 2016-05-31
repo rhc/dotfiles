@@ -32,7 +32,7 @@ gem_group :development do
   gem 'rails_layout'
   gem 'rails_best_practices'
   gem 'rails_apps_pages'
-  gem 'rubocop', require: false
+  gem 'annotate'
   #gem 'bullet'
 end
 
@@ -40,6 +40,10 @@ gem_group :test do
   gem 'minitest-reporters'
   gem 'minitest-rails-capybara' 
   gem 'faker'
+end
+
+gem_group :development, :test do
+  gem 'rubocop'
 end
 
 gem_group :production do
@@ -155,7 +159,10 @@ git commit: "-a -m 'Initial commit'"
 #todo: configure the application to use SSL in production
 # in config/environments/production.rb
 # config.force_ssl = true
- 
+
+#todo Add .rubycop.yml
+copy_file '.rubycop.yml' 
+
 # create remote repo on Github or Bitbucket
 
 case  
@@ -191,6 +198,7 @@ when yes?("Create repo on Github?  \033[33m(y/n)\033[0m")
   git push: "origin master"
 
 end
+
  
 run "echo 'Voila! Have (a lot of) fun' "
 

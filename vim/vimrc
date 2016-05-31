@@ -245,6 +245,7 @@ set listchars=""
 "let g:dbext_default_profile = 'type=MYSQL:user=root:passwd=kyamukende:dbname=otrs:extra=-t'
 let g:dbext_default_profile_ODBC = 'type=ODBC:dsnname=acdis:user=acapp_otrs:passwd=kyamukende:dbname=acdis'
 let g:dbext_default_history_file = '~/.vim/dbext_sql_history.txt'
+let g:dbext_default_PGSQL_cmd_terminator = ";"
 
 source ~/.vim/abbreviations.txt
 
