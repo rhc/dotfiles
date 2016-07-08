@@ -33,6 +33,7 @@ gem_group :development do
   gem 'rails_best_practices'
   gem 'rails_apps_pages'
   gem 'annotate'
+  gem 'bundler-audit'
   #gem 'bullet'
 end
 
@@ -44,6 +45,7 @@ end
 
 gem_group :development, :test do
   gem 'rubocop'
+  gem 'rubycritic'
 end
 
 gem_group :production do

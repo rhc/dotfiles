@@ -1,52 +1,51 @@
 dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:50)
-1. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTv', 'IPT V');
-2. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTV', 'IPT V');
-3. update subnets @@@  set vlan_name = replace(vlan_name, '-', ' ')
-4. update subnets @@@  set vlan_name = replace(vlan_name, '_', ' ')
-5. select *@@@from scan_statuses ;
-6. insert into scan_statuses( code, description) values ( 'A' , 'Aborted')  ;@@@insert into scan_statuses( code, description) values ( 'C' , 'Successful')   ;@@@insert into scan_statuses( code, description) values ( 'U' , 'Running')  ;@@@insert into scan_statuses( code, description) values ( 'S' , 'Stopped')  ;@@@insert into scan_statuses( code, description) values ( 'E' , 'Failed')   ;@@@insert into scan_statuses( code, description) values ( 'P' , 'Paused')   ;@@@insert into scan_statuses( code, description) values ( '-' , 'Unknown')  ;
-7. select * @@@from scan_types ;
-8. -- populate scan types@@@insert into scan_types( code, description ) values ('A', 'Manual');@@@insert into scan_types( code, description ) values ('S', 'Scheduled');@@@insert into scan_types( code, description ) values ('-', 'Unknown');
-9. insert into scan_types( code, description ) values ('A', 'Manual');
-10. select * 
-11. insert into scan_types( code, description ) values("S", "Scheduled");
-12. select *@@@from subnets s@@@where text(network) like '%3.15%'
-13. select *@@@from subnets s@@@where text(network) like '%10.3%'
-14. select *@@@from subnets s@@@where network >> '196.11.8.1'
-15. select *@@@from subnets s@@@where network >> '196.11.0.1'
-16. select *
-17. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'@@@order by network
-18. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'
-19. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where s.code = 'JNB'
-20. select *@@@from subnets s@@@where s.vlan_name = 'Security' ;
-21. select *@@@from subnets s@@@where s.vlan_name = 'Security'@@@;
-22. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
-23. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id
-24. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
-25. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id
-26. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@;
-27. update zone_infos
-28. set ip_start = cast(first_ip as inet),
-29. update zone_infos set first_ip = ip_start , last_ip = ip_stop ;
-30. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA';
-31. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@go
-32. select * from zone_infos
-33. select ip_start, ip_stop, * from zone_infos
-34. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'
-35. -- change the ip {start,stop} data types to become inet type@@@update zone_infos@@@set first_ip = ip_start@@@, last_ip = ip_stop
-36. select distinct s.code, substring(z.name from 1 for position(' ' in z.name) )@@@from zone_infos z@@@join sites s on s.id = z.site_id
-37. select *@@@from zone_infos z@@@where z.site_id is null;
-38. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'ELS'@@@and  z.name like 'ELS%';
-39. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'CORP'@@@and  z.name like 'CORP%';
-40. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'PLZ'@@@and  z.name like 'PLZ%';
-41. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'BFN'@@@and  z.name like 'BFN%';
-42. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'KIM'@@@and  z.name like 'KIM%';
-43. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'GRJ'@@@and  z.name like 'GRJ%';
-44. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'UTN'@@@and  z.name like 'UTN%';
-45. select distinct substring(name from 1 for position(' ' in name) ) as site@@@from zone_infos z
-46. -- Split the zone name into site and vlan name@@@select distinct substring(name from 1 for position(' ' in name) ) as site@@@from zone_infos z
-47. update zone_infos@@@set name = translate(name, '-_', '  ')
-48. select *@@@from zone_infos z@@@where z.site_id is null
-49. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'DUR'@@@and  z.name like 'KSIA%'
-50. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'DUR'@@@and  z.name like 'KSIA'
-51. select distint s.code, substring(z.name from 1 for position(' ' in z.name) )@@@from zone_infos z@@@join sites s on s.id = z.site_id
+1. select *@@@from exam_topics;
+2. insert into exam_topics( exam_id, topic_id )@@@  select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+3. select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+4. select *@@@from exams;
+5. insert into exam_topics( exam_id, topic_id )@@@  select t.id, e.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+6.   select t.id, e.id@@@  from topics t@@@  join exams e on e.name = "CCIE Routing and Switching Written"@@@;
+7.   select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
+8. select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
+9. select *@@@from topics@@@;
+10. select *
+11. from topics
+12. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTv', 'IPT V');
+13. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTV', 'IPT V');
+14. update subnets @@@  set vlan_name = replace(vlan_name, '-', ' ')
+15. update subnets @@@  set vlan_name = replace(vlan_name, '_', ' ')
+16. select *@@@from scan_statuses ;
+17. insert into scan_statuses( code, description) values ( 'A' , 'Aborted')  ;@@@insert into scan_statuses( code, description) values ( 'C' , 'Successful')   ;@@@insert into scan_statuses( code, description) values ( 'U' , 'Running')  ;@@@insert into scan_statuses( code, description) values ( 'S' , 'Stopped')  ;@@@insert into scan_statuses( code, description) values ( 'E' , 'Failed')   ;@@@insert into scan_statuses( code, description) values ( 'P' , 'Paused')   ;@@@insert into scan_statuses( code, description) values ( '-' , 'Unknown')  ;
+18. select * @@@from scan_types ;
+19. -- populate scan types@@@insert into scan_types( code, description ) values ('A', 'Manual');@@@insert into scan_types( code, description ) values ('S', 'Scheduled');@@@insert into scan_types( code, description ) values ('-', 'Unknown');
+20. insert into scan_types( code, description ) values ('A', 'Manual');
+21. insert into scan_types( code, description ) values("S", "Scheduled");
+22. select *@@@from subnets s@@@where text(network) like '%3.15%'
+23. select *@@@from subnets s@@@where text(network) like '%10.3%'
+24. select *@@@from subnets s@@@where network >> '196.11.8.1'
+25. select *@@@from subnets s@@@where network >> '196.11.0.1'
+26. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'@@@order by network
+27. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'
+28. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where s.code = 'JNB'
+29. select *@@@from subnets s@@@where s.vlan_name = 'Security' ;
+30. select *@@@from subnets s@@@where s.vlan_name = 'Security'@@@;
+31. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
+32. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id
+33. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
+34. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id
+35. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@;
+36. update zone_infos
+37. set ip_start = cast(first_ip as inet),
+38. update zone_infos set first_ip = ip_start , last_ip = ip_stop ;
+39. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA';
+40. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@go
+41. select * from zone_infos
+42. select ip_start, ip_stop, * from zone_infos
+43. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'
+44. -- change the ip {start,stop} data types to become inet type@@@update zone_infos@@@set first_ip = ip_start@@@, last_ip = ip_stop
+45. select distinct s.code, substring(z.name from 1 for position(' ' in z.name) )@@@from zone_infos z@@@join sites s on s.id = z.site_id
+46. select *@@@from zone_infos z@@@where z.site_id is null;
+47. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'ELS'@@@and  z.name like 'ELS%';
+48. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'CORP'@@@and  z.name like 'CORP%';
+49. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'PLZ'@@@and  z.name like 'PLZ%';
+50. update zone_infos z@@@set site_id = s.id @@@from sites s @@@where s.code = 'BFN'@@@and  z.name like 'BFN%';
