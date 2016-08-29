@@ -26,7 +26,6 @@ gem_group :development do
   #gem 'terminal-notifier-guard'
   gem 'better_errors' 
   gem 'binding_of_caller'
-  gem 'quiet_assets' 
   gem 'pry-byebug'  
   gem 'pry-rails' 
   gem 'rails_layout'
