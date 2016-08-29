@@ -185,7 +185,7 @@ when yes?("Create repo on Bitbucket? \033[33m(y/n)\033[0m" )
   # --pubkey ~/.ssh/id_rsa.pub # TODO: can we make this work???
   # TODO: what if this fails? can we re-try?
   run "echo #{credentials}" 
-  run "curl --request POST --user '#{credentials}' https://bitbucket.org/api/2.0/repositories/#{owner}/#{repo_slug} #{data_fields}"
+  run "curl --request POST --user '#{credentials}' https://api.bitbucket.org/2.0/repositories/#{owner}/#{repo_slug} #{data_fields}"
 
   # Add code to the repository
   git :init
