@@ -47,10 +47,6 @@ gem_group :development, :test do
   gem 'rubycritic'
 end
 
-gem_group :production do
-  gem "rails_12factor"
-end
-
 run "bundle install"
 
 # minitest test_helper
