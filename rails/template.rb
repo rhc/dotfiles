@@ -37,7 +37,6 @@ gem_group :development do
 end
 
 gem_group :test do 
-  gem 'minitest-reporters'
   gem 'minitest-rails-capybara' 
   gem 'faker'
 end
@@ -111,7 +110,7 @@ generate 'devise:install'
 
 generate 'devise user'
 rake 'db:migrate'
-generate 'layout:devise bootstrap3'
+generate 'devise:views'
 
 generate 'pundit:install'
 generate 'pages:users --force'
@@ -123,6 +122,10 @@ copy_file 'config/initializers/hide_passwords_in_logs.rb'
 # guard-minitest
 copy_file "Guardfile"
 
+#### Active Admin
+# generate 'activeadmin', '~> 1.0.0.pre4'
+# generate 'inherited_resources', github: 'activeadmin/inherited_resources'
+# generate 'active_admin:install User'
 
 # Reload the browser on file changes
 environment nil, env: 'development' do
@@ -139,7 +142,8 @@ comment_lines 'config/application.rb', /railtie/
 prepend_file 'config/application.rb', "require 'rails/all'\n"
  
 # add minitest features to Rake task
-copy_file 'minitest-features.rake', 'lib/tasks/minitest-features.rake'
+# TODO: investigate if the line below is needed
+# copy_file 'minitest-features.rake', 'lib/tasks/minitest-features.rake'
  
 #Add spring to bins and start spring
 run 'spring binstub --all'

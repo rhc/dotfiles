@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/christiank/repo/lesedi'
 let g:netrw_dirhist_2='/Users/christiank/repo/lesedi/lib'
 let g:netrw_dirhist_3='/Users/christiank/drs/acsa'
 let g:netrw_dirhist_4='/Users/christiank/drs'
 let g:netrw_dirhist_5='/Users/christiank'
+let g:netrw_dirhist_6='/Users/christiank/repo/acsa/lib/tasks'
