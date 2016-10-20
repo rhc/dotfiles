@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/christiank/repo/overtime-app'
-let g:netrw_dirhist_2='/Users/christiank/repo/overtime-app/bin'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/christiank/repo/acsa'
+let g:netrw_dirhist_2='/Users/christiank/repo/acsa/app'
+let g:netrw_dirhist_3='/Users/christiank/repo/acsa/app/views'
+let g:netrw_dirhist_4='/Users/christiank/repo/acsa/app/views/todos'
+let g:netrw_dirhist_5='/Users/christiank/repo/acsa'
+let g:netrw_dirhist_6='/Users/christiank/repo/acsa/lib'
+let g:netrw_dirhist_7='/Users/christiank/repo/acsa/lib/tasks'
+let g:netrw_dirhist_8='/Users/christiank/.task/hooks'

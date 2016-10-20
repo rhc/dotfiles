@@ -4,12 +4,6 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
 
-#require "minitest/pride"
-require 'minitest/reporters'
-#require 'minitest/focus'
-#require 'minitest/colorize'
-reporter_options = { color: true}
-Minitest::Reporters.use!( Minitest::Reporters::DefaultReporter.new(reporter_options), ENV, Minitest.backtrace_filter )
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!

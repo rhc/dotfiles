@@ -78,7 +78,7 @@ autocmd BufReadPost *
     \ exe "normal g`\"" |
     \ endif
 
-" colors 
+" colors
 set t_Co=256
 
 set background=dark " Assume a dark background
@@ -86,7 +86,7 @@ colorscheme jellybeans
 hi clear SpellBad
 hi SpellBad cterm=undercurl
 set tabpagemax=15 " only show 15 tabs
-set title 
+set title
 set visualbell " don't beep"
 set noerrorbells " don't beep"
 
@@ -95,7 +95,7 @@ set laststatus=2
 
 set linespace=0 " No extra spaces between rows
 set number " Line numbers on
-set cursorline 
+set cursorline
 set cursorcolumn
 set showmatch " show matching brackets/parenthesis
 set incsearch " find as you type search
@@ -132,7 +132,7 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0 
+  let g:ctrlp_use_caching = 0
 endif
 
 
@@ -141,7 +141,7 @@ set scrolljump=5 " lines to scroll when cursor leaves screen
 set scrolloff=3 " minimum lines to keep above and below cursor
 set gdefault " the /g flag on :s substitutions by default
 
-set modeline 
+set modeline
 set modelines=5
 
 ""--TODO: set magic=very
@@ -150,6 +150,7 @@ vnoremap / /\v
 nnoremap ? /\v
 vnoremap ? ?\v
 cnoremap %s/ %s/\v
+cnoremap %g/ %g/\v
 
 
 " Windows focus movements
@@ -165,13 +166,13 @@ map gl :buffers<CR>
 map gb :bnext<CR>
 map gB :bprev<CR>
 
-" automatically resize windows 
+" automatically resize windows
 autocmd vimResized * :wincmd =
 
 " TODO: I need to spend some time to be comfortable with vim folds
 " set foldenable " auto fold code
 
-" Formatting 
+" Formatting
 set nowrap " wrap long lines
 set autoindent " indent at the same level of the previous line
 set shiftwidth=2 " use indents of 2 spaces
@@ -182,14 +183,14 @@ set matchpairs+=<:> " match, to be used with %
 "set pastetoggle=<F12> " pastetoggle (sane indentation on pastes)
 let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 
-" Key (re)Mappings 
+" Key (re)Mappings
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
 nnoremap ; :
 
 " set digraph if working with French file
 
 " when you forgot to sudo before editing a file
-" cmap sw  w  !sudo tee % >/dev/null 
+" cmap sw  w  !sudo tee % >/dev/null
 
 let mapleader=","
 "quick edit/reload the vimrc file
@@ -204,7 +205,7 @@ nmap <silent> <leader>5b ebys5w*<ESC>
 nmap <silent> <leader>6b ebys6w*<ESC>
 nmap <silent> <leader>p <c-p>
 
-" copy the configuration of routers 
+" copy the configuration of routers
 nmap <silent> <leader>r1 /R1\s*$<CR>yip<ESC>
 nmap <silent> <leader>r2 /R2\s*$<CR>yip<ESC>
 nmap <silent> <leader>r3 /R3\s*$<CR>yip<ESC>
@@ -228,11 +229,11 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 end
 
-"edit list of abbreviations 
+"edit list of abbreviations
 nmap <silent> <leader>a :tabedit ~/.vim/abbreviations.txt<CR>
 
 set listchars=""
-" Fuzzy Finder 
+" Fuzzy Finder
 """ Fuzzy Find file, tree, buffer, line
 "nmap <leader>ff :FufFile **/<CR>
 "nmap <leader>ft :FufFile<CR>
@@ -270,13 +271,13 @@ au BufRead, BufNewFile {*.asciidoc,*.adoc,*.ad} set ft= asciidoc
 " enable compiler support for ruby
 compiler ruby
 
-" to be removed 
+" to be removed
 set maxmempattern=200000
 
 "needed for ruby text objects
 runtime macros/matchit.vim
 
-" Ultisnips 
+" Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -288,15 +289,15 @@ set tags=./tags;
 nnoremap <leader>u :GundoToggle<cr>
 let g:gundo_close_on_revert=1
 
-" Rails.vim 
+" Rails.vim
 "  :Rfea item
 "TODO: Add this with projection
-let g:rails_projections = { 
-      \ "test/features/*_test.rb": { 
-            \"command": "feature", 
-            \ "template": "class %SDecorator < SimpleDelegator\nend", 
+let g:rails_projections = {
+      \ "test/features/*_test.rb": {
+            \"command": "feature",
+            \ "template": "class %SDecorator < SimpleDelegator\nend",
             \ "test": [ "test/features/%s" ],
-            \ "affinity": "model" 
+            \ "affinity": "model"
       \ }}
 
 
@@ -305,7 +306,7 @@ nmap <leader>w <Plug>(openbrowser-open)
 vmap <leader>w <Plug>(openbrowser-open)
 
 " utilities for Project Management
-"TODO: create snipmate shortcut 
+"TODO: create snipmate shortcut
 nmap <leader>ls olog start: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
 imap <leader>ls log start: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"
 nmap <leader>lp olog pause: "<c-r>=strftime("%Y-%m-%d %a %H:%M")<cr>"<esc>
@@ -328,9 +329,26 @@ set guifont=Inconsolata\ for\ Powerline:h14
 set noshowmode
 
 " " Vim-test
-" " To be combined with tslime 
+" " To be combined with tslime
 " nnoremap <silent> <Leader>t :TestFile<CR>
 " nnoremap <silent> <Leader>s :TestNearest<CR>
 " nnoremap <silent> <Leader>l :TestLast<CR>
 " nnoremap <silent> <Leader>a :TestSuite<CR>
 " nnoremap <silent> <leader>=> :TestVisit<CR>
+"
+
+" Remove trailing whitespaces when a File is saved
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
+
+
