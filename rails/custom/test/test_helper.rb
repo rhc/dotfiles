@@ -8,11 +8,10 @@ require "minitest/rails/capybara"
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
-  # -- they do not yet inherit this setting
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def sign_in_as(user)
+  def login_as(user)
     visit  '/'
     click_link 'Sign in'
     fill_in 'Email', with: user.email
