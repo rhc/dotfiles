@@ -89,7 +89,7 @@ Capybara.javascript_driver = :webkit
 
 # Devise
 class ActionController::TestCase
-  include Devise::Test:ControllerHelpers
+  include Devise::Test::ControllerHelpers
 end
 CODE
 #
@@ -175,7 +175,8 @@ remove_file 'config/initializers/devise_permitted_parameters.rb'
 #
 # Navigation
 #
-remove_file 'app/views/layouts/application.html.rb'
+remove_file 'app/views/layouts/application.html.erb'
+# TODO Change here to get the name as a logo
 copy_file 'app/views/layouts/application.html.slim'
 copy_file 'app/views/layouts/_navigation.html.slim'
 copy_file 'app/views/layouts/_navigation_links.html.slim'

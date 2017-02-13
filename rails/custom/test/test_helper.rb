@@ -13,10 +13,10 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   def login_as(user)
     visit  '/'
-    click_link 'Sign in'
+    click_on 'Sign in'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: 'topsecret'
-    click_button "Sign in"
+    click_button 'Log in'
   end
 
   def define_permission(user, action , thing)
