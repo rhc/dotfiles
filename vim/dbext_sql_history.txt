@@ -1,52 +1,52 @@
 dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:50)
-1. select * 
-2. select * from users;
-3. select * from distributors
-4. insert into distributors ( owner_id, name ) values( 1, 'Changamuka');
-5. insert into distributors ( owner_id, name ) values( 1, "Changamuka");
-6. select *@@@from exam_topics;
-7. insert into exam_topics( exam_id, topic_id )@@@  select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-8. select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-9. select *@@@from exams;
-10. insert into exam_topics( exam_id, topic_id )@@@  select t.id, e.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-11.   select t.id, e.id@@@  from topics t@@@  join exams e on e.name = "CCIE Routing and Switching Written"@@@;
-12.   select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
-13. select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
-14. select *@@@from topics@@@;
-15. select *
-16. from topics
-17. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTv', 'IPT V');
-18. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTV', 'IPT V');
-19. update subnets @@@  set vlan_name = replace(vlan_name, '-', ' ')
-20. update subnets @@@  set vlan_name = replace(vlan_name, '_', ' ')
-21. select *@@@from scan_statuses ;
-22. insert into scan_statuses( code, description) values ( 'A' , 'Aborted')  ;@@@insert into scan_statuses( code, description) values ( 'C' , 'Successful')   ;@@@insert into scan_statuses( code, description) values ( 'U' , 'Running')  ;@@@insert into scan_statuses( code, description) values ( 'S' , 'Stopped')  ;@@@insert into scan_statuses( code, description) values ( 'E' , 'Failed')   ;@@@insert into scan_statuses( code, description) values ( 'P' , 'Paused')   ;@@@insert into scan_statuses( code, description) values ( '-' , 'Unknown')  ;
-23. select * @@@from scan_types ;
-24. -- populate scan types@@@insert into scan_types( code, description ) values ('A', 'Manual');@@@insert into scan_types( code, description ) values ('S', 'Scheduled');@@@insert into scan_types( code, description ) values ('-', 'Unknown');
-25. insert into scan_types( code, description ) values ('A', 'Manual');
-26. insert into scan_types( code, description ) values("S", "Scheduled");
-27. select *@@@from subnets s@@@where text(network) like '%3.15%'
-28. select *@@@from subnets s@@@where text(network) like '%10.3%'
-29. select *@@@from subnets s@@@where network >> '196.11.8.1'
-30. select *@@@from subnets s@@@where network >> '196.11.0.1'
-31. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'@@@order by network
-32. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where si.code = 'JNB'
-33. select network @@@from subnets s@@@join sites si on si.id = s.site_id@@@where s.code = 'JNB'
-34. select *@@@from subnets s@@@where s.vlan_name = 'Security' ;
-35. select *@@@from subnets s@@@where s.vlan_name = 'Security'@@@;
-36. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
-37. select s.code, s1.code, z.ip_stop, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_stop @@@join sites s1 on s1.id = su.site_id
-38. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id@@@where s.id <> s1.id
-39. select s.code, s1.code, z.ip_start, su.network@@@from zone_infos z@@@join sites s on s.id = z.site_id@@@join subnets su on su.network >> z.ip_start @@@join sites s1 on s1.id = su.site_id
-40. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@;
-41. update zone_infos
-42. set ip_start = cast(first_ip as inet),
-43. update zone_infos set first_ip = ip_start , last_ip = ip_stop ;
-44. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA';
-45. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'@@@go
-46. select * from zone_infos
-47. select ip_start, ip_stop, * from zone_infos
-48. update zone_infos@@@set ip_start = cast(first_ip as inet),@@@ip_stop = cast(last_ip as inet)@@@where name <> 'ACSA'
-49. -- change the ip {start,stop} data types to become inet type@@@update zone_infos@@@set first_ip = ip_start@@@, last_ip = ip_stop
-50. select distinct s.code, substring(z.name from 1 for position(' ' in z.name) )@@@from zone_infos z@@@join sites s on s.id = z.site_id
-51. select *@@@from zone_infos z@@@where z.site_id is null;
+1. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then '1-High'@@@    when ce.severity < 40 then '3-Low'@@@    else '2-Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
+2. select *@@@from universities@@@;
+3. update universities set telephone = '031 260 2227' where telephone = '031 2602227';
+4. update  universities set province = 'Free State' where province = 'FREE STATE' ;@@@update  universities set province = 'Gauteng' where province = 'GAUTENG' ;@@@update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;@@@update  universities set province = 'Limpopo' where province = 'LIMPOPO' ;@@@update  universities set province = 'North West' where province = 'NORTH WEST' ;@@@update  universities set province = 'Western Cape' where province = 'WESTERN CAPE' ;
+5. update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;
+6. update  universities@@@set province = 'Gauteng'@@@where province = 'GAUTENG'@@@;
+7. update  universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'@@@;
+8. update from universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'  @@@;
+9. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then 'High'@@@    when ce.severity < 40 then 'Low'@@@    else 'Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
+10. select *@@@from correlated_events@@@where period = 'Y16M12'@@@;
+11. delete from correlated_events@@@where period = 'Y16M12'@@@;
+12. delete from correlated_events@@@where period = 'Y16M11'@@@;
+13. select *@@@from correlated_events@@@where period = 'Y16M11'@@@;
+14. select *@@@from correlated_events@@@where period = 'Y16M11'@@@and severity > '80'@@@;
+15. select *@@@from correlated_events;@@@where period = 'Y16M11'@@@and severity > '80'
+16. select *@@@from correlated_events;@@@where period = 'Y16M11'
+17. select distinct period@@@from correlated_events ce;
+18. update correlated_events@@@set period = 'Y16' || period;
+19. update correlated_events@@@set period = SUBSTRING(period FROM '.{3}$');
+20. update correlated_events@@@set period = SUBSTRING(period FROM '.{6}$');
+21. update correlated_events@@@  set period = 'Y17' || period@@@;
+22. select distinct period@@@from corelated_events ce;
+23. select 'Y17' || period@@@from correlated_events ce;
+24. select "Y17" || period@@@from correlated_events ce;
+25. select concat("Y17", ce.period)@@@from correlated_events ce;
+26. 'Y17', period)@@@from correlated
+27. ('Y17', period)@@@from correlate
+28. select concatenate('Y17', period)@@@from correlated_events ce;
+29. select *@@@from correlated_events ce;
+30. select *@@@from users;
+31. select *
+32. select * from users;
+33. select * from distributors
+34. insert into distributors ( owner_id, name ) values( 1, 'Changamuka');
+35. insert into distributors ( owner_id, name ) values( 1, "Changamuka");
+36. select *@@@from exam_topics;
+37. insert into exam_topics( exam_id, topic_id )@@@  select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+38. select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+39. select *@@@from exams;
+40. insert into exam_topics( exam_id, topic_id )@@@  select t.id, e.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
+41.   select t.id, e.id@@@  from topics t@@@  join exams e on e.name = "CCIE Routing and Switching Written"@@@;
+42.   select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
+43. select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
+44. select *@@@from topics@@@;
+45. select *
+46. from topics
+47. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTv', 'IPT V');
+48. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTV', 'IPT V');
+49. update subnets @@@  set vlan_name = replace(vlan_name, '-', ' ')
+50. update subnets @@@  set vlan_name = replace(vlan_name, '_', ' ')
+51. select *@@@from scan_statuses ;

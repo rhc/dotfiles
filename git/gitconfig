@@ -8,6 +8,7 @@
 	cam = commit -am
 [core]
 	editor = vim
+	excludesfile = ~/dotfiles/git/.gitignore
 [push]
 	default = matching
 [color]
@@ -15,4 +16,4 @@
 [url "https://"]
 	insteadOf = git://
 [init]
-	templatedir = ~/dotfiles/.git_template
+	templatedir = ~/dotfiles/git/.git_template

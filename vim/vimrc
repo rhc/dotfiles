@@ -193,9 +193,12 @@ nnoremap ; :
 " cmap sw  w  !sudo tee % >/dev/null
 
 let mapleader=","
-"quick edit/reload the vimrc file
+"quick edit/reload the vimrc filep
 nmap <silent> <leader>v :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>s :source $MYVIMRC<CR>
+nmap <silent> <leader>j :tabedit ~/journal.adoc<CR>
+nmap <silent> <leader>g :tabedit ~/deferred-gratifications.adoc<CR>
+
 
 nmap <silent> <leader>b ysiw*<ESC>
 nmap <silent> <leader>2b ebys2w*<ESC>
