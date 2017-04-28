@@ -7,8 +7,8 @@
 #
 #
 gem 'slim-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6 '
-gem 'rb-readline'
+# gem 'bootstrap', '~> 4.0.0.alpha6 '
+# gem 'rb-readline'
 # gem 'autoprefixer-rails'
 # gem 'font-awesome-sass'
 # gem 'simple_form'
