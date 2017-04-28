@@ -301,8 +301,13 @@ let g:rails_projections = {
             \ "template": "class %SDecorator < SimpleDelegator\nend",
             \ "test": [ "test/features/%s" ],
             \ "affinity": "model"
+      \ },
+      \ "app/hyperloop/components/*.rb": {
+            \"command": "component",
+            \ "template": "class %SDecorator < SimpleDelegator\nend",
+            \ "test": [ "app/hyperloop/components/%s" ],
+            \ "affinity": "model"
       \ }}
-
 
 " Open browser
 nmap <leader>w <Plug>(openbrowser-open)

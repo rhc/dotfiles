@@ -116,6 +116,19 @@ iabb vn VLAN
 iabb vns VLANs
 iabb wo without
 iabb xn Christian
+iabb bcast broadcast
+iabb mcast multicast
+iabb ucast unicast
+iabb acast anycast
+iabb info information
+iabb sce service
+iabb sces services
+iabb src source
+iabb srcs sources
+iabb dst destination
+iabb dsts destinations
+
+
 
 "French
 iabb modele modèle
