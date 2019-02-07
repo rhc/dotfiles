@@ -1,4 +1,4 @@
 # .railsrc
 --skip-test-unit
---database=postgresql 
--m ~/dotfiles/rails/template.rb
+--database=postgresql
+--template=~/dotfiles/rails/template.rb

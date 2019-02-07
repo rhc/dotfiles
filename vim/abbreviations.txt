@@ -12,6 +12,7 @@ iabb cfg (config)#
 iabb cfgif (config-if)#
 iabb cfgifr (config-if-range)#
 iabb cfgmap (config-map-class)#
+iabb cfgrm (config-route-map)#
 iabb cfgv (config-vrf)#
 iabb lenght length
 iabb cfgr (config-router)#
@@ -123,10 +124,12 @@ iabb acast anycast
 iabb info information
 iabb sce service
 iabb sces services
-iabb src source
-iabb srcs sources
-iabb dst destination
-iabb dsts destinations
+
+" TODO: conditionally replace the ones below"
+" iabb src source
+" iabb srcs sources
+" iabb dst destination
+" iabb dsts destinations
 
 
 

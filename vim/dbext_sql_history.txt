@@ -1,52 +1,51 @@
 dbext history, <enter> or dbl-click to execute, or [q] to quit (history size:50)
-1. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then '1-High'@@@    when ce.severity < 40 then '3-Low'@@@    else '2-Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
-2. select *@@@from universities@@@;
-3. update universities set telephone = '031 260 2227' where telephone = '031 2602227';
-4. update  universities set province = 'Free State' where province = 'FREE STATE' ;@@@update  universities set province = 'Gauteng' where province = 'GAUTENG' ;@@@update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;@@@update  universities set province = 'Limpopo' where province = 'LIMPOPO' ;@@@update  universities set province = 'North West' where province = 'NORTH WEST' ;@@@update  universities set province = 'Western Cape' where province = 'WESTERN CAPE' ;
-5. update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;
-6. update  universities@@@set province = 'Gauteng'@@@where province = 'GAUTENG'@@@;
-7. update  universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'@@@;
-8. update from universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'  @@@;
-9. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then 'High'@@@    when ce.severity < 40 then 'Low'@@@    else 'Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
-10. select *@@@from correlated_events@@@where period = 'Y16M12'@@@;
-11. delete from correlated_events@@@where period = 'Y16M12'@@@;
-12. delete from correlated_events@@@where period = 'Y16M11'@@@;
-13. select *@@@from correlated_events@@@where period = 'Y16M11'@@@;
-14. select *@@@from correlated_events@@@where period = 'Y16M11'@@@and severity > '80'@@@;
-15. select *@@@from correlated_events;@@@where period = 'Y16M11'@@@and severity > '80'
-16. select *@@@from correlated_events;@@@where period = 'Y16M11'
-17. select distinct period@@@from correlated_events ce;
-18. update correlated_events@@@set period = 'Y16' || period;
-19. update correlated_events@@@set period = SUBSTRING(period FROM '.{3}$');
-20. update correlated_events@@@set period = SUBSTRING(period FROM '.{6}$');
-21. update correlated_events@@@  set period = 'Y17' || period@@@;
-22. select distinct period@@@from corelated_events ce;
-23. select 'Y17' || period@@@from correlated_events ce;
-24. select "Y17" || period@@@from correlated_events ce;
-25. select concat("Y17", ce.period)@@@from correlated_events ce;
-26. 'Y17', period)@@@from correlated
-27. ('Y17', period)@@@from correlate
-28. select concatenate('Y17', period)@@@from correlated_events ce;
-29. select *@@@from correlated_events ce;
-30. select *@@@from users;
-31. select *
-32. select * from users;
-33. select * from distributors
-34. insert into distributors ( owner_id, name ) values( 1, 'Changamuka');
-35. insert into distributors ( owner_id, name ) values( 1, "Changamuka");
-36. select *@@@from exam_topics;
-37. insert into exam_topics( exam_id, topic_id )@@@  select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-38. select e.id, t.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-39. select *@@@from exams;
-40. insert into exam_topics( exam_id, topic_id )@@@  select t.id, e.id@@@  from topics t@@@  join exams e on e.name = 'CCIE Routing and Switching Written'@@@;
-41.   select t.id, e.id@@@  from topics t@@@  join exams e on e.name = "CCIE Routing and Switching Written"@@@;
-42.   select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
-43. select t.id, e.id@@@  from topics t@@@  join exams e @@@  where e.name = "CCIE Routing and Switching Written"@@@;
-44. select *@@@from topics@@@;
-45. select *
-46. from topics
-47. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTv', 'IPT V');
-48. update subnets @@@  set vlan_name = replace(vlan_name, 'IPTV', 'IPT V');
-49. update subnets @@@  set vlan_name = replace(vlan_name, '-', ' ')
-50. update subnets @@@  set vlan_name = replace(vlan_name, '_', ' ')
-51. select *@@@from scan_statuses ;
+1. select *@@@from correlated_events @@@where period = 'Y17M10'@@@;
+2. delete @@@from correlated_events@@@where period = 'Y17M10'@@@;
+3. select *@@@from malwares
+4. drop table exploit_events;@@@drop table exploits;
+5. drop table exploits;
+6. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Botnet%')@@@order by severity desc@@@;
+7. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Virus%')@@@order by severity desc@@@;
+8. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Malware%')@@@  -- or (r.message like '%Suspicious%')@@@  -- or (r.message like '%Domain Policy%')@@@  -- or (r.message like 'Login%')@@@  -- or (r.message like '%UBA%')@@@order by severity desc@@@;
+9. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like 'Malware%')@@@  -- or (r.message like '%Suspicious%')@@@  -- or (r.message like '%Domain Policy%')@@@  -- or (r.message like 'Login%')@@@  -- or (r.message like '%UBA%')@@@order by severity desc@@@;
+10. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Malware%')
+11. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Windows Authentication%')@@@  or (r.message like '%Suspicious%')@@@  or (r.message like '%Domain Policy%')@@@  or (r.message like 'Login%')@@@  or (r.message like '%UBA%')@@@order by severity desc@@@;
+12. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Windows Authentication%')@@@  or (r.message like '%Logon%')@@@  or (r.message like '%Suspiciious%')@@@;
+13. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Windows Authentication%')@@@  or (r.message like '%Logon%')@@@;
+14. select r.signature, r.message, ce.occurences,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and (r.message like '%Windows Authentication%'@@@  or (r.message like '%Logon%')@@@;
+15. select r.signature, r.message, ce.occurences, ce.events,  severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and r.message like '%Windows Authentication%'@@@;
+16. select r.signature, r.message, ce.occurences, severity@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and r.message like '%Windows Authentication%'@@@;
+17. select r.signature, r.message, ce.*@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and r.message like '%Windows Authentication%'@@@;
+18. select sum(events) as events, sum(occurences) as occurences@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and r.message like '%Windows Authentication%'@@@;
+19. select sum(events) as events, sum(occurences) as occurences@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@and r.description like '%Windows Authentication%'@@@;
+20. select * from exploits;@@@select * from exploit_events;
+21. delete from exploit_events;@@@delete from exploits;
+22. delete from exploits;
+23. select * from exploit_events;
+24. select * from exploits;
+25. delete from correlated_events
+26. select sum(events) as events, sum(occurences) as occurences@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'@@@;
+27. select *@@@from users;
+28. select sum(events), sum(occurences)@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'
+29. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-%'
+30. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47-*'
+31. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '345-4'
+32. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id
+33. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where r.signature like '47'
+34. select *@@@from correlated_events ce@@@join rules r on r.id = ce.rule_id@@@where rules.signature like '47'
+35. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then '1-High'@@@    when ce.severity < 40 then '3-Low'@@@    else '2-Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
+36. select *@@@from universities@@@;
+37. update universities set telephone = '031 260 2227' where telephone = '031 2602227';
+38. update  universities set province = 'Free State' where province = 'FREE STATE' ;@@@update  universities set province = 'Gauteng' where province = 'GAUTENG' ;@@@update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;@@@update  universities set province = 'Limpopo' where province = 'LIMPOPO' ;@@@update  universities set province = 'North West' where province = 'NORTH WEST' ;@@@update  universities set province = 'Western Cape' where province = 'WESTERN CAPE' ;
+39. update  universities set province = 'KwaZulu Natal' where province = 'KWAZULU NATAL' ;
+40. update  universities@@@set province = 'Gauteng'@@@where province = 'GAUTENG'@@@;
+41. update  universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'@@@;
+42. update from universities@@@  set province = 'Free State'@@@where province = 'FREE STATE'  @@@;
+43. with severity_levels as (@@@  select ce.*,@@@    case@@@    when ce.severity >= 70 then 'High'@@@    when ce.severity < 40 then 'Low'@@@    else 'Medium'@@@    end as severity_level@@@  from correlated_events ce@@@)@@@select period@@@  , severity_level@@@  , sum(occurences) as total_occurences@@@  , sum(events) as total_events@@@from severity_levels@@@group by period, severity_level@@@order by period , severity_level@@@;
+44. select *@@@from correlated_events@@@where period = 'Y16M12'@@@;
+45. delete from correlated_events@@@where period = 'Y16M12'@@@;
+46. delete from correlated_events@@@where period = 'Y16M11'@@@;
+47. select *@@@from correlated_events@@@where period = 'Y16M11'@@@;
+48. select *@@@from correlated_events@@@where period = 'Y16M11'@@@and severity > '80'@@@;
+49. select *@@@from correlated_events;@@@where period = 'Y16M11'@@@and severity > '80'
+50. select *@@@from correlated_events;@@@where period = 'Y16M11'

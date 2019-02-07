@@ -125,16 +125,16 @@ run 'rails db:migrate'
 #
 # Bootstrap
 #
-remove_file 'app/assets/stylesheets/application.css'
-create_file 'app/assets/stylesheets/application.scss', <<-CODE
-@import "bootstrap-sprockets";
-@import "bootstrap";
-CODE
-#
-insert_into_file 'app/assets/javascripts/application.js', before: "//= require_tree ." do <<-CODE
-//= require bootstrap
-CODE
-end
+# remove_file 'app/assets/stylesheets/application.css'
+# create_file 'app/assets/stylesheets/application.scss', <<-CODE
+# @import "bootstrap-sprockets";
+# @import "bootstrap";
+# CODE
+# #
+# insert_into_file 'app/assets/javascripts/application.js', before: "//= require_tree ." do <<-CODE
+# //= require bootstrap
+# CODE
+# end
 
 #
 # Simple Form
