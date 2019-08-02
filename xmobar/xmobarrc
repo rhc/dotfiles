@@ -23,7 +23,7 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-12-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% }{ %battery%  <fc=#ee9a00>%date%</fc> "
+       , template = "%UnsafeStdinReader% }{ %battery% <action=gnome-calendar><fc=#ee9a00>%date%</fc></action> "
        }
 
 -- vim: ft=haskell

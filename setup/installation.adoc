@@ -1,17 +1,69 @@
+TODO copy ErikBjare dotfiles 
 
 
-== change Sudo 
-
-Add yourself in the wheel group
+== Ansible
 
 ----
-sudo dscl . -append /Groups/wheel GroupMembership MyUserName
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get install ansible
+----
+
+== Git
+
+.configuration
+----
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+----
+
+
+copy ssh key to github.com
+
+
+sudo apt install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+
+Conventional commit:
+
+feat: Add a new feature (equivalent to a MINOR in Semantic Versioning).
+fix: Fix a bug (equivalent to a PATCH in Semantic Versioning).
+docs: Documentation changes.
+style: Code style change (semicolon, indentation…).
+refactor: Refactor code without changing public API.
+perf: Update code performances.
+test: Add test to an existing feature.
+chore: Update something without impacting the user (ex: bump a dependency in package.json).
+
+
+
+
+
+== sudoers execute any command without password 
+
+
+./etc/sudoers
+----
+%sudo ALL=(ALL) NOPASSWD:ALL
 ----
 
 == ngrok
 
+----
 brew install ngrok
 gem install github-auth
+----
+
+
+== Remap Caps Lock to Escape key
+
+Add the following to ~/.profile 
+
+----
+# Map Caps Lock key to Escape key
+setxkbmap -option caps:escape
+----
 
 
 == Cisco AnyConnect 
@@ -21,5 +73,454 @@ brew install openconnect
 brew cask install 
 
 
+== Ubuntu upgrade
+
+----
+# Install the Update Manager Core Package.
+sudo apt-get update
+
+# Run the following commands to check the current version and the kernel information.
+sudo apt-get install update-manager-core
+
+# Use this command to update/upgrade to the next available version.
+lsb_release -a
+uname -a
+
+# You will see a series of onscreen prompts that take you through the upgrade. I can't tell you how to answer the prompts, as it depends on what type of installation you want to end up with.
+sudo do-release-upgrade -d
+----
+
+
+- media codecs
+
+----
+sudo apt install ubuntu-restricted-extras
+----
+
+- restart the network manager after sleep or suspend
+
+./lib/systemd/system/system-sleep/network-manager-restart
+----
+#!/bin/sh
+set -e
+
+if [ "$2" = "suspend" ] || [ "$2" = "hybrid-sleep" ]; then
+    case "$1" in
+        post) sleep 5 ; systemctl restart network-manager ;;
+    esac
+fi
+----
+
+
+== SSH server
+
+----
+open ssh
+sudo apt-get install openssh-server
+----
+
+== GNS3 installation
+
+----
+sudo apt add-apt-repository ppa:gns3/ppa
+sudo apt update
+sudo apt install gns3-gui
+sudo apt install gns3-server
+sudo usermod -aG kvm $(whoami) && sudo reboot 
+----
+
+create interface loopback tap0
+
+----
+sudo apt-get install uml-utilities
+sudo modprobe tun
+# create loopback interface tap0
+sudo tunctl            
+sudo ifconfig tap0 10.100.100.100 netmask 255.255.255.0 up
+sudo ifconfig          
+----
+
+in GNS3-GUI,
+select cloud, add tap0 as interface
+
+NOTE: Do not select the wi-fi interface
+
+== Node 
+
+NOTE: avoid to install nodejs with apt-get 
+if nodejs already installed via apt-get, uninstall it 
+
+----
+sudo apt purge nodejs && sudo apt autoremove && sudo apt autoclean
+----
+
+nvm does not support fish shell
+
+install the bass plugin
+
+----
+fisher add jorgebucaran/fish-nvm
+----
+
+
+----
+nvm list
+nvm ls-remote
+# install LTS version
+nvm install 10.16.0 
+nvm alias default 10.16.1
+node -v
+npm install -g npm
+npm -v
+----
+
+
+Increase the amount of inotify watches
+
+----
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+----
+
+
+== TFTP server
+
+
+----
+sudo apt-get install tftpd-hpa
+----
+
+The default configuration file for tftpd-hpa is /etc/default/tftpd-hpa.
+The default root directory where files will be stored is /var/lib/tftpboot.
+
+== Tilix
+
+For tabbed terminal in GNS3
+
+----
+sudo add-apt-repository ppa:webupd8team/terminix
+sudo apt-get update
+sudo apt-get install tilix
+----
+
+
+
+
+== Tree
+
+----
+sudo apt install tree
+----
+
+
+== VirtualBox
+
+----
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+sudo apt update
+sudo apt install -y virtualbox-6.0
+----
+
+Extension pack
+
+----
+wget https://download.virtualbox.org/virtualbox/6.0.0/Oracle_VM_VirtualBox_Extension_Pack-6.0.0.vbox-extpack
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.0.0.vbox-extpack
+----
+
+
+== Shell 
+
+Fish
+
+.install
+----
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt-get update
+sudo apt-get install fish
+----
+
+
+.config
+----
+# vi keybindings
+
+----
+
+== TMux
+
+----
+sudo apt-get install tmux
+----
+
+.configuration
+
+
+== Tmuxinator
+
+----
+gem install tmuxinator
+----
+
+----
+set --Ux EDITOR vim
+----
+
+== Vim
+
+----
+sudo apt install vim-gtk
+----
+
+== neovim
+
+----
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+----
+
+
+== Visual Studio Code
+
+----
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg 
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code
+----
+
+== Xmonad
+
+TODO install xmonad with stack
+TODO https://brianbuccola.com/how-to-install-xmonad-and-xmobar-via-stack/
+
+
+----
+sudo apt install xmonad suckless-tools xscreensaver
+sudo apt install libghc-xmonad-dev
+sudo apt install xmobar
+sudo apt install stalonetray
+----
+
+control the brightness of the screen
+
+----
+git clone https://github.com/Ventto/lux.git
+cd lux 
+sudo make install 
+sudo lux
+----
+
+
+.stalonetrayrc
+----
+decorations none
+transparent false
+dockapp_mode none
+geometry 5x1-400+0
+max_geometry 5x1-325-10
+background "#000000"
+kludges force_icons_size
+grow_gravity NE
+icon_gravity NE
+icon_size 12
+sticky true
+#window_strut none
+window_type dock
+window_layer bottom
+#no_shrink false
+skip_taskbar true
+----
+
+
+----
+sudo apt install acpi
+----
+
+
+TODO export all variables in configuration file
+cat /home/ckyony/bin/check-low-battery.sh 
+
+----
+#!/bin/bash
+
+POWERSUPPLY="/sys/class/power_supply/ACAD/online" # could be different on your system!
+TOO_LOW=20 # how low is too low?
+NOT_CHARGING="0"
+ICON="/usr/share/icons/ubuntu-mono-dark/status/24/battery-low.svg" # eye candy
+
+export DISPLAY=:0
+
+BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+STATUS=$(cat $POWERSUPPLY)
+
+if [ $BATTERY_LEVEL -le $TOO_LOW -a $STATUS = $NOT_CHARGING ]
+then
+    /usr/bin/notify-send -u critical -i "$ICON" -t 3000 "Battery low" "Battery level is ${BATTERY_LEVEL}%!"
+fi
+
+exit 0
+----
+
+
+
+
+
+== Ruby
+
+
+
+
+----
+sudo apt install ruby-full ruby-dev
+----
+
+
+install ruby-install
+
+----
+wget -O ruby-install-0.7.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.7.0.tar.gz
+tar -xzvf ruby-install-0.7.0.tar.gz
+cd ruby-install-0.7.0/
+sudo make install
+----
+
+install the latest version of Ruby
+
+----
+ruby-install --latest ruby
+----
+
+Use the latest version
+
+----
+echo 'ruby-2.6.1' > ~/.ruby-version
+----
+
+
+install chruby 
+
+----
+
+
+----
+
+install chrub-fish
+
+----
+wget -O chruby-fish-0.8.2.tar.gz https://github.com/JeanMertz/chruby-fish/archive/v0.8.2.tar.gz
+tar -xzvf chruby-fish-0.8.2.tar.gz
+cd chruby-fish-0.8.2/
+sudo make install
+----
+
+configure 
+
+.config/fish/config.fish
+----
+source /usr/local/share/chruby/chruby.fish
+----
+
+.config/fish/auto.fish
+----
+source /usr/local/share/chruby/auto.fish
+----
+
+----
+bundler install
+----
+
+
+install solargraph, language server for ruby
+
+----
+gem install solargraph
+----
+
+== udiskie
+
+----
+sudo apt-get install python-pip
+sudo pip install udiskie
+----
+
+
+edit ~/.xmonad/start-xmonad.sh
+
+----
+udiskie &
+----
+
+== touchpad
+
+disable while typing
+
+----
+syndaemon -i .5 -K -t -R -d
+----
+
+== asciidoctor
+
+gem install asciidoctor
+
+== coderay
+
+gem install coderay
+
+
+== vmware workstation player
+
+- download wvmare workstation player for linux 64-bit 
+
+  chmod +x ~/Downloads/VMWare-Player*
+  sudo ~/Downloads/VMWare-Player
+
+
+Run the player 
+
+  vmplayer
+
+== EVE-NG
+
+download eve-ng community edition
+
+== qutebrowser
+
+sudo apt install qutebrowser
+
+== xfce power manager 
+
+sudo apt install xfce4-power-manager
+
+add in xmonad/startup-hoop.sh
+
+configure 
+
+----
+xfce4-power-manager --customize
+----
+
+== Youtube downloader 
+
+sudo -H pip install --upgrade youtube-dl
+
+
+== Firebase
+
+npm install -g firebase-tools
+
+
+== VUE
+
+== Pug
+
+npm install -g html2pug
+
+== Taskbook
+
+yarn global add taskbook
 
 

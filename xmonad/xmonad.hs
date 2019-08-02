@@ -1,21 +1,39 @@
 -- 
 --
 --
--- Terminal: termite 
 -- Focus follows the mouse pointer
 --
+-- https://github.com/LutzCle/xmonad-config/blob/master/xmonad.hs 
+-- https://xiangji.me/2018/11/19/my-xmonad-configuration/
 
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Config.Desktop
+import XMonad.Layout.ResizableTile
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Spiral
+import XMonad.Layout.Tabbed
 import Data.Monoid
 import System.Exit
+import XMonad.Config.Gnome
+import XMonad.Util.Scratchpad
+import XMonad.Util.Ungrab
+-- import XMonad.Util.Brightness
+import XMonad.Actions.Volume
+import XMonad.Actions.WindowBringer
+import Graphics.X11.ExtraTypes.XF86
+
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal      = "termite"
+myTerminal      = "tilix"
+quakeTerminal      = "xterm"
+myScreensaver = "xscreensaver-command -lock"
+mySelectScreenshot = "select-screenshot"
+myScreenshot = "screenshot"
 
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
@@ -29,8 +47,8 @@ myModMask       = mod1Mask
 
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myNormalBorderColor  = "#000000"
+myFocusedBorderColor = "#f00000"
 
 -- Key bindings. Add, modify or remove key bindings here.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -41,11 +59,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-    -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    -- take a full screenshot 
+    , ((modm , xK_F11     ), unGrab >> spawn "scrot %Y-%m-%d-%H-%M-%s.png --select --exec 'mv $f /home/ckyony/screenshots' ")
+    , ((0 , xK_Print     ), unGrab >> spawn "scrot %Y-%m-%d-%H-%M-%s.png --select --exec 'mv $f /home/ckyony/screenshots'")
+
+    -- launch quake
+    , ((modm , xK_o     ), scratchpad)
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    , ((modm , xK_c     ), kill)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -83,6 +105,40 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Expand the master area
     , ((modm,               xK_l     ), sendMessage Expand)
 
+    -- Shrink the focused area
+    , ((modm,               xK_a     ), sendMessage MirrorShrink)
+
+    -- Expand the focused area
+    , ((modm .|. shiftMask,               xK_a     ), sendMessage MirrorExpand)
+    
+    , ((modm .|. shiftMask, xK_g     ), gotoMenu)
+    , ((modm .|. shiftMask, xK_b     ), bringMenu)
+
+    -- Launch my favorite browser
+    , ((modm, xK_g), spawn "qutebrowser")
+
+    -- Screensaver 
+    , ((modm, xK_z     ), spawn "gnome-screensaver-command --lock"    )
+
+    -- Shutdown 
+    , ((modm .|. shiftMask, xK_z     ), spawn "shutdown now"    )
+
+
+    -- lower volume
+    , ((0 , xK_F2), lowerVolume 10 >> return ()) 
+    -- raise volume
+    , ((0 , xK_F3), raiseVolume 10 >> return ()) 
+    -- toggle mute XF86AudioMute
+    , ((modm, xK_F1), toggleMute >> return ()) 
+    , ((0, xF86XK_AudioMute), toggleMute >> return ()) 
+
+
+    -- settings for laptop
+    , ((0                 , xF86XK_MonBrightnessUp ), spawn "lux -a 10%")
+    , ((0                 , xF86XK_MonBrightnessDown ), spawn "lux -s 10%")
+
+    
+
     -- Push window back into tiling
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
 
@@ -105,7 +161,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
-    --, ((modMask .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+    -- , ((modm           , xK_F1 ), spawn "xmessage -file -")
     ]
     ++
 
@@ -126,6 +182,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [1,0,2] -- was [0..], changed to match my screen order
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
+  where scratchpad = scratchpadSpawnActionTerminal quakeTerminal
 
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
@@ -157,10 +214,12 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayoutHook = smartBorders tiled ||| noBorders Full 
+-- myLayoutHook = smartBorders tiled ||| noBorders Full ||| spiral (2/1) 
+-- myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full  
+myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full 
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
+     tiled   = ResizableTall nmaster delta ratio []
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -170,6 +229,7 @@ myLayoutHook = smartBorders tiled ||| noBorders Full
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
+     
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -186,11 +246,19 @@ myLayoutHook = smartBorders tiled ||| noBorders Full
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
 --
-myManageHook = composeAll
+myManageHook = manageScratchPad <+> composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
+
+manageScratchPad :: ManageHook
+manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
+  where 
+    h = 0.1 -- terminal height 10%
+    w = 1   -- width 100%
+    t = 1 - h -- distance from top edge
+    l = 1 - w -- distance from left eddge
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -219,8 +287,8 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
-
+myStartupHook = do
+  spawn "~/.xmonad/startup-hook.sh"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
@@ -234,7 +302,7 @@ main = xmonad =<< xmobar defaults
 --
 -- No need to modify this.
 --
-defaults = desktopConfig {
+defaults = gnomeConfig {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
