@@ -1,7 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/ckyony/repo/archivist/functions'
-let g:netrw_dirhist_2='/home/ckyony/repo/archivist/functions/src'
-let g:netrw_dirhist_3='/home/ckyony/repo/archivist/functions'
-let g:netrw_dirhist_4='/home/ckyony/repo/archivist/src'
-let g:netrw_dirhist_5='/home/ckyony/repo/archivist'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/ckyony/repo/oldmutual'
+let g:netrw_dirhist_2='/home/ckyony/repo'
+let g:netrw_dirhist_3='/home/ckyony/repo/playground/mi_card_flutter/lib'

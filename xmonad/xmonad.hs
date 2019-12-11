@@ -7,29 +7,33 @@
 -- https://xiangji.me/2018/11/19/my-xmonad-configuration/
 
 import XMonad
+-- import XMonad.Hooks.DynamicLog(dynamicLogWithPP, xmobarPP, ppOutput, ppLayout, ppTitle)
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.SetWMName
 import XMonad.Config.Desktop
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
+import XMonad.Layout.IndependentScreens(countScreens)
 import Data.Monoid
 import System.Exit
 import XMonad.Config.Gnome
 import XMonad.Util.Scratchpad
 import XMonad.Util.Ungrab
+import XMonad.Util.Run(spawnPipe, hPutStrLn)
+
 -- import XMonad.Util.Brightness
 import XMonad.Actions.Volume
 import XMonad.Actions.WindowBringer
 import Graphics.X11.ExtraTypes.XF86
-
-
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 myTerminal      = "tilix"
+-- myTerminal      = "terminal"
 quakeTerminal      = "xterm"
 myScreensaver = "xscreensaver-command -lock"
 mySelectScreenshot = "select-screenshot"
@@ -115,7 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_b     ), bringMenu)
 
     -- Launch my favorite browser
-    , ((modm, xK_g), spawn "qutebrowser")
+    , ((modm, xK_g), spawn "google-chrome-stable")
 
     -- Screensaver 
     , ((modm, xK_z     ), spawn "gnome-screensaver-command --lock"    )
@@ -183,7 +187,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
   where scratchpad = scratchpadSpawnActionTerminal quakeTerminal
-
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
 --
@@ -215,8 +218,8 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- which denotes layout choice.
 --
 -- myLayoutHook = smartBorders tiled ||| noBorders Full ||| spiral (2/1) 
--- myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full  
-myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full 
+myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full  
+-- myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full 
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = ResizableTall nmaster delta ratio []
@@ -248,8 +251,8 @@ myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full
 --
 myManageHook = manageScratchPad <+> composeAll
     [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , resource  =? "desktop_window" --> doIgnore
+    -- , className =? "Gimp"           --> doFloat
+    , resource  =? "desktop_window" --> doFloat
     , resource  =? "kdesktop"       --> doIgnore ]
 
 manageScratchPad :: ManageHook
@@ -274,11 +277,14 @@ myEventHook = mempty
 ------------------------------------------------------------------------
 -- Status bars and logging
 
--- Perform an arbitrary action on each internal state change or X event.
--- See the 'XMonad.Hooks.DynamicLog' extension for examples.
---
-myLogHook = return ()
+-- -- Perform an arbitrary action on each internal state change or X event.
+-- -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
+-- --
+-- myLogHook = dynamicLogWithPP myPP {
+--   ppOutput = \s -> sequence_ [hPutStrLn h s | h <- xmprocs]
+-- }
 
+myLogHook = return ()
 ------------------------------------------------------------------------
 -- Startup hook
 
@@ -286,15 +292,19 @@ myLogHook = return ()
 -- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
 -- per-workspace layout choices.
 --
--- By default, do nothing.
 myStartupHook = do
   spawn "~/.xmonad/startup-hook.sh"
+  setWMName "LG3D"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = xmonad =<< xmobar defaults
+-- main = do 
+--   screens <- countScreens
+--   xmprocs <- mapM(\dis -> spawnPipe("xmobar -x " ++ show dis))[0..screens - 1]
+--   xmonad $ defaults 
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -321,6 +331,9 @@ defaults = gnomeConfig {
         layoutHook         = myLayoutHook,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
-        logHook            = myLogHook,
+        logHook = myLogHook,
+        -- logHook            = dynamicLogWithPP myPP {
+        --   ppOutput = \s -> sequence_ [hPutStrLn h s | h <- xmprocs]
+        -- },
         startupHook        = myStartupHook
     }

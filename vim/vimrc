@@ -5,16 +5,15 @@ scriptencoding utf-8
 filetype off
 call plug#begin('~/.vim/bundle')
 
-" Plug 'othree/html5.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'digitaltoad/vim-pug'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'othree/yajs.vim'
 Plug 'posva/vim-vue'
 Plug 'leshill/vim-json'
 Plug 'itchyny/calendar.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-textobj-user'
-Plug 'sheerun/vim-polyglot' " syntax for programming languages
+" Plug 'sheerun/vim-polyglot' " syntax for programming languages
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -44,15 +43,11 @@ Plug 'vim-scripts/gnuplot.vim'
 Plug 'vim-scripts/tabular'
 Plug 'vim-scripts/tlib'
 Plug 'zaiste/tmux.vim'
-" Plug 'fleischie/vim-styled-components'
-" Plug 'endel/vim-github-colorscheme'
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
 " Plug 'gyim/vim-boxdraw'
-" Plug 'mattn/emmet-vim'
-" Plug 'kalafut/vim-taskjuggler'
 Plug 'kien/ctrlp.vim'
 Plug 'Shougo/echodoc.vim'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 
 call plug#end()
 
@@ -100,9 +95,9 @@ set noerrorbells " don't beep"
 set laststatus=2
 
 set linespace=0 " No extra spaces between rows
-" set number " Line numbers on
-set cursorline
-set cursorcolumn
+set number " Line numbers on
+" set cursorline
+" set cursorcolumn
 set showmatch " show matching brackets/parenthesis
 set incsearch " find as you type search
 set nohlsearch " highlight search terms
@@ -357,8 +352,11 @@ let g:airline#extensions#tabline#show_tab_nr = 0 " Don't display tab numbers
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 set guifont=Inconsolata\ for\ Powerline:h14
 set noshowmode
+set noshowcmd " do not show last command 
 
 let g:NERDTreeStatusline = ''
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
 
 
 " " Vim-test
@@ -387,21 +385,17 @@ let g:jsx_ext_required = 0
 
 
 " Plug 'javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'underscore,angularjs,jasmine,chai,react'
-
+let g:used_javascript_libs = 'underscore,angularjs,jasmine,chai,react,vue'
 
 " Vue
 " let g:vue_disable_pre_processors=1
-autocmd FileType vue syntax sync fromstart
-" autocmd BufNewFile,BufRead *.vue set filetype=html
+" autocmd BufNewFile,BufReadPost *.vue 
+" autocmd FileType vue syntax sync fromstart
 
 set suffixesadd+=.vue
 
 " CoC
 let g:coc_global_extensions = ['coc-solargraph'] 
- 
- 
- 
  
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -504,9 +498,16 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+set signcolumn=yes
 
 let g:LanguageClient_serverCommands = { 'vue': ['vls'] }
 
 " echodoc
 set noshowmode
 let g:echodoc_enable_at_startup = 1
+
+
+" coc.preferences.formatOnSaveFiletypes
+
+
+

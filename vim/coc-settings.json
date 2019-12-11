@@ -1,8 +1,9 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript",  "json"],
-  "eslint.filetypes": ["javascript", "typescript"],
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript",  "json", "vue"],
+  "eslint.filetypes": ["javascript", "typescript", "json", "vue"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•"

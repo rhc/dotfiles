@@ -1,3 +1,19 @@
+= Setup
+Christian Kyony <ckyony@changamuka.com>
+v1.0, 2019-10-12
+:experimental:
+:producer: asciidoctor
+:toc: left
+:toclevels: 3
+:experimental:
+:icons: font
+:stem:
+:imagesdir: ../images
+:frame: topbot
+:grid: rows
+:stylesheet: ../stylesheets/asciidoctor.css
+
+
 TODO copy ErikBjare dotfiles 
 
 
@@ -522,5 +538,161 @@ npm install -g html2pug
 == Taskbook
 
 yarn global add taskbook
+
+== VEGA
+
+TODO
+  https://vega.github.io/vega/usage/
+
+
+== ERD
+
+----
+git clone git://github.com/BurntSushi/erd
+cd erd
+stack install
+----
+
+== imagemagick
+
+sudo apt-get install -y graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat
+
+
+== dart
+
+home: https://dart.dev/get-dart
+
+.one-time setup
+----
+sudo apt update
+sudo apt install apt-transport-https
+sudo sh -c 'wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+sudo sh -c 'wget -qO- https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+----
+
+----
+sudo apt update
+sudo apt install dart
+----
+
+- ruby support
+----
+gem install neovim
+----
+
+== neovim
+
+----
+# ~/.config/nvim/init.vim
+
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+----
+
+
+== flutter
+
+- Download from flutter.io
+
+----
+cd ~/repo
+tar xf flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
+----
+
+- Add flutter/bin to PATH 
+----
+# ~/.config/fish/config.fish
+set PATH /home/ckyony/repo/flutter/bin $PATH
+----
+
+- Download  and install android studio
+
+* Start Android Studio
+* Go through the ‘Android Studio Setup Wizard’. 
+** This installs the latest Android SDK, 
+Android SDK Platform-Tools, 
+and Android SDK Build-Tools, 
+which are required by Flutter when developing for Android.
+
+----
+cd ~/repo
+tar xzvf android-studio-ide-191.5977832-linux.tar.gz
+----
+
+- add android/bin to PATH
+
+----
+# ~/.config/fish/config.fish
+set PATH /home/ckyony/repo/android-studio/bin $PATH
+----
+
+
+- To avoid blank android studio window in xmonad
+----
+set -Ux _JAVA_AWT_WM_NONREPARENTING 1
+----
+
+- install Flutter and Dart plugins
+
+* start Android Studio
+* Go to menu:File[Settings > Plugins > Marketplace] 
+* select Flutter 
+* click btn:[Install]
+* click btn:[Yes] to install the Dart plugin
+* click btn:[Restart the IDE]
+
+- Install the VS Code 
+
+* start VS Code
+* Invoke menu:View[Command Palette...]
+* Type *install*
+* Select menu:Extensions[Install Extensions]
+* Type *flutter* in the extensions search field
+* select *flutter*
+* click *Install* 
+* 
+
+- Setup my Android device
+
+* Enable Developer options 
+
+** open *Settings* app 
+** select *System* on Android 8.0+
+** scroll to the bottom and select btn:[About phone]
+** scroll to the bottom and tap btn:[Build number] 7 times
+** return to the previous screen to find *Developer options*
+
+* Enable USB debugging
+
+- Using a USB cable, plug your phone into your computer. If prompted on your device, authorize your computer to access your device.
+- In the terminal, run the flutter devices command to verify that Flutter recognizes your connected Android device. By default, Flutter uses the version of the Android SDK where your adb tool is based. If you want Flutter to use a different installation of the Android SDK, you must set the ANDROID_HOME environment variable to that installation directory.
+
+NOTE: on Huawei
+- Go to Settings > Developer Options 
+- 
+
+
+
+
+== GIMP
+
+----
+sudo apt install gimp
+----
+
+TIP: How to merge two images
+
+- menu[Open] first image
+- menu[Open as a layers] the second image
+- drag the second image to the desired location
+
+
+== font manager
+
+
+sudo apt install font-manager
+
+
 
 
