@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/ckyony/repo/oldmutual'
-let g:netrw_dirhist_2='/home/ckyony/repo'
-let g:netrw_dirhist_3='/home/ckyony/repo/playground/mi_card_flutter/lib'
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/ckyony/paloalto/xsoar/docs'
+let g:netrw_dirhist_8='/home/ckyony/paloalto/xsoar/docs/fonts'
+let g:netrw_dirhist_7='/home/ckyony/paloalto/xsoar/docs'
+let g:netrw_dirhist_6='/home/ckyony/paloalto/xsoar/docs/images'
+let g:netrw_dirhist_5='/home/ckyony/paloalto/xsoar/docs'
+let g:netrw_dirhist_4='/home/ckyony/paloalto/xsoar'
+let g:netrw_dirhist_3='/home/ckyony/aha'
+let g:netrw_dirhist_2='/home/ckyony'
+let g:netrw_dirhist_1='/home/ckyony/repo/archivist/src/docs'
+let g:netrw_dirhist_0='/home/ckyony/repo/archivist/src/docs/outputs'

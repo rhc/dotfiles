@@ -1,11 +1,13 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript",  "json", "vue", "dart"],
+  "diagnostic.errorSign": "•",
+  "diagnostic.infoSign": "•",
+  "diagnostic.warningSign": "⚠",
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "typescript", "json", "vue"],
+  "flutter.provider.hot-reload": true,
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript",  "json", "vue"],
-  "eslint.filetypes": ["javascript", "typescript", "json", "vue"],
-  "diagnostic.errorSign": "•",
-  "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•"
+  "suggest.enablePreview":true,
 }
 
