@@ -1,7 +1,6 @@
 cabb tt tabnew
 
 iabb Prj project
-iabb ak Angelique Kyony
 iabb bb byebug
 iabb biz business
 iabb bn between
@@ -29,6 +28,8 @@ iabb dont don't
 iabb eg e.g.
 iabb eqn equation
 iabb eqns equations
+iabb fw firewall
+iabb fws firewalls
 iabb grp group
 iabb grps groups
 iabb gt =>
@@ -51,7 +52,6 @@ iabb nw network
 iabb nws networks
 iabb ops operations
 iabb orga organization
-iabb p2 PRINCE2
 iabb p2ap Authorize the project
 iabb p2bc Business Case
 iabb p2bo Project Board

@@ -1,9 +1,9 @@
--- 
+--
 --
 --
 -- Focus follows the mouse pointer
 --
--- https://github.com/LutzCle/xmonad-config/blob/master/xmonad.hs 
+-- https://github.com/LutzCle/xmonad-config/blob/master/xmonad.hs
 -- https://xiangji.me/2018/11/19/my-xmonad-configuration/
 
 import XMonad
@@ -32,7 +32,9 @@ import Graphics.X11.ExtraTypes.XF86
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-myTerminal      = "tilix"
+myTerminal      = "/home/ckyony/.local/kitty.app/bin/kitty"
+-- myTerminal      = "alacritty"
+-- myTerminal      = "tilix"
 -- myTerminal      = "terminal"
 quakeTerminal      = "xterm"
 myScreensaver = "xscreensaver-command -lock"
@@ -63,7 +65,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-    -- take a full screenshot 
+    -- take a full screenshot
     , ((modm , xK_F11     ), unGrab >> spawn "scrot %Y-%m-%d-%H-%M-%s.png --select --exec 'mv $f /home/ckyony/screenshots' ")
     , ((0 , xK_Print     ), unGrab >> spawn "scrot %Y-%m-%d-%H-%M-%s.png --select --exec 'mv $f /home/ckyony/screenshots'")
 
@@ -114,34 +116,34 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Expand the focused area
     , ((modm .|. shiftMask,               xK_a     ), sendMessage MirrorExpand)
-    
+
     , ((modm .|. shiftMask, xK_g     ), gotoMenu)
     , ((modm .|. shiftMask, xK_b     ), bringMenu)
 
     -- Launch my favorite browser
     , ((modm, xK_g), spawn "google-chrome-stable")
 
-    -- Screensaver 
+    -- Screensaver
     , ((modm, xK_z     ), spawn "gnome-screensaver-command --lock"    )
 
-    -- Shutdown 
+    -- Shutdown
     , ((modm .|. shiftMask, xK_z     ), spawn "shutdown now"    )
 
 
     -- lower volume
-    , ((0 , xK_F2), lowerVolume 10 >> return ()) 
+    , ((0 , xK_F2), lowerVolume 10 >> return ())
     -- raise volume
-    , ((0 , xK_F3), raiseVolume 10 >> return ()) 
+    , ((0 , xK_F3), raiseVolume 10 >> return ())
     -- toggle mute XF86AudioMute
-    , ((modm, xK_F1), toggleMute >> return ()) 
-    , ((0, xF86XK_AudioMute), toggleMute >> return ()) 
+    , ((modm, xK_F1), toggleMute >> return ())
+    , ((0, xF86XK_AudioMute), toggleMute >> return ())
 
 
     -- settings for laptop
     , ((0                 , xF86XK_MonBrightnessUp ), spawn "lux -a 10%")
     , ((0                 , xF86XK_MonBrightnessDown ), spawn "lux -s 10%")
 
-    
+
 
     -- Push window back into tiling
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
@@ -217,9 +219,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
--- myLayoutHook = smartBorders tiled ||| noBorders Full ||| spiral (2/1) 
-myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full  
--- myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full 
+-- myLayoutHook = smartBorders tiled ||| noBorders Full ||| spiral (2/1)
+myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full ||| spiral (6/7)
+-- myLayoutHook = avoidStruts $ spiral (6/7)  ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = ResizableTall nmaster delta ratio []
@@ -232,7 +234,7 @@ myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
-     
+
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -252,12 +254,13 @@ myLayoutHook = avoidStruts $ smartBorders tiled ||| noBorders Full
 myManageHook = manageScratchPad <+> composeAll
     [ className =? "MPlayer"        --> doFloat
     -- , className =? "Gimp"           --> doFloat
+    -- , stringProperty "Android Emulator - Pixel_2_API_29:5554" =? "Emulator" --> doFloat
     , resource  =? "desktop_window" --> doFloat
     , resource  =? "kdesktop"       --> doIgnore ]
 
 manageScratchPad :: ManageHook
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
-  where 
+  where
     h = 0.1 -- terminal height 10%
     w = 1   -- width 100%
     t = 1 - h -- distance from top edge
@@ -301,10 +304,10 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = xmonad =<< xmobar defaults
--- main = do 
+-- main = do
 --   screens <- countScreens
 --   xmprocs <- mapM(\dis -> spawnPipe("xmobar -x " ++ show dis))[0..screens - 1]
---   xmonad $ defaults 
+--   xmonad $ defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will

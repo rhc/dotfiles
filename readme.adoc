@@ -119,7 +119,10 @@ Science.
 - Blog: jekyll ?
 - Twitter client: ?
 - Pastebin client: gist
-- Bitcoin: 
+- xdotools ?
+- taskwarrior
+- file explorer: ranger, vifm
+- terminal: 
 
 === Multimedia
 
