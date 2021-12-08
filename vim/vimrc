@@ -1,118 +1,239 @@
 set nocompatible "must be first line
 set encoding=utf-8
 scriptencoding utf-8
-
-if &shell =~# 'fish$'
-    set shell=bash
-endif
+set signcolumn=yes
+set completeopt=menuone,noselect
 
 filetype off
 call plug#begin('~/.vim/bundle')
 
-Plug 'digitaltoad/vim-pug'
-Plug 'hzchirs/vim-material'
+" to be retired
+"
+" Plug 'Shougo/denite.nvim'
+" Plug '/usr/local/opt/fzf'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+" Plug 'kien/ctrlp.vim'
+" Plug 'mattn/emmet-vim'
+" Plug 'mhartington/oceanic-next'
+" Plug 'posva/vim-vue'
+" Plug 'vim-scripts/tlib'
+" Plug 'vimwiki/vimwiki'
+" Plug 'sheerun/vim-polyglot' " syntax for programming languages
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tpope/vim-rails'
+"Plug 'hzchirs/vim-material'
+"
+"
+
+"
 " colorscheme
-Plug 'junegunn/seoul256.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sainnhe/gruvbox-material'
 
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
-
-" (Optional) Multi-entry selection UI.
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug '/usr/local/opt/fzf'
-" Plug 'othree/yajs.vim'
-Plug 'posva/vim-vue'
-" Plug 'leshill/vim-json'
-Plug 'itchyny/calendar.vim'
+Plug 'Shougo/echodoc.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'akinsho/flutter-tools.nvim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'connorholyday/vim-snazzy'
+" Plug 'dart-lang/dart-vim-plugin'
+Plug 'digitaltoad/vim-pug'
+Plug 'editorconfig/editorconfig-vim'
+"
+" Auto-completions
+Plug 'hrsh7th/nvim-compe'
 Plug 'jiangmiao/auto-pairs'
+" Plug 'honza/vim-snippets'
+" Plug 'SirVer/Ultisnips'
+"
+" fuzzy search
+"
+" Plug 'mileszs/ack.vim'
+"
+" Navigation
+"
+"
+" Plug 'itchyny/calendar.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'kana/vim-textobj-user'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'mileszs/ack.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'lervag/vimtex'
 Plug 'nelstrom/vim-textobj-rubyblock'
-" Plug 'NLKNguyen/papercolor-theme'
-" Plug 'w0rp/ale'
-" Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sjl/gundo.vim'
 Plug 'sukima/xmledit'
-Plug 'tomtom/tcomment_vim'
-" Plug 'tpope/vim-bundler'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-cucumber'
 Plug 'tyru/open-browser.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/dbext.vim'
 Plug 'vim-scripts/gnuplot.vim'
 Plug 'vim-scripts/tabular'
-Plug 'vim-scripts/tlib'
 Plug 'zaiste/tmux.vim'
-" Plug 'gyim/vim-boxdraw'
-Plug 'kien/ctrlp.vim'
-Plug 'dart-lang/dart-vim-plugin'
-" Plug 'scrooloose/nerdtree'
-" Plug 'preservim/nerdtree'
-" Plug 'thosakwe/vim-flutter'
-" Plug 'tpope/vim-vinegar' "TODO repo not found
-Plug 'cormacrelf/vim-colors-github'
-Plug 'connorholyday/vim-snazzy'
-"
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
-"
-Plug 'mhartington/oceanic-next'
-Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'semshi' " python syntax highlight
-"
-"
-"
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'christoomey/vim-tmux-navigator'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'mattn/emmet-vim'
-  Plug 'junegunn/gv.vim'
-  Plug 'natebosch/dartlang-snippets'
-  Plug 'kshenoy/vim-signature'
-  Plug 'vimwiki/vimwiki'
-  Plug 'tpope/vim-projectionist'
-  Plug 'itchyny/lightline.vim'
-  Plug 'Shougo/echodoc.vim'
-  " Plug 'prettier/vim-prettier', {
-  "       \ 'do': 'yarn install',
-  "       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-  " Plug 'leafgarland/typescript-vim'
-  " Plug 'rhysd/vim-grammarous'
+"""
 
-  " Language
-  Plug 'dart-lang/dart-vim-plugin'
-  " Plug 'fatih/vim-go', {'tag': '*', 'for': 'go', 'do': ':GoUpdateBinaries'}
-  Plug 'nvim-treesitter/nvim-treesitter'
-  Plug 'sheerun/vim-polyglot' " syntax for programming languages
-Plug 'vim-ruby/vim-ruby'
-  Plug 'editorconfig/editorconfig-vim'
-Plug 'lervag/vimtex'
-  " Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/echodoc.vim'
-  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'sainnhe/gruvbox-material'
-  " Plug 'Shougo/denite.nvim'
-   Plug 'SirVer/Ultisnips'
- Plug 'honza/vim-snippets'
-   " must be after ultisnips
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"
+autocmd FileType dart setlocal commentstring=//\ %s
+
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+" Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim'
+Plug 'overcache/NeoSolarized'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
+
+
+" LSPSaga
+" if !exists('g.loaded_lspsaga') | finish | endif
+lua << EOF
+  local saga = require 'lspsaga'
+  saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+  }
+EOF
+
+"
+nnoremap <silent>fa <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+nnoremap <silent>mv <cmd>Lspsaga rename<CR>
+nnoremap <silent>gn <cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent>gp <cmd>Lspsaga diagnostic_jump_previous<CR>
+nnoremap <silent>K <cmd>Lspsaga hover_doc<CR>
+inoremap <silent><C-k> <cmd>Lspsaga signature_help<CR>
+nnoremap <silent>gh <cmd>Lspsaga lsp_finder<CR>
+" scroll up hover doc
+nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" scroll down hover doc or scroll in definition preview
+nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
+
+"""
+"
+lua << EOF
+
+EOF
+
+"""
+" nvim-compe
+"
+lua << EOF
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+  --
+  source = {
+    path = true;
+    nvim_lsp = true;
+  };
+}
+
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  else
+    return t "<S-Tab>"
+  end
+end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
+--This line is important for auto-import
+vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
+vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
+
+EOF
+
+
+
+
+"-------
+
+"
+" let g:compe = {}
+" let g:compe.enabled = v:true
+" let g:compe.autocomplete = v:true
+" let g:compe.debug = v:false
+" let g:compe.min_length = 1
+" let g:compe.preselect = 'enable'
+" let g:compe.throttle_time = 80
+" let g:compe.source_timeout = 200
+" let g:compe.resolve_timeout = 800
+" let g:compe.incomplete_delay = 400
+" let g:compe.max_abbr_width = 100
+" let g:compe.max_kind_width = 100
+" let g:compe.max_menu_width = 100
+" let g:compe.documentation = v:false
+"
+" let g:compe.source = {}
+" let g:compe.source.path = v:true
+" let g:compe.source.buffer = v:true
+" let g:compe.source.calc = v:true
+" let g:compe.source.nvim_lsp = v:true
+" let g:compe.source.nvim_lua = v:true
+" let g:compe.source.vsnip = v:true
+" let g:compe.source.ultisnips = v:true
+" let g:compe.source.luasnip = v:true
+" let g:compe.source.emoji = v:true
+" let g:compe.source.treesitter = v:true
+
+
 
 filetype plugin indent on " Automatically detect file types.
 syntax on " syntax highlighting
@@ -141,9 +262,9 @@ autocmd BufReadPost *
 " colors
 " set t_Co=256
 set termguicolors
-" set background=dark " Assume a dark background
-colorscheme vim-material
-" colorscheme jellybeans
+set background=dark " Assume a dark background
+" colorscheme vim-material
+colorscheme jellybeans
 " colorscheme OceanicNextLight
 
 " colorscheme OceanicNext
@@ -179,6 +300,9 @@ set wildignore+=*.g.dart,pubspec.lock
 
 set lazyredraw " redraw only when necessary
 autocmd FileType help wincmd L " open help window in vertical split
+
+
+let g:mapleader=","
 
 " Exclude files and directories with ctrlp
 let g:ctrlp_custom_ignore = {
@@ -218,13 +342,19 @@ vnoremap ? ?\v
 cnoremap %s/ %s/\v
 cnoremap %g/ %g/\v
 " TODO add very magic to multi-line selection
-
+"
 
 " Windows focus movements
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+nnoremap <silent>gw <c-w>w " go to the new window"
+nnoremap <silent>fj <c-w>w " go to the new window"
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
+
 
 "TODO: Navigation
 " Switch between the last 2 files
@@ -255,7 +385,7 @@ set tabstop=2 " an indentation every two columns
 "set softtabstop=2 " let backspace delete indent
 set matchpairs+=<:> " match, to be used with %
 "set pastetoggle=<F12> " pastetoggle (sane indentation on pastes)
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
+let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '`':'`','<':'>'}
 
 " Key (re)Mappings
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
@@ -267,10 +397,9 @@ set digraph
 "
 "
 
-let g:mapleader=","
 "edit/reload the vimrc filep
-nmap <silent> <leader>v :e $MYVIMRC<CR>
-" nmap <silent> <leader>s :source $MYVIMRC<CR>
+nmap <silent> <leader>v :e ~/.config/nvim/init.vim<CR>
+nmap <silent> <leader>s :source $MYVIMRC<CR>
 nmap <silent> <leader>j :e ~/journal.adoc<CR>
 nmap <silent> <leader>p :e ~/pushups.adoc<CR>
 " nmap <silent> <leader>g :e ~/deferred-gratifications.adoc<CR>
@@ -304,14 +433,15 @@ nmap <silent> <leader>s4 /S4\s*$<CR>yip<ESC>
 set ttyfast " send more characters for redraws"
 
 "source vimrc each time I save it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-end
+" if has("autocmd")
+"   autocmd bufwritepost .vimrc source $MYVIMRC
+" end
 
 "edit list of abbreviations
 " nmap <silent> <leader>a :tabedit ~/.vim/abbreviations.txt<CR>
 
-set listchars=""
+" set listchars=""
+set listchars=tab:▒░,trail:▓,nbsp:░
 " Fuzzy Finder
 """ Fuzzy Find file, tree, buffer, line
 " nmap <leader>ff :FufFile **/<CR>
@@ -423,8 +553,8 @@ let g:airline#extensions#tabline#show_tab_nr = 0 " Don't display tab numbers
 " let g:airline#extensions#tabline#buffer_nr_show = 1
 " let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-set guifont=Inconsolata\ for\ Powerline:h14
-" set guifont=Fira\ Code:h18
+" set guifont=Inconsolata\ for\ Powerline:h14
+set guifont=Victor\ Mono:h18
 set noshowmode
 set noshowcmd " do not show last command
 
@@ -484,171 +614,160 @@ au BufLeave * silent! update
 set autowrite
 
 
-" CoC
-set hidden
-let g:coc_global_extensions = [ 'coc-solargraph', 'coc-flutter', 'coc-snippets', ]
-let g:dart_format_on_save = 1
-set updatetime=300
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,dart,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-set signcolumn=yes
-
-" Coc Flutter
-nnoremap <leader>fr :CocCommand flutter.run -d emulator-5554
-nnoremap <leader>fl :CocCommand flutter.dev.openDevLog<cr>
-nnoremap <leader>fp :CocCommand flutter.pub.get<cr>
-nnoremap <leader>fq :CocCommand flutter.dev.quit<cr>
-nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<cr>
-nnoremap <leader>fe :CocCommand flutter.emulators<cr>
-nmap <leader>f  <Plug>(coc-fix-current)
-
-"Run :healthcheck to check if everything is ok
-let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python3'
-
-
-" let g:LanguageClient_serverCommands = { 'vue': ['vls'] }
 
 " echodoc
 set noshowmode
 let g:echodoc_enable_at_startup = 1
 
 
-" coc.preferences.formatOnSaveFiletypes
-
-" vim-flutter
-" let g:flutter_hot_reload_on_save = 1
 
 " https://coderwall.com/p/prfnnw/vim-to-do-list
 " Generate a to-do list in the quickfix list
 " command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
 
-
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 
-
-" let g:LanguageClient_serverCommands = { 'dart': ['dart_language_server'],  }
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': 'gd',
-    \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-    \ 'FindReferences': 'gr',
-    \ 'NextReference': '<C-n>',
-    \ 'PreviousReference': '<C-p>',
-    \ 'FindImplementations': 'gi',
-    \ 'FindCodeActions': 'ga',
-    \ 'Rename': 'gr',
-    \ 'ShowHover': v:true,
-    \ 'DocumentSymbol': 'go',
-    \ 'WorkspaceSymbol': 'gS',
-    \ 'SignatureHelp': 'gm',
-    \ 'Completion': 'completefunc',
-    \}
-
 "vimtex
 " let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
+let g:vimtex_compiler_progname = 'nvr'
 
 " Fuzzy search
 nnoremap <leader><leader> :CtrlP<CR>
+
+
+" LSPconfig
+nnoremap <silent>gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent>gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent>gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+" nnoremap <silent>gp <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+" nnoremap <silent>gn <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+" buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+nnoremap <silent>ca <cmd>lua vim.lsp.buf.code_action()<CR>
+"
+""" auto-format
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.dart lua vim.lsp.buf.formatting_sync(nil, 100)
+
+
+
+" Flutter-tools
+lua << EOF
+-- alternatively you can override the default configs
+require("flutter-tools").setup {
+  ui = {
+    -- the border type to use for all floating windows, the same options/formats
+    -- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
+    border = "rounded",
+  },
+  decorations = {
+    statusline = {
+      -- set to true to be able use the 'flutter_tools_decorations.app_version' in your statusline
+      -- this will show the current version of the flutter app from the pubspec.yaml file
+      app_version = false,
+      -- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
+      -- this will show the currently running device if an application was started with a specific
+      -- device
+      device = true  ,
+    }
+  },
+  debugger = { -- integrate with nvim dap + install dart code debugger
+    enabled = false,
+  },
+  flutter_lookup_cmd = nil, -- example "dirname $(which flutter)" or "asdf where flutter"
+  widget_guides = {
+    enabled = false,
+  },
+  closing_tags = {
+    prefix = "// ", -- character to use for close tag e.g. > Widget
+    enabled = true -- set to false to disable
+  },
+  dev_log = {
+    -- open_cmd = "tabedit", -- command to use to open the log buffer
+  },
+  dev_tools = {
+    autostart = false, -- autostart devtools server if not detected
+    auto_open_browser = false, -- Automatically opens devtools in the browser
+  },
+  outline = {
+    open_cmd = "30vnew", -- command to use to open the outline buffer
+    auto_open = false -- if true this will open the outline automatically when it is first populated
+  },
+  lsp = {
+ --   on_attach = my_custom_on_attach,
+    --capabilities = my_custom_capabilities -- e.g. lsp_status capabilities
+    --- OR you can specify a function to deactivate or change or control how the config is created
+    -- capabilities = function(config)
+    --   config.specificThingIDontWant = false
+    --   return config
+    --end,
+    settings = {
+      showTodos = false,
+      completeFunctionCalls = true,
+      analysisExcludedFolders = {'/home/ckyony/.pub-cache', '/opt/flutter'}
+      -- analysisExcludedFolders = {'/opt/flutter'}
+    }
+  }
+}
+EOF
+nnoremap <silent>fe <cmd>FlutterEmulators<cr>
+nnoremap <silent>fd <cmd>FlutterDevices<cr>
+nnoremap <silent>fo <CMD>FlutterOutlineToggle<cr>
+nnoremap <silent>fq <CMD>FlutterQuit<cr>
+nnoremap <silent>fp <CMD>FlutterPubGet<cr>
+nnoremap <silent>fr <CMD>FlutterRestart<cr>
+nnoremap <silent>fl <CMD>FlutterLogClear<cr>
+"""
+" Treesitter
+"
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+  indent = {
+    enable = false,
+    disable = {},
+  },
+  ensure_installed = {
+    "dart"
+  },
+}
+-- local parser_config = require "nvim-mtreesitter.parsers".get_parser_configs()
+-- parser_config.tsx.used_by = { "javascript", "typescript.tsx" }
+EOF
+
+"""
+" Ruby
+"
+" to fix :checkhealth
+let g:ruby_host_prog = '/home/ckyony/.gem/ruby/3.0.0/bin/neovim-ruby-host'
+
+"""
+" Telescope
+"
+lua << EOF
+local actions = require('telescope.actions')
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      n = {
+        ["x"] = actions.close
+      },
+    },
+  }
+}
+EOF
+
+nnoremap <silent> ff <cmd>Telescope find_files<cr>
+nnoremap <silent> fl <cmd>Telescope live_grep<cr>
+nnoremap <silent> fb <cmd>Telescope buffers<cr>
+nnoremap <silent> fh <cmd>Telescope help_tags<cr>
+

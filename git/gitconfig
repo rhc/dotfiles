@@ -22,3 +22,6 @@
 	insteadOf = https://github.com/
 [advice]
 	ignoredHook = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
